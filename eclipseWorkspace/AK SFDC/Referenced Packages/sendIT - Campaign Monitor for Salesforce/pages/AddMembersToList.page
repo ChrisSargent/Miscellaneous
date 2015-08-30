@@ -1,0 +1,38 @@
+<apex:page standardController="Campaign" extensions="wbsendit.AddMembersToListController"  >
+<apex:sectionHeader title="Campaign Monitor Members" subtitle="Subscriber Members" help="http://support.beaufort12.com/customer/portal/articles/817281" />
+
+    <apex:form >
+
+    <apex:pageBlock title="Add Members to Email List">
+        <apex:pageMessages escape="false"/>
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton action="{!addMembers}" value="Add Members to Email List" rendered="{!showAddButton}"/>
+            <apex:commandButton action="{!cancel}" value="Cancel"/>
+        </apex:pageBlockButtons>
+        <apex:pageBlockSection columns="2" rendered="{!showAddButton}" >
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Select an Email List" for="pro"></apex:outputLabel>
+                <apex:selectList id="pro" value="{!SubscriberList}" size="1" title="Email Lists">
+                    <apex:selectOptions value="{!SubscriberLists}"></apex:selectOptions>
+                </apex:selectList>
+            </apex:pageBlockSectionItem>
+            <apex:pageBlockSectionItem >
+                <apex:outputlabel style="color:grey">All the campaign members will be added to this list in Campaign Monitor.</apex:outputlabel>
+            </apex:pageBlockSectionItem>
+
+
+            <apex:pageblockSectionItem >
+              <apex:outputlabel >Resubscribe</apex:outputlabel>
+              <apex:inputCheckBox value="{!resubscribe}" style="width:150px"  rendered="{!showAddButton}"/>
+            </apex:pageblockSectionItem>
+
+            <apex:pageBlockSectionItem >
+              <apex:outputlabel style="color:grey">When this field is ticked, previously unsusbcribed emails will be resubscribed.</apex:outputlabel>
+            </apex:pageBlockSectionItem>
+
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+
+    </apex:form>
+
+</apex:page>

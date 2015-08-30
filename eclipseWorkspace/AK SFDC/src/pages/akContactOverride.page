@@ -1,0 +1,10 @@
+<apex:page standardController="Contact" extensions="akRedirectExtension">
+<script>
+if({!redirect}) {
+    window.top.location.href='/003/e?RecordType={!recordtypeid}&nooverride=1';
+}
+else {
+    window.top.location.href='/apex/akCandidateWizard';
+}
+</script>
+</apex:page>

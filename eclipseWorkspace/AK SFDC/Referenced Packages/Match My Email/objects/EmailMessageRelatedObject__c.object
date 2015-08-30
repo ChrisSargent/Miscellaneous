@@ -1,0 +1,518 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Relation of email message to other object such as Account, Contact, etc. in Match My Email.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AccountIdValue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account ID Value</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountNameValue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account/Company Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AccountName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( NOT(OR( Account__c  = &apos;&apos;, ISNULL(Account__c))) ,  &apos;&apos; , 
+ IF( NOT(OR(  Case__c = &apos;&apos;, ISNULL(Case__c))) , 
+    IF( NOT(OR( Case__r.AccountId=&apos;&apos;, ISNULL(Case__r.AccountId))) , 
+        HYPERLINK(&apos;/&apos;+Case__r.AccountId, Case__r.Account.Name, &apos;_top&apos;) ,
+        AccountNameValue__c)
+ , 
+ IF( NOT(OR(   Contact__c = &apos;&apos;, ISNULL(Contact__c ))) ,
+       IF( NOT(OR(Contact__r.AccountId=&apos;&apos;, ISNULL(Contact__r.AccountId))) , 
+        HYPERLINK(&apos;/&apos;+Contact__r.AccountId, Contact__r.Account.Name, &apos;_top&apos;) ,
+        &apos;&apos;)
+ , 
+ IF( NOT(OR(   Lead__c = &apos;&apos;, ISNULL(Lead__c ))) , Lead__r.Company 
+ , 
+ IF( NOT(OR(    Opportunity__c = &apos;&apos;, ISNULL(Opportunity__c ))) , 
+     IF( NOT(OR(Opportunity__r.AccountId=&apos;&apos;, ISNULL(Opportunity__r.AccountId))) , 
+        HYPERLINK(&apos;/&apos;+Opportunity__r.AccountId, Opportunity__r.Account.Name, &apos;_top&apos;) ,
+        &apos;&apos;)
+, 
+IF( NOT(OR(    User__c = &apos;&apos;, ISNULL(User__c ))) ,  User__r.CompanyName, 
+IF( NOT(OR( AccountNameValue__c  = &apos;&apos;, ISNULL(AccountNameValue__c))) ,  
+ IF( NOT(OR( AccountIdValue__c  = &apos;&apos;, ISNULL(AccountIdValue__c))) ,  
+  HYPERLINK(&apos;/&apos;+AccountIdValue__c, AccountNameValue__c, &apos;_top&apos;),
+  AccountNameValue__c),
+&apos;&apos;
+) ))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account/Company</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>Email Messages</relationshipLabel>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Attachments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attachments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Case__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipLabel>Email Messages</relationshipLabel>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Email Messages</relationshipLabel>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>EmailMessage__r.Date__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>DirectionValue__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Direction Value</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Sender</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Recipient</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Direction__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>CASE(DirectionValue__c,
+    &apos;Sender&apos;, &apos;Sender&apos;,
+    &apos;Recipient&apos;, &apos;Recipient&apos;,
+    &apos;&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <inlineHelpText>Direction of email message from point of view of related object.</inlineHelpText>
+        <label>Direction</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>EmailMessage__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Email Message</label>
+        <referenceTo>EmailMessage__c</referenceTo>
+        <relationshipLabel>Related Objects</relationshipLabel>
+        <relationshipName>RelatedObjects</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>From__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>From</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Lead__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead</label>
+        <referenceTo>Lead</referenceTo>
+        <relationshipLabel>Email Messages</relationshipLabel>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Name__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( NOT(OR( Account__c  = &apos;&apos;, ISNULL(Account__c))) , HYPERLINK(&apos;/&apos;+Account__c, BLANKVALUE(Account__r.Name, Account__c), &apos;_top&apos;) ,
+ IF( NOT(OR(  Case__c = &apos;&apos;, ISNULL(Case__c))) ,  HYPERLINK(&apos;/&apos;+Case__c, &apos;#&apos;+Case__r.CaseNumber+&apos;: &apos;+Case__r.Subject, &apos;_top&apos;) , 
+ IF( NOT(OR(   Contact__c = &apos;&apos;, ISNULL(Contact__c ))) ,  HYPERLINK(&apos;/&apos;+Contact__c, Contact__r.LastName + &apos;, &apos; +  Contact__r.FirstName, &apos;_top&apos;) , 
+ IF( NOT(OR(   Lead__c = &apos;&apos;, ISNULL(Lead__c ))) ,  HYPERLINK(&apos;/&apos;+Lead__c, Lead__r.LastName + &apos;, &apos; +  Lead__r.FirstName, &apos;_top&apos;) , 
+ IF( NOT(OR(    Opportunity__c = &apos;&apos;, ISNULL(Opportunity__c ))) ,  HYPERLINK(&apos;/&apos;+Opportunity__c, Opportunity__r.Name, &apos;_top&apos;) , 
+IF( NOT(OR(    User__c = &apos;&apos;, ISNULL(User__c ))) ,  HYPERLINK(&apos;/&apos;+User__c, User__r.LastName + &apos;, &apos; + User__r.FirstName, &apos;_top&apos;), 
+IF( NOT(OR(    ObjectName__c = &apos;&apos;, ISNULL(ObjectName__c ))) ,  HYPERLINK(&apos;/&apos;+ObjectId__c, ObjectName__c, &apos;_top&apos;),
+&apos;Unrelated&apos; ) ))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Name</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectId__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object ID</label>
+        <length>18</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectTypeName__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object Type Name</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>ObjectType__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Object Type</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Email Messages</relationshipLabel>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Reason__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Reason</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+EmailMessage__c , BLANKVALUE(EmailMessage__r.SubjectShort__c, &apos;No Subject&apos;) , &apos;_top&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>To__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>To</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Type__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>IF( NOT(OR( Account__c  = &apos;&apos;, ISNULL(Account__c))) , &apos;Account&apos;, 
+ IF( NOT(OR(  Case__c = &apos;&apos;, ISNULL(Case__c))) ,  &apos;Case&apos; , 
+ IF( NOT(OR(   Contact__c = &apos;&apos;, ISNULL(Contact__c ))) ,  &apos;Contact&apos; , 
+ IF( NOT(OR(   Lead__c = &apos;&apos;, ISNULL(Lead__c ))) ,  &apos;Lead&apos; , 
+ IF( NOT(OR(    Opportunity__c = &apos;&apos;, ISNULL(Opportunity__c ))) ,  &apos;Opportunity&apos;, 
+IF( NOT(OR(    User__c = &apos;&apos;, ISNULL(User__c ))) ,  &apos;User&apos;, 
+IF( NOT(OR(    ObjectTypeName__c = &apos;&apos;, ISNULL(ObjectTypeName__c ))) ,  ObjectTypeName__c,
+&apos;Unrelated&apos; ) ))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>User__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>User</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>EmailMessages</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <label>Email Message Related Object</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Account__c</columns>
+        <columns>AccountName__c</columns>
+        <columns>AccountNameValue__c</columns>
+        <columns>Contact__c</columns>
+        <columns>Subject__c</columns>
+        <columns>ObjectType__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000000000}</displayFormat>
+        <label>#</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Email Message Related Objects</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>From__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Subject__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Direction__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Attachments__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>Unmatch</listViewButtons>
+        <listViewButtons>RelatedDelete</listViewButtons>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>RelatedDelete</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)}
+
+var ros = {!GETRECORDIDS( $ObjectType.EmailMessageRelatedObject__c )};
+
+if (ros[0] == null) {
+    alert(&quot;Please select at least one record.&quot;);
+} else {
+    result = sforce.connection.query(&quot;SELECT Id, MME__EmailMessage__c FROM MME__EmailMessageRelatedObject__c WHERE Id in (&apos;&quot;  + ros.join(&quot;&apos;, &apos;&quot;) + &quot;&apos;)&quot;);
+    records = result.getArray(&quot;records&quot;);
+    var ids = [];
+    for (var i = 0; i &lt; records.length; i++) {
+	ids.push(records[i].MME__EmailMessage__c);
+    }
+    if (ids.length &gt; 0) {
+	if (confirm(&quot;Are you sure you want to delete &quot;+ids.length+&quot; record(s)?&quot;)) {
+	    var errors = []; 
+	    var result = sforce.connection.deleteIds(ids); 
+	    if (result &amp;&amp; result.length) {
+		var numFailed = 0;
+		var numSucceeded = 0;
+		for (var i = 0; i &lt; result.length; i++) {
+		    var res = result[i]; 
+		    if (res &amp;&amp; res.success == &apos;true&apos;) {
+			numSucceeded++; 
+		    } else { 
+			var es = res.getArray(&quot;errors&quot;); 
+			if (es.length &gt; 0) { 
+			    errors.push(es[0].message); 
+			}
+			numFailed++; 
+		    }
+		}
+		if (numFailed &gt; 0) { 
+		    alert(&quot;Failed: &quot; + numFailed + &quot;\nSucceeded: &quot; + numSucceeded + &quot; \n Due to: &quot; + errors.join(&quot;\n&quot;)); 
+		} else { 
+		    window.location.reload();
+		}
+	    }
+	}
+    } else {
+	alert(&quot;Requested record(s) is not found.&quot;);
+	window.location.reload();
+    }
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Unmatch</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Unmatch</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.EmailMessageRelatedObject__c)}; 
+
+if (null == records || 0 == records.length) { 
+	alert(&quot;Please select at least one record.&quot;)
+} else if (confirm(&quot;Are you sure you want to unmatch &quot;+records.length+&quot; record(s)?&quot;)) { 
+  	var errors = []; 
+  	var result = sforce.connection.deleteIds(records); 
+  	if (result &amp;&amp; result.length) { 
+    	var numFailed = 0; 
+    	var numSucceeded = 0;
+    	for (var i = 0; i &lt; result.length; i++) { 
+      		var res = result[i];
+      		if (res &amp;&amp; res.success == &apos;true&apos;) { 
+        		numSucceeded++; 
+      		} else { 
+        		var es = res.getArray(&quot;errors&quot;); 
+        		if (es.length &gt; 0) { 
+          			errors.push(es[0].message); 
+        		} 
+        		numFailed++; 
+      		} 
+    	}
+
+    	if (numFailed &gt; 0) {
+      		alert(&quot;Failed to unmatch &quot;+numFailed+&quot; record(s) due to:\n&quot;+(errors.length ? &quot;\t&quot;+errors.join(&quot;\n\t&quot;) : &quot;\tUnknow error&quot;));
+    	} else {
+      		window.location.reload(); 
+    	}
+  	} else {
+    	window.location.reload(); 
+  	}
+}</url>
+    </webLinks>
+</CustomObject>

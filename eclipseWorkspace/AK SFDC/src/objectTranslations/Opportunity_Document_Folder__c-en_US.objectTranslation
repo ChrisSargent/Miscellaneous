@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Opportunity Document Folder</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Opportunity Document Folders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Folder Contains: --></label>
+        <name>Folder_Contains__c</name>
+        <picklistValues>
+            <masterLabel>Job Assessments or Tests</masterLabel>
+            <translation><!-- Job Assessments or Tests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Job Descriptions</masterLabel>
+            <translation><!-- Job Descriptions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Opportunity Document Folders --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Job Document Folder Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

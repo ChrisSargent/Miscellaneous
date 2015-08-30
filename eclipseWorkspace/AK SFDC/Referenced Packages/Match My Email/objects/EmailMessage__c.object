@@ -1,0 +1,368 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>EmailMessages</content>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Visualforce</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <deprecated>false</deprecated>
+    <description>Email message in Match My Email</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>false</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>AttachmentsPlain__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attachments</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Attachments__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Attachments</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Bcc__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Bcc</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Body__c</fullName>
+        <deprecated>false</deprecated>
+        <description>Email Message Body</description>
+        <externalId>false</externalId>
+        <label>Body</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Cc__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Cc</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ContentDigest__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Content Digest</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>FromShort__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>From</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>From__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>From</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MessageID__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Message ID</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>MmeID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <deprecated>false</deprecated>
+        <externalId>true</externalId>
+        <label>MME ID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>RelatedObjectsCount__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Related Objects Count</label>
+        <summaryForeignKey>EmailMessageRelatedObject__c.EmailMessage__c</summaryForeignKey>
+        <summaryOperation>count</summaryOperation>
+        <trackTrending>false</trackTrending>
+        <type>Summary</type>
+    </fields>
+    <fields>
+        <fullName>SubjectLink__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&apos;/&apos;+Id, BLANKVALUE(SubjectShort__c, &apos;No Subject&apos;), &apos;_top&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Subject</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubjectShort__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Subject__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Subject</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>ToShort__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>To</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>To__c</fullName>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>To</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Email Message</label>
+    <listViews>
+        <fullName>AllEmailMessages</fullName>
+        <columns>FromShort__c</columns>
+        <columns>SubjectLink__c</columns>
+        <columns>Date__c</columns>
+        <columns>AttachmentsPlain__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>AllNoMatchEmailMessages</fullName>
+        <columns>FromShort__c</columns>
+        <columns>SubjectLink__c</columns>
+        <columns>Date__c</columns>
+        <columns>Attachments__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>RelatedObjectsCount__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>All No Match</label>
+    </listViews>
+    <listViews>
+        <fullName>MyNoMatchEmailMessages</fullName>
+        <columns>FromShort__c</columns>
+        <columns>SubjectLink__c</columns>
+        <columns>Date__c</columns>
+        <columns>Attachments__c</columns>
+        <filterScope>Mine</filterScope>
+        <filters>
+            <field>RelatedObjectsCount__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <label>My No Match</label>
+    </listViews>
+    <listViews>
+        <fullName>My_Email_Messages</fullName>
+        <columns>FromShort__c</columns>
+        <columns>SubjectLink__c</columns>
+        <columns>Date__c</columns>
+        <columns>AttachmentsPlain__c</columns>
+        <filterScope>Mine</filterScope>
+        <label>My</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000000000}</displayFormat>
+        <label>#</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Email Messages</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>FromShort__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>SubjectLink__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>AttachmentsPlain__c</customTabListAdditionalFields>
+        <excludedStandardButtons>New</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <listViewButtons>EmailMessageDelete</listViewButtons>
+        <lookupDialogsAdditionalFields>FromShort__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>SubjectLink__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>AttachmentsPlain__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FromShort__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>SubjectLink__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>AttachmentsPlain__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>Date__c</searchFilterFields>
+        <searchFilterFields>SubjectLink__c</searchFilterFields>
+        <searchFilterFields>OWNER.ALIAS</searchFilterFields>
+        <searchFilterFields>OWNER.FIRST_NAME</searchFilterFields>
+        <searchFilterFields>OWNER.LAST_NAME</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER.ALIAS</searchFilterFields>
+        <searchFilterFields>CREATEDBY_USER</searchFilterFields>
+        <searchFilterFields>CREATED_DATE</searchFilterFields>
+        <searchFilterFields>MmeID__c</searchFilterFields>
+        <searchFilterFields>ContentDigest__c</searchFilterFields>
+        <searchResultsAdditionalFields>FromShort__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>SubjectLink__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>AttachmentsPlain__c</searchResultsAdditionalFields>
+        <searchResultsCustomButtons>EmailMessageDelete</searchResultsCustomButtons>
+    </searchLayouts>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>EmailMessageDelete</fullName>
+        <availability>online</availability>
+        <description>Delete Email Message records</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/9.0/connection.js&quot;)} 
+
+var records = {!GETRECORDIDS( $ObjectType.EmailMessage__c )}; 
+
+if (null == records || 0 == records.length) { 
+	alert(&quot;Please select at least one record.&quot;)
+} else if (confirm(&quot;Are you sure you want to delete &quot;+records.length+&quot; record(s)?&quot;)) { 
+  	var errors = []; 
+  	var result = sforce.connection.deleteIds(records); 
+  	if (result &amp;&amp; result.length) { 
+    	var numFailed = 0; 
+    	var numSucceeded = 0;
+    	for (var i = 0; i &lt; result.length; i++) { 
+      		var res = result[i];
+      		if (res &amp;&amp; res.success == &apos;true&apos;) { 
+        		numSucceeded++; 
+      		} else { 
+        		var es = res.getArray(&quot;errors&quot;); 
+        		if (es.length &gt; 0) { 
+          			errors.push(es[0].message); 
+        		} 
+        		numFailed++; 
+      		} 
+    	}
+
+    	if (numFailed &gt; 0) {
+      		alert(&quot;Failed to delete &quot;+numFailed+&quot; record(s) due to:\n&quot;+(errors.length ? &quot;\t&quot;+errors.join(&quot;\n\t&quot;) : &quot;\tUnknow error&quot;));
+    	} else {
+      		window.location.reload(); 
+    	}
+  	} else {
+    	window.location.reload(); 
+  	}
+}</url>
+    </webLinks>
+</CustomObject>

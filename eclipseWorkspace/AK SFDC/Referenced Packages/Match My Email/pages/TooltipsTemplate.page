@@ -1,0 +1,14 @@
+<apex:page >
+<div style="visibility:hidden; display:none;">
+	<div class="mme_body_tips" id="mmeBodyTips">
+		<div class="mme-tips-header">
+			<div class="mme-close-button-back">
+				<div class="mme-close-button"></div>
+			</div>
+		</div>
+		<div id="mmeTipsContent" class="mme-tips-content">
+			<img src="{!URLFOR($Resource.Common, '/img/loader.gif')}"/>
+		</div>
+	</div>
+</div>
+</apex:page>

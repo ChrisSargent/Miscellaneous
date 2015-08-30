@@ -1,0 +1,321 @@
+<apex:page controller="wbsendit.OptionsController" showHeader="true" tabStyle="SendIt_Options__tab" action="{!runOAuth}" standardStylesheets="false">
+
+<style>
+.button {
+  background: #d93434;
+  background-image: -webkit-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -moz-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -ms-linear-gradient(top, #d93434, #b82b2b);
+  background-image: -o-linear-gradient(top, #d93434, #b82b2b);
+  background-image: linear-gradient(to bottom, #d93434, #b82b2b);
+  -webkit-border-radius: 7;
+  -moz-border-radius: 7;
+  border-radius: 7px;
+  font-family: Arial;
+  color: #ffffff !important;
+  font-size: 15px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: #fc3c3c;
+  text-decoration: none;
+}
+</style>
+
+  <apex:stylesheet value="{!URLFOR($Resource.wbsendit__SendItAssets, 'css/style.css')}"/>
+
+  <apex:sectionHeader title="Campaign Monitor Settings for Salesforce" subtitle="Settings" help="http://support.beaufort12.com/customer/portal/articles/1403424" />
+
+
+  <apex:pageblock mode="{!inEditLoginMode}" title="Administrator Settings" rendered="{!NOT(IsAdmin)}" id="NoAdminSettings">
+    <apex:outputlabel >You need to have 'Modify All Data' privileges in order to edit the 'SendIt' settings page. Your profile is set to '{!usrProfileName}'.</apex:outputlabel>
+  </apex:pageblock>
+
+  <!-- Connection Settings -->
+  <apex:form >
+    <apex:pageblock mode="{!inEditLoginMode}" title="Campaign Monitor Connection Settings" rendered="{!IsAdmin}" id="AdminSettings">
+      <apex:pageMessages escape="false" />
+
+      <apex:pageBlockButtons location="bottom" >
+        <apex:commandButton id="idSaveLoginDetails" value="Save" action="{!saveLoginDetails}" rerender="AdminSettings,AdminSettingsRefresh" rendered="{!inEditLoginMode}" />
+        <apex:commandButton id="idCancelLoginDetails" value="Cancel" action="{!cancelLoginDetails}" rerender="AdminSettings" rendered="{!inEditLoginMode}" />
+        <apex:commandButton id="idEditLoginDetails" value="Edit" action="{!switchLoginEditMode}" rerender="AdminSettings" rendered="{!AND(cmAuthState != 'securityNone',inEditLoginMode != true)}" />
+        <apex:commandButton id="idDisconnect" value="Disconnect" action="{!ResetConnection}" rendered="{!AND(cmAuthState != 'securityNone',inEditLoginMode != true)}" />
+      </apex:pageBlockButtons>
+
+      <!-- OAuth Security -->
+      <apex:PageBlockSection columns="2" collapsible="true" rendered="{!cmAuthState == 'securityNone'}">
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel ></apex:outputlabel>
+          <apex:outputPanel styleClass="requiredInput" layout="block">
+            <apex:outputPanel style="padding:5px;" layout="block" />
+            <apex:commandLink action="{!connectViaOAuth}" id="idConnectViaOAuth"  styleClass="button" value="Connect with Campaign Monitor"/><br/><br/>
+            <apex:inputCheckBox value="{!isCMFullClientUser}" title="Check this box if you need to connect with a 'Full Client Access' Campaign Monitor user." id="accessCheckbox"/>
+            <apex:outputLabel value="Not a Campaign Monitor administrator" for="accessCheckbox" style="color:grey"/>
+          </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">
+            Authorise Salesforce to connect with Campaign Monitor via OAuth.<br/>
+            See: <a href="http://support.beaufort12.com/customer/portal/articles/1403424" target="_blank">Installation Guide</a>
+          </apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+      <!-- Show client list -->
+      <apex:PageBlockSection columns="2" title="Client Details" collapsible="true" rendered="{!AND(IsAdmin,cmAuthState != 'securityNone')}" >
+        <apex:pageBlockSectionItem rendered="{!cmAuthState != 'securityNone'}">
+          <apex:outputlabel >Client</apex:outputlabel>
+          <apex:outputPanel styleClass="requiredInput" layout="block">
+            <apex:selectCheckboxes id="OptionsController" value="{!clientSites}" layout="pageDirection" title="Clients" disabled="{!NOT(inEditLoginMode)}">
+              <apex:selectOptions value="{!cmclients}"></apex:selectOptions>
+            </apex:selectCheckboxes>
+          </apex:outputPanel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem rendered="{!cmAuthState != 'securityNone'}">
+          <apex:outputlabel style="color:grey">Select the clients you would like to connect Campaign Monitor with Salesforce.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+    </apex:pageblock>
+  </apex:form>
+
+  <!-- Refresh Settings -->
+  <apex:form >
+
+    <apex:pageblock mode="{!adminModeRefresh}" title="Refresh Settings" rendered="{!AND(IsAdmin,cmAuthState != 'securityNone')}" id="AdminSettingsRefresh">
+      <apex:pageMessages escape="false"/>
+
+      <apex:actionPoller action="{!progressBar}" reRender="jobprogress" interval="5" timeout="20000" enabled="{!progressBarVisible}" />
+      <apex:PageBlockSection columns="2" showHeader="false"  id="jobprogress" >
+        <apex:pageblockSectionItem rendered="{!progressBarVisible}">
+          <apex:outputlabel >Job status</apex:outputlabel>
+            <div class="progress"><span class="blue" style="width: {!progressCount}%;"><span>{!progressCount}%</span></span></div>
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem rendered="{!progressBarVisible}">
+          <apex:outputlabel id="idProgressBarJobName">{!runningJobName}</apex:outputlabel>
+        </apex:pageblockSectionItem>
+      </apex:PageBlockSection>
+
+      <apex:pageBlockButtons location="bottom">
+        <apex:commandButton id="idSaveRefreshSettings" value="Save" action="{!saveRefreshSettings}" rerender="AdminSettingsRefresh" rendered="{!adminModeRefresh == 'editRefresh'}" />
+        <apex:commandButton id="idCancelRefreshSettings" value="Cancel" action="{!cancelRefreshSettings}" rerender="AdminSettingsRefresh" rendered="{!adminModeRefresh == 'editRefresh'}" />
+        <apex:commandButton id="idEditRefreshSettings" value="Edit" action="{!switchAdminModeRefresh}" rerender="AdminSettingsRefresh" rendered="{!adminModeRefresh != 'editRefresh'}" />
+        <apex:commandButton id="idForceRefreshSubscribers" value="Sync Subscribers" action="{!ForceRefreshSubscribers}" rerender="AdminSettingsRefresh" />
+        <apex:commandButton id="idForceRefreshCampaigns" value="Sync Tracking Stats" action="{!ForceRefreshCampaigns}" rerender="AdminSettingsRefresh" />
+      </apex:pageBlockButtons>
+      <apex:PageBlockSection columns="2" title="Refresh Settings" collapsible="true">
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Connector sync frequency</apex:outputlabel>
+          <apex:selectList id="OptionsController" value="{!frequency}" size="1" title="Frequency" disabled="{!adminModeRefresh != 'editRefresh'}">
+            <apex:selectOptions value="{!frequencies}"></apex:selectOptions>
+          </apex:selectList>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Frequency to sync between Salesforce and Campaign Monitor.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Don’t sync tracking statistics</apex:outputlabel>
+          <apex:inputCheckBox value="{!syncCampaigns}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Only sync Subscriber details. See: <a href="http://support.beaufort12.com/customer/portal/articles/1403947" target="_blank">Managing Salesforce storage</a></apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Enable autoresponders</apex:outputlabel>
+          <apex:inputCheckBox value="{!enableAutoresponders}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey"><a href="http://support.beaufort12.com/customer/portal/articles/1450647" target="_blank">Enable autoresponders</a>.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Update Salesforce Campaign statistics</apex:outputlabel>
+          <apex:inputCheckBox value="{!updateSalesforceCampaigns}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Update <a href="http://support.beaufort12.com/customer/portal/articles/1640666" target="_blank">Salesforce campaign statistics.</a></apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+      <apex:PageBlockSection columns="2" title="Last Run Dates" collapsible="true">
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Last sync for subscribers</apex:outputlabel>
+          <apex:inputText value="{!lastRunSubcribers}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel style="color:grey">This is the last time the sync job ran for subscribers.</apex:outputlabel>
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Last sync for tracking statistics</apex:outputlabel>
+          <apex:inputText value="{!lastRunCampaigns}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel style="color:grey">This is the last time the sync job ran for tracking statistics.</apex:outputlabel>
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Retain email history (days)</apex:outputlabel>
+          <apex:inputText value="{!campaignActivityDays}" disabled="{!adminModeRefresh != 'editRefresh'}" style="width:150px" />
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel style="color:grey">Number of days to <a href="http://support.beaufort12.com/customer/portal/articles/1403947"  target="_blank">retain email history</a> in Salesforce.</apex:outputlabel>
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel >Select email types to sync</apex:outputlabel>
+          <apex:outputPanel styleClass="requiredInput" layout="block">
+            <apex:selectCheckboxes id="OptionsController" value="{!emailActivityStatuses}" layout="lineDirection" title="Email Activity Statuses" disabled="{!adminModeRefresh != 'editRefresh'}">
+              <apex:selectOptions value="{!cmActivityTypes}"></apex:selectOptions>
+            </apex:selectCheckboxes>
+          </apex:outputPanel>
+        </apex:pageblockSectionItem>
+        <apex:pageblockSectionItem >
+          <apex:outputlabel style="color:grey">Select which <a href="http://support.beaufort12.com/customer/portal/articles/1464582"  target="_blank">email activity types to sync</a> with Salesforce.</apex:outputlabel>
+        </apex:pageblockSectionItem>
+      </apex:PageBlockSection>
+    </apex:pageblock>
+  </apex:form>
+
+
+  <apex:form >
+
+    <apex:pageblock title="General" rendered="{!AND(IsAdmin,cmAuthState != 'securityNone')}" id="AdminSettingsGeneral">
+
+      <!-- General Section -->
+      <apex:PageBlockSection columns="2" title="General" collapsible="true">
+
+        <apex:pageBlockSectionItem >
+          <apex:commandLink action="{!displayNewSubscriberRules}" id="idNewSubscriberRules"  value="Manage new subscriber rules..."/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Manage how <a href="http://support.beaufort12.com/customer/portal/articles/1608705">new subscribers</a> are treated when added via Campaign Monitor.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:commandLink action="{!manageEmailTemplates}" id="idManageTemplates"  value="Manage email templates..."/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Manage Campaign Monitor <a href="https://www.campaignmonitor.com/canvas/">email templates</a> (import, edit etc).</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:image url="{!URLFOR($Resource.wbsendit__SendItAssets, 'img/Download_on_the_App_Store_Badge_US-UK_135x40.png')}" onclick="window.open('http://itunes.apple.com/app/id855095172?ls=1&mt=8')"  style="cursor: pointer;"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Download <a href="https://www.campaignmonitor.com/monitor/">Monitor</a>, the Campaign Monitor iPhone App.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+      <!-- Advanced Section -->
+      <apex:PageBlockSection columns="2" title="Advanced Sync Settings" collapsible="true">
+        <apex:pageBlockSectionItem >
+          <apex:commandLink action="{!RefreshConfig}" id="idResyncConfig"  value="Re-sync all configuration data"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Re-sync connector configuration data (susbcriber lists, Campaign lists etc).</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:commandLink action="{!ResetSubscribers}" id="idResyncSubscribers"  value="Re-sync all subscribers"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Re-sync all subscribers with Salesforce.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:commandLink action="{!ResetCampaigns}" id="idResyncCampaigns"  value="Re-sync all tracking stats"/>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Re-sync all tracking statistics with Salesforce.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+      <!-- Billing Section -->
+      <apex:PageBlockSection columns="2" title="Billing" collapsible="true">
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Active subscribers</apex:outputlabel>
+          <apex:outputlabel >{!numSubscribers}</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">This is the total number of all active subscribers across all subscriber lists.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Estimated monthly charge</apex:outputlabel>
+          <apex:outputlabel >{!monthlyCharge}</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Estimated monthly connector costs (USD). See: <a href="http://support.beaufort12.com/customer/portal/articles/1116501" target="_blank">Connector costs</a></apex:outputlabel>
+        </apex:pageBlockSectionItem>
+      </apex:PageBlockSection>
+
+    </apex:pageblock>
+
+  </apex:form>
+
+  <!-- Advanced Options Settings -->
+  <apex:form >
+    <apex:pageblock mode="{!inEditLoginMode}" title="Advanced Options" rendered="{!AND(IsAdmin,cmAuthState != 'securityNone')}" id="AdminSettingsOther">
+      <apex:pageMessages escape="false" />
+      <apex:pageBlockButtons location="bottom">
+        <apex:commandButton id="idSaveOtherSettings" value="Save" action="{!saveOtherSettings}" rerender="AdminSettingsOther" rendered="{!isOtherEditMode}" />
+        <apex:commandButton id="idCancelOtherSettings" value="Cancel" action="{!cancelOtherSettings}" rerender="AdminSettingsOther" rendered="{!isOtherEditMode}" />
+        <apex:commandButton id="idEditOtherSettings" value="Edit" action="{!editOtherSettings}" rerender="AdminSettingsOther" rendered="{!NOT(isOtherEditMode)}" />
+      </apex:pageBlockButtons>
+
+      <!-- General Section -->
+      <apex:PageBlockSection columns="2" title="General" collapsible="true">
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Enable Chatter</apex:outputlabel>
+          <apex:inputCheckBox value="{!enableChatter}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Enable chatter notifications for automatic subscriptions.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Unsubscribe with Email Opt Out</apex:outputlabel>
+          <apex:inputCheckBox value="{!enableEmailOptOut}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Triggers unsubscribe when 'Email Opt Out' field is checked on lead/contact.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Prevent subscribes with Email Opt Out</apex:outputlabel>
+          <apex:inputCheckBox value="{!enableEmailOptOutUnsubscribe}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">When 'Email Opt Out' is checked, emails will not be subscribed to any list.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Show Campaign Monitor Tabs</apex:outputlabel>
+          <apex:inputCheckBox value="{!frameStyle}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Display additional Campaign Monitor tabs.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Disable Bulk Actions</apex:outputlabel>
+          <apex:inputCheckBox value="{!disableBulkActions}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Prevent sendIT triggers from firing when performing "Bulk" operations.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel >Disable All Actions</apex:outputlabel>
+          <apex:inputCheckBox value="{!disableAllActions}" disabled="{!NOT(isOtherEditMode)}" style="width:150px" />
+        </apex:pageBlockSectionItem>
+        <apex:pageBlockSectionItem >
+          <apex:outputlabel style="color:grey">Prevent sendIT triggers from firing when performing ANY operations.</apex:outputlabel>
+        </apex:pageBlockSectionItem>
+
+      </apex:PageBlockSection>
+
+    </apex:pageblock>
+  </apex:form>
+
+
+</apex:page>

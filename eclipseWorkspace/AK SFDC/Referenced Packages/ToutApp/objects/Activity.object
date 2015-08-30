@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Email_with_Tout</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Email with Tout</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>var u = &quot;https://www.toutapp.com/pitches/new?name={!Contact.Name}&amp;email={!Contact.Email}&amp;salesforce_contact_id={!Contact.Id}}&amp;force_bookmarklet=true&amp;style=salesforce&quot;; var w = window; w.open(u,&apos;Tout&apos;,&apos;scrollbars=1,status=1,width=762,height=&apos; + ( w.screen.height &lt; 970 ? w.screen.height : 970))</url>
+    </webLinks>
+</CustomObject>

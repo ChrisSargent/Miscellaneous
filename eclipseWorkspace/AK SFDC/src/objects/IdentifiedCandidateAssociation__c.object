@@ -1,0 +1,836 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fieldSets>
+        <fullName>Candidate_Fields</fullName>
+        <description>On the New Candidate VF page</description>
+        <displayedFields>
+            <field>Responded__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Needs_Further_Action__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Source__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <label>Candidate_Fields</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Candidate_Wiz_ICA_Akascia</fullName>
+        <description>Candidate Wizard - Identified Candidate Association - Akascia Section</description>
+        <displayedFields>
+            <field>Akascia_Suitability_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Primary_Akascia_Objection__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Akascia_Other_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Candidate Wiz - ICA - Akascia</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Candidate_Wiz_ICA_Candidate</fullName>
+        <description>Candidate Wizard - Identified Candidate Association - Candidate Section</description>
+        <displayedFields>
+            <field>Candidate_Interest_Level__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Primary_Candidate_Objection__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>true</isRequired>
+        </displayedFields>
+        <displayedFields>
+            <field>Candidate_Other_Reason__c</field>
+            <isFieldManaged>false</isFieldManaged>
+            <isRequired>false</isRequired>
+        </displayedFields>
+        <label>Candidate Wiz - ICA - Candidate</label>
+    </fieldSets>
+    <fieldSets>
+        <fullName>Candidate_Wiz_ICA_Client</fullName>
+        <description>Candidate Wizard - Identified Candidate Association - Akascia Section</description>
+        <label>Candidate Wiz - ICA - Client</label>
+    </fieldSets>
+    <fields>
+        <fullName>Account__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Opportunity__r.AccountId,  Opportunity__r.Account.Name, &apos;_self&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Ak_IdentID__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>Ak_IdentID</label>
+        <length>16</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>Akascia_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Akascia Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Akascia_Other_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Akascia Other Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Akascia_Suitability_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Akascia Interest Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Walking Placement!</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Okay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meh...</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nah</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Candidate Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Candidate_Interest_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Candidate Interest Level</label>
+        <picklist>
+            <controllingField>Responded__c</controllingField>
+            <picklistValues>
+                <fullName>Loves it!</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Okay</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meh...</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nah</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_Name__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Candidate Name</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Identified Opportunities</relationshipLabel>
+        <relationshipName>Contact</relationshipName>
+        <required>true</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Candidate_Other_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Candidate Other Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate_Stage__c</fullName>
+        <defaultValue>&quot;01.Identified&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Candidate Stage</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Comments</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Client_Interest_Level__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Interest Level</label>
+        <picklist>
+            <controllingField>Submitted_to_Client__c</controllingField>
+            <picklistValues>
+                <fullName>Hot to Trot!</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Okay</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meh...</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Nah</fullName>
+                <controllingFieldValues>checked</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Client_Other_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Other Reason</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Interviewed_by_Client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Interviewed by Client?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Needs_Further_Action__c</fullName>
+        <defaultValue>true</defaultValue>
+        <externalId>false</externalId>
+        <label>Needs Further Action?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(Opportunity__r.StageName)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>Identified Candidates</relationshipLabel>
+        <relationshipName>Opportunity</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Primary_Akascia_Objection__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Akascia Objection</label>
+        <picklist>
+            <controllingField>Akascia_Suitability_Level__c</controllingField>
+            <picklistValues>
+                <fullName>Already been Approached</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Chased but no Response</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Culture Fit</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Level of Experience</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Market Knowledge</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salary</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Expertise</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seniority</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Expertise</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unstable Work History</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Candidate_Objection__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Candidate Objection</label>
+        <picklist>
+            <controllingField>Candidate_Interest_Level__c</controllingField>
+            <picklistValues>
+                <fullName>Accepted a Role Elsewhere</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company Reputation</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company too Big</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company too Small / Young / Unstable</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Company not as Appealing as Current Employer</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Location</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Not Looking for a Move Right Now</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role too Commercial</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role too Junior</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role too Senior</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Role too Technical</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salary too Low</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sector not Interesting</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Client_Objection__c</fullName>
+        <externalId>false</externalId>
+        <label>Primary Client Objection</label>
+        <picklist>
+            <controllingField>Client_Interest_Level__c</controllingField>
+            <picklistValues>
+                <fullName>Culture Fit</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Level of Experience</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Market Knowledge</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Salary</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Sales Expertise</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Seniority</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Technical Expertise</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Unstable Work History</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <controllingFieldValues>Meh...</controllingFieldValues>
+                <controllingFieldValues>Nah</controllingFieldValues>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Responded__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>Only Select if the Candidate has Responded. This field cannot be changed once it&apos;s set to &quot;True&quot;.</inlineHelpText>
+        <label>Responded?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Source__c</fullName>
+        <externalId>false</externalId>
+        <label>Source</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Direct Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Database Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Akascia.com Application</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Linkedin Application</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Twitter Application</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Facebook Application</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other Application</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referral from Contact</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outsourced Search</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other 3rd Party</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/?sort=&quot; &amp; Candidate_Stage__c, &quot;&quot;, &apos;_blank&apos;) &amp; 
+
+HYPERLINK(&quot;/&quot; &amp; Id, Candidate_Stage__c, &apos;_blank&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Stage (Click to Update)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Still_In_Client_Process__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <inlineHelpText>This field will automatically update when you change the &quot;Stage&quot; but can still be edited manually.</inlineHelpText>
+        <label>Still In Client Process?</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Submitted_to_Client__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Submitted to Client?</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>bh_JobResponseID__c</fullName>
+        <externalId>true</externalId>
+        <label>bh_JobResponseID</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Identified Candidate Association</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Stage__c</columns>
+        <columns>Candidate_Name__c</columns>
+        <columns>Opportunity__c</columns>
+        <columns>Candidate_Stage__c</columns>
+        <columns>Responded__c</columns>
+        <columns>Submitted_to_Client__c</columns>
+        <columns>Interviewed_by_Client__c</columns>
+        <columns>Still_In_Client_Process__c</columns>
+        <columns>Needs_Further_Action__c</columns>
+        <columns>CREATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>IdentID{000000}</displayFormat>
+        <label>Identified Candidate Association ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Identified Candidate Associations</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Candidate_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATEDBY_USER</customTabListAdditionalFields>
+        <excludedStandardButtons>ChangeOwner</excludedStandardButtons>
+        <excludedStandardButtons>Accept</excludedStandardButtons>
+        <lookupDialogsAdditionalFields>Candidate_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Candidate_Name__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Opportunity__c</lookupPhoneDialogsAdditionalFields>
+        <searchFilterFields>OBJECT_ID</searchFilterFields>
+        <searchFilterFields>NAME</searchFilterFields>
+        <searchFilterFields>Opportunity__c</searchFilterFields>
+        <searchFilterFields>Candidate_Name__c</searchFilterFields>
+        <searchResultsAdditionalFields>Candidate_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <validationRules>
+        <fullName>Akascia_Other_Reason_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL( Primary_Akascia_Objection__c , &quot;Other&quot;),  Akascia_Other_Reason__c = &quot;&quot; )</errorConditionFormula>
+        <errorDisplayField>Akascia_Other_Reason__c</errorDisplayField>
+        <errorMessage>Please insert your &quot;Other&quot; reason.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Candidate_Other_Reason_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(Primary_Candidate_Objection__c , &quot;Other&quot;),    Candidate_Other_Reason__c = &quot;&quot; )</errorConditionFormula>
+        <errorDisplayField>Candidate_Other_Reason__c</errorDisplayField>
+        <errorMessage>Please insert your &quot;Other&quot; reason.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Not_to_Retainer</fullName>
+        <active>true</active>
+        <errorConditionFormula>Opportunity__r.RecordTypeId = &quot;012b0000000TsQG&quot;</errorConditionFormula>
+        <errorDisplayField>Opportunity__c</errorDisplayField>
+        <errorMessage>You can not submit candidates to retainers. Please try again using the actual Assignment Opportunity.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Client_Other_Reason_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(ISPICKVAL(Primary_Client_Objection__c , &quot;Other&quot;),   Client_Other_Reason__c = &quot;&quot; )</errorConditionFormula>
+        <errorDisplayField>Client_Other_Reason__c</errorDisplayField>
+        <errorMessage>Please insert your &quot;Other&quot; reason.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Change_to_Interview_by_Client</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+PRIORVALUE(Interviewed_by_Client__c) = True,
+ISCHANGED(Interviewed_by_Client__c)
+)</errorConditionFormula>
+        <errorDisplayField>Interviewed_by_Client__c</errorDisplayField>
+        <errorMessage>You cannot change the &quot;Interviewed by Client?&quot; field, once it&apos;s been set to &quot;True&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Change_to_Responded</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+PRIORVALUE( Responded__c )=True,
+ISCHANGED(Responded__c )
+)</errorConditionFormula>
+        <errorDisplayField>Responded__c</errorDisplayField>
+        <errorMessage>You cannot change the &quot;Responsed?&quot; field once it&apos;s been set to &quot;True&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_Change_to_Submitted_to_Client</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(
+PRIORVALUE(Submitted_to_Client__c ) = True,
+ISCHANGED(Submitted_to_Client__c )
+)</errorConditionFormula>
+        <errorDisplayField>Submitted_to_Client__c</errorDisplayField>
+        <errorMessage>You cannot manually change the &quot;Submitted to Client?&quot; field, once it&apos;s been set to &quot;True&quot;.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Identify_as_Candidate</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Identify as Candidate</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/a00/e?CF00Nb00000047Yz0={!Contact.Name}&amp;CF00Nb00000047Yz0_lkid={!Contact.Id}&amp;retURL=%2F{!IdentifiedCandidateAssociation__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Stage</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Stage</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/setup/ui/recordtypeselect.jsp?ent=01Ib0000000Vlmv&amp;retURL=%2F{!IdentifiedCandidateAssociation__c.Id}&amp;save_new_url=%2Fa0f%2Fe%3FCF00Nb0000004kUvx%3D{!IdentifiedCandidateAssociation__c.Name}%26CF00Nb0000004kUvx_lkid%3D{!IdentifiedCandidateAssociation__c.Id}%26retURL%3D%252F{!IdentifiedCandidateAssociation__c.Id}%26saveURL%3D%252F{!IdentifiedCandidateAssociation__c.Id}</url>
+    </webLinks>
+</CustomObject>

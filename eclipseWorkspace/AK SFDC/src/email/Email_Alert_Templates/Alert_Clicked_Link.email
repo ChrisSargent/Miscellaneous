@@ -1,0 +1,15 @@
+<p>Someone has just clicked on a link in one of our email campaigns! Here are the details:</p>
+
+<p><strong>Contact:</strong> <a href="https://akascia.my.salesforce.com/{!wbsendit__Campaign_Activity__c.wbsendit__ContactId__c}" target="_blank">{!wbsendit__Campaign_Activity__c.wbsendit__Contact__c}</a></p>
+
+<p><strong>Account:</strong> <a href="https://akascia.my.salesforce.com/{!wbsendit__Campaign_Activity__c.Account_ID__c}" target="_blank">{!wbsendit__Campaign_Activity__c.Account__c}</a></p>
+
+<p><strong>Link:</strong> {!wbsendit__Campaign_Activity__c.wbsendit__URL_Clicked__c}</p>
+
+<p><strong>Campaign:</strong> {!wbsendit__Campaign_Activity__c.Name}</p>
+
+<p><strong>When:</strong> {!wbsendit__Campaign_Activity__c.wbsendit__Activity_Date__c}</p>
+
+<p><strong>Owner:</strong> {!wbsendit__Campaign_Activity__c.Contact_Owner__c}</p>
+
+If the contact is owned by you, please call them within 24 hours. If they are not owned by you, then this email is only FYI - you don't need to do anything.

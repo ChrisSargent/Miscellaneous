@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomTab xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>&quot;Match My Email&quot; service</description>
+    <frameHeight>600</frameHeight>
+    <hasSidebar>false</hasSidebar>
+    <label>Match My Email</label>
+    <mobileReady>false</mobileReady>
+    <motif>Custom23: Mail</motif>
+    <url>https://matchmyemail.com/?rm=login&amp;type=sf&amp;sf_org={!Organization.Id}&amp;sf_user={!User.Id}&amp;sf_session={!API.Session_ID}</url>
+    <urlEncodingKey>UTF-8</urlEncodingKey>
+</CustomTab>

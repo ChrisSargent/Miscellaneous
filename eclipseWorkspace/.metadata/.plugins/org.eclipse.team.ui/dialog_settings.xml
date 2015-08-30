@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="SynchronizeViewSettings">
+		<item value="1422556974387" key="lastactiveparticipant_sec_id"/>
+		<item value="com.salesforce.ide.ui.sync.componentSyncParticipant" key="lastactiveparticipant_id"/>
+		<item value="false" key="linkWithEditor"/>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1418049032785">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1418049977557">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1418050066831">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1421152089911">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1422556097161">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1421152252819">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+		<section name="com.salesforce.ide.ui.sync.componentSyncParticipant.1422556974387">
+			<item value="org.eclipse.team.ui.modelprovider_compressedfolders" key="org.eclipse.team.ui.P_LAST_MODELPROVIDER"/>
+		</section>
+	</section>
+</section>

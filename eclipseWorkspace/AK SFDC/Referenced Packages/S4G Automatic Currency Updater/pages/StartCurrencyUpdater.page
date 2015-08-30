@@ -1,0 +1,140 @@
+<apex:page showheader="true" title="S4G Help" controller="s4g_currencies.TimeController" sidebar="true">
+    <apex:stylesheet value="{!URLFOR($Resource.s4g_currencies__styleR)}"/>
+
+    		<div style='float:left;width:450px'>
+    			<apex:sectionHeader title="by S4G Consulting" subtitle="S4G Currency Updater " />
+    		</div>
+    		<div style='float:right'><img src='{!URLFOR($Resource.S4G)}'  /></div>
+
+    <apex:pageBlock title=" S4G Currency Updater" mode="detail">
+
+        
+  
+    <apex:pageBlockSection title=" S4G Currency Updater" collapsible="false">
+        <div Id="CUInfo"><i>S4G Currency Updater</i> lets you automatically update the exchange rates for your organization's currencies on a daily basis. 
+        You can choose the time of the day when the update will happen.<p> 
+        To correctly configure this application, please follow the steps on the <i>'Settings'</i> and <i>'Advanced'</i> sections below.</p>
+
+        </div>
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="Settings" id="pBSSettings">
+        <script>twistSection(document.getElementById('img_{!$Component.pBSSettings}'));</script>
+        <div Id="settingsInfo">
+
+            <div class ="title">System Requirements</div>
+            <p style="text-align: justify">
+                You need an <b>Enterprise Edition</b> organization with <b>Multi-currency</b> and <b>Dated Exchange Rate</b> enabled. 
+                To get Multi-currency enabled, you must create a case or contact Salesforce.com, as it is a provisioned feature it 
+                must be enabled by them. Once this has been done, you must enable <i>Dated Exchange Rate</i> yourself (check the 
+                standard help if you need assistance with this).
+            </p>
+            </div>
+			<p></p>
+			<p></p> 
+            <div class ="title">Setting up and running <i>S4G Currency Updater</i></div>
+            <div class="contenido">
+            <p style="text-align: justify">
+               <b>1)</b> In the <i>Start Currency Updater</i> section below you can specify the exact time (in your local Timezone) 
+				you want the update to happen on a daily basis. After setting the time you must click the <b>Change now!</b> 
+				button for the process to be scheduled (or rescheduled if you have already configured this and just want 
+				to change the update time). <p>Please note that the process can only run once per day so if you are changing 
+				the time after the process has already run that day, it won't run until the specified time on the following day.</p>                 
+
+                                         <p></p>
+                <div style='margin-left: 130px;'><img src='{!URLFOR($Resource.Picklists)}'  /></div>
+            </p> 
+            <p style="text-align: justify">
+              <b>2)</b> To the right you will see information about the next time and date the <i>S4G Currency Updater</i> process will 
+              be launched. If it's the first time you use <i>S4G Currency Updater</i> the time and date messages will show the text <b>'Not Launched'</b>.
+                                         <p></p>
+                <div style='margin-left: 130px;'><img src='{!URLFOR($Resource.Info)}'  /></div>              
+            </p>
+            </div>
+                                                         
+    </apex:pageBlockSection>
+
+    <apex:pageBlockSection title="Start Currency Updater" columns="2" >
+    
+    <apex:pageBlockSectionItem >
+        <apex:form >
+            Please, set the time you want the <i>S4G Currency Updater</i> process to start every day.
+            <div id="labelSeleccion">
+                    <p>
+
+                    <h1 style="text-align:center;">  
+                    <apex:outputLabel value="Hour"/>
+                    </h1>
+                    <h1 style="text-align:center;margin-left: 20px;"> 
+                    <apex:outputLabel value="Minute"/>
+                    </h1>
+                    </p>
+                    </div>
+                    <div id="seleccion">
+                <apex:selectList size="1" value="{!hour}">
+                    <apex:selectOptions value="{!hoursSelectedList}"/>
+                </apex:selectList>:                
+                <apex:selectList size="1" value="{!minute}">
+                    <apex:selectOptions value="{!minutesSelectedList}"/>
+                </apex:selectList> 
+                </div>
+                <div id='botonChange'><apex:commandButton value="Change now!" action="{!changeTime}"/></div>
+    
+
+ 
+            </apex:form>
+
+</apex:pageBlockSectionItem>
+
+
+<apex:pageBlockSectionItem >
+
+  <apex:panelGrid columns="2"> 
+  
+    <apex:outputText value="Currency Updater Information" style="font-weight: bold;font-size:14px;"/>
+    <p>
+    <apex:outputText value="" style="font-weight: bold"/>      
+    </p>
+    <apex:outputText value="Next time:" style="font-weight: bold"/>
+    <apex:outputText value="{!currentTime}" style="font-weight: normal"/>
+    <apex:outputText value="Next date:" style="font-weight: bold"/>
+    <apex:outputText value="{!currentDate}" style="font-weight: normal"/>   
+  </apex:panelGrid>
+  
+</apex:pageBlockSectionItem>            
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="Advanced" id="pBSAdvanced">
+        <script>twistSection(document.getElementById('img_{!$Component.pBSAdvanced}'));</script>   
+            <div class ="title">Check the Currency Updater Log</div>
+            <p> 
+                By checking the <b>Currency Updater Log</b> in the LogsCurrency tab it is possible to know the status of <b>every 
+                currency rate</b> update request launched by the system.
+                
+            </p> 
+            <p> 
+              <b>1)</b> Go to <b>LogsCurrency</b> tab. 
+                          <p></p>                 
+                <div style='margin-left: 130px;'><img src='{!URLFOR($Resource.LogCurrency1)}'  /></div>
+            </p>  
+
+            <p style="text-align: justify"> 
+              <b>2)</b> If you want to know the outcome of  the process for today, choose the <b>Today's Exchanges</b> view. An <i>'OK'</i> Status
+               in a record means that the process worked fine and a <i>'KO'</i> status means the process failed. You can get further information
+                about each process by clicking a specific record and checking its 'Log' field.
+                          <p></p>
+                <div style='margin-left: 130px;'><img src='{!URLFOR($Resource.LogCurrency2)}'  /></div>
+            </p> 
+
+
+            <div class ="title">Supported currencies</div>            
+            <p style="text-align: justify"> 
+            	Most currencies are supported by this process and therefore updated once configured. If you want to know the exact list of currencies 
+            	supported please visit <a style="text-decoration: none" href="http://help.yahoo.com/l/us/yahoo/ewsapt/webservices/reference/data/wsr_currency.html" target="_blank">Yahoo!'s</a> 
+            	Currency Web services pages. 
+              
+            </p>            
+                                                    
+                     
+    </apex:pageBlockSection>
+ </apex:pageBlock>
+</apex:page>

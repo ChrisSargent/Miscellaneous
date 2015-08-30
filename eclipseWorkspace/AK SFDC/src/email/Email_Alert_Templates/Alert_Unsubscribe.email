@@ -1,0 +1,1 @@
+<p><strong>Contact:</strong> <a href="https://akascia.my.salesforce.com/{!wbsendit__Campaign_Activity__c.wbsendit__ContactId__c}" target="_blank">{!wbsendit__Campaign_Activity__c.wbsendit__Contact__c}</a></p>

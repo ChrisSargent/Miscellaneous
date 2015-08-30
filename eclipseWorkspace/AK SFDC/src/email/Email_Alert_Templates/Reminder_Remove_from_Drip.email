@@ -1,0 +1,15 @@
+{!Contact.OwnerFirstName},<br>
+<br>
+You have just changed the status of the person below.<br>
+<br>
+Contact: <a href="https://akascia.my.salesforce.com/{!Contact.Id}" target="_blank">{!Contact.Name}</a><br>
+Account: <a href="https://akascia.my.salesforce.com/{!Account.Id}" target="_blank">{!Account.Name}</a><br>
+Contacted by: {!Contact.Contacted_By__c}<br>
+Account Attributed to: {!Account.Attributed_To__c}<br>
+<br>Don't forget to remove them from the ToutApp Sales drip campaign if necessary, to prevent them from receiving further chasing emails.<br>
+<br>
+<a href="https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}" target="_blank">https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}</a><br>
+<br>
+Please also ensure the "Account Relationship" of their account is appropriate.<br>
+<br>
+Finally, you might want to remove other Contacts at the same Account from the drip campaign too, if it would be inappropriate for them to receive them now.

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Person Document Folder</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Person Document Folders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Person Document Folders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Folder Contains: --></label>
+        <name>Folder_Contains__c</name>
+        <picklistValues>
+            <masterLabel>Assessments and Tests</masterLabel>
+            <translation><!-- Assessments and Tests --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CVs, Covering Letters and Profiles</masterLabel>
+            <translation><!-- CVs, Covering Letters and Profiles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Offers and Contracts</masterLabel>
+            <translation><!-- Offers and Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>References</masterLabel>
+            <translation><!-- References --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Akascia Documents Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

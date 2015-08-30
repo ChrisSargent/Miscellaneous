@@ -1,0 +1,32 @@
+<apex:page controller="wbsendit.SendItMessagesController" tabStyle="SendIt_Options__tab" action="{!init}">
+
+	<apex:sectionHeader title="List of sendIT Messages" subtitle="sendIT Messages" help="http://support.beaufort12.com"/>
+
+	<apex:form >
+		&nbsp;«&nbsp;<apex:commandLink action="{!back}" id="idBack"  value="Back to Settings" style="font-family: 'Verdana','Geneva',sans-serif;font-size: 91.3%;text-decoration: none;"/>
+
+		<apex:pageblock mode="detail" id="idMessageBlock">
+			<apex:pageMessages escape="false" />
+
+			<!-- Messages -->
+			<apex:PageBlockSection columns="1" collapsible="false" >
+			<apex:pageBlockTable value="{!messageList}" var="msg" rowClasses="odd,even" styleClass="tableClass" id="idMessages">
+				<apex:column width="5%" style="white-space: nowrap;">
+					<apex:facet name="header">Code</apex:facet>
+					<apex:outputLink value="{!msg.helpURL}" target="_blank">{!msg.code}</apex:outputLink>
+				</apex:column>
+				<apex:column >
+					<apex:facet name="header">Date</apex:facet>
+					<apex:outputText value="{!msg.msgTime}"/>
+				</apex:column>
+				<apex:column >
+					<apex:facet name="header">Message</apex:facet>
+					<apex:outputText value="{!msg.message}"/>
+				</apex:column>
+				</apex:pageBlockTable>
+			</apex:PageBlockSection>
+
+		</apex:pageBlock>
+
+	</apex:form>	
+</apex:page>

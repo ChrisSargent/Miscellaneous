@@ -1,0 +1,410 @@
+<apex:page standardController="wbsendit__AutoSubscription__c" extensions="wbsendit.EditAutoSubExtension" action="{!checkSetup}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
+
+    <apex:sectionHeader title="{!title}" subtitle="{!subTitle}" rendered="{!showPage}" help="http://support.beaufort12.com/customer/portal/articles/740077-automatic-subscriptions"/>
+
+    <div style="height:auto;margin-top:3px;margin-bottom:13px;">
+        &nbsp;&#171;&nbsp;
+        <apex:outputLink style="color: #015ba7;text-decoration: none;font-family:'Verdana','Geneva',sans-serif;font-size: 91.3%;" value="{!URLFOR($Action.AutoSubscription__c.List, $ObjectType.AutoSubscription__c)}">
+            Back to List: Automatic Subscriptions
+        </apex:outputLink>
+    </div>
+
+    <apex:pageMessages escape="false" />
+    <apex:form id="WizardForm" >
+        <apex:pageBlock mode="{!editMode}" title="Automatic Subscription Details"  rendered="{!showPage}" >
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!Save}" rendered="{!editMode == 'edit'}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}" rendered="{!editMode == 'edit'}"/>
+                <apex:commandButton value="Edit" action="{!Edit}" rendered="{!editMode != 'edit'}" disabled="{!NOT(validList)}" />
+                <apex:commandButton value="Delete" action="{!Delete}" rendered="{!editMode != 'edit'}"/>
+            </apex:pageBlockButtons>
+
+            <apex:outputPanel rendered="{!editMode == 'edit'}" >
+                <apex:pageBlockSection columns="1" title="Edit Rule">
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Name" for="ifName"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputField value="{!newCondition.Name}" required="true" id="ifName"/>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                    <apex:inputField value="{!newCondition.wbsendit__Description__c}"/>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Object" for="slObject"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:selectList id="slObject" value="{!newCondition.wbsendit__Object__c}" required="true" size="1" onchange="objName = j$(this).val(); resetFields();">
+                                <apex:selectOptions value="{!Objects}"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Action" for="slAction"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:selectList id="slAction" value="{!newCondition.wbsendit__Action__c}" required="true" size="1" >
+                                <apex:selectOptions value="{!Actions}"/>
+                                <apex:actionSupport event="onchange" rerender="EvaluationTime"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Subscriber List" for="slList"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:selectList id="slList" value="{!newCondition.wbsendit__Subscriber_List_Id__c}" required="true" size="1">
+                                <apex:selectOptions value="{!SubscriberLists}"/>
+                            </apex:selectList>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+
+                    <apex:pageBlockSectionItem >
+                        <apex:outputLabel value="Resubscribe Subscribers" for="cbxResubscribe"/>
+                        <apex:outputPanel styleClass="requiredInput" layout="block">
+                            <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                            <apex:inputCheckbox id="cbxResubscribe" value="{!newCondition.wbsendit__Resubscribe__c}" required="true"/>
+                        </apex:outputPanel>
+                    </apex:pageBlockSectionItem>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!editMode != 'edit'}" >
+                <apex:pageBlockSection columns="1" title="Edit Rule">
+                    <apex:outputField value="{!newCondition.Name}"/>
+                    <apex:outputField value="{!newCondition.wbsendit__Description__c}"/>
+                    <apex:outputField value="{!newCondition.wbsendit__Object__c}"/>
+                    <apex:outputField value="{!newCondition.wbsendit__Action__c}"/>
+                    <apex:outputField value="{!newCondition.wbsendit__Subscriber_List_Name__c}"/>
+                    <apex:outputField value="{!newCondition.wbsendit__Resubscribe__c}"/>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:pageBlockSection columns="1" title="Evaluation Criteria"  rendered="{!showPage}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Evaluation Time" for="EvaluationTime" />
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block" rendered="{!editMode == 'edit'}"/>
+                        <apex:selectRadio value="{!newCondition.wbsendit__Evaluation_Time__c}" layout="pageDirection" required="true" id="EvaluationTime" disabled="{!editMode != 'edit'}">
+                            <apex:selectOptions value="{!EvalTimes}"/>
+                        </apex:selectRadio>
+                   </apex:outputPanel>
+               </apex:pageBlockSectionItem>
+            </apex:pageBlockSection>
+
+            <apex:outputPanel rendered="{!editMode == 'edit'}">
+                <apex:pageBlockSection columns="1" title="Rule Criteria">
+                    <apex:outputPanel >
+                        <table>
+                            <tr>
+                                <td></td><td><b>Field</b></td><td><b>Operator</b></td><td><b>Value</b></td><td></td>
+                            </tr>
+                            <tr>
+                                <td style="height:10px">
+                                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                                        &nbsp;
+                                    </apex:outputPanel>
+                                </td>
+                                <td><select id="field1" class="field"></select></td>
+                                <td><select id="operator1" class="operator"></select></td>
+                                <td><input id="value1" class="value"/> <a id="lookup1" style="display:none" href="javascript:openLookup(1);"><img src="/s.gif" alt="Lookup (New Window)" class="lookupIcon"  onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Lookup (New Window)"/></a></td>
+                                <td> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field2" class="field"></select></td>
+                                <td><select id="operator2" class="operator"></select></td>
+                                <td><input id="value2" class="value"/> <a id="lookup2" style="display:none" href="javascript:openLookup(2);"><img src="/s.gif" alt="Lookup (New Window)" class="lookupIcon"  onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Lookup (New Window)"/></a></td>
+                                <td> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field3" class="field"></select></td>
+                                <td><select id="operator3" class="operator"></select></td>
+                                <td><input id="value3" class="value"/> <a id="lookup3" style="display:none" href="javascript:openLookup(3);"><img src="/s.gif" alt="Lookup (New Window)" class="lookupIcon"  onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Lookup (New Window)"/></a></td>
+                                <td> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field4" class="field"></select></td>
+                                <td><select id="operator4" class="operator"></select></td>
+                                <td><input id="value4" class="value"/> <a id="lookup4" style="display:none" href="javascript:openLookup(4);"><img src="/s.gif" alt="Lookup (New Window)" class="lookupIcon"  onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Lookup (New Window)"/></a></td>
+                                <td> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field5" class="field"></select></td>
+                                <td><select id="operator5" class="operator"></select></td>
+                                <td><input id="value5" class="value"/> <a id="lookup5" style="display:none" href="javascript:openLookup(5);"><img src="/s.gif" alt="Lookup (New Window)" class="lookupIcon"  onmouseout="this.className = 'lookupIcon';this.className = 'lookupIcon';" onmouseover="this.className = 'lookupIconOn';this.className = 'lookupIconOn';" title="Lookup (New Window)"/></a></td>
+                                <td></td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+
+            <apex:outputPanel rendered="{!editMode != 'edit'}">
+                <apex:pageBlockSection columns="1" title="Rule Criteria">
+                    <apex:outputPanel >
+                        <table>
+                            <tr>
+                                <td></td><td><b>Field</b></td><td><b>Operator</b></td><td><b>Value</b></td>
+                            </tr>
+                            <tr>
+                                <td style="height:10px">
+                                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                                        &nbsp;
+                                    </apex:outputPanel>
+                                </td>
+                                <td><select id="field1" class="field" disabled="disabled"></select></td>
+                                <td><select id="operator1" class="operator" disabled="disabled"></select></td>
+                                <td><input id="value1" class="value" disabled="disabled"/> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field2" class="field" disabled="disabled"></select></td>
+                                <td><select id="operator2" class="operator" disabled="disabled"></select></td>
+                                <td><input id="value2" class="value" disabled="disabled"/> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field3" class="field" disabled="disabled"></select></td>
+                                <td><select id="operator3" class="operator" disabled="disabled"></select></td>
+                                <td><input id="value3" class="value" disabled="disabled"/> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field4" class="field" disabled="disabled"></select></td>
+                                <td><select id="operator4" class="operator" disabled="disabled"></select></td>
+                                <td><input id="value4" class="value" disabled="disabled"/> AND</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td><select id="field5" class="field" disabled="disabled"></select></td>
+                                <td><select id="operator5" class="operator" disabled="disabled"></select></td>
+                                <td><input id="value5" class="value" disabled="disabled"/></td>
+                            </tr>
+                        </table>
+                    </apex:outputPanel>
+                </apex:pageBlockSection>
+            </apex:outputPanel>
+            <apex:inputHidden id="hiddenSaveCondition" value="{!newCondition.wbsendit__Criteria__c}"/>
+            <script>var hiddenValId = '{!$Component.hiddenSaveCondition}';</script>
+
+        </apex:pageBlock>
+
+    </apex:form>
+
+    <apex:outputPanel rendered="{!showPage}">
+    <script>
+        var conFields = JSON.parse('{!conFields}');
+        var conFieldTypes = JSON.parse('{!conFieldTypes}');
+        var conPicklists = JSON.parse('{!conPicklists}');
+        var leadFields = JSON.parse('{!leadFields}');
+        var leadFieldTypes = JSON.parse('{!leadFieldTypes}');
+        var leadPicklists = JSON.parse('{!leadPicklists}');
+        var objName = '{!ObjectType}';
+
+        var j$ = jQuery.noConflict();
+        function esc(myid) {
+            return '#' + myid.replace(/(:|\.)/g,'\\\\$1');
+        }
+
+        var ops = {boolean: ["equals", "notequalto"],
+                   double: ["equals", "notequalto", "lessthan", "lessorequal", "greaterthan", "greaterorequal"],
+                   integer: ["equals", "notequalto", "lessthan", "lessorequal", "greaterthan", "greaterorequal"],
+                   string: ["equals", "notequalto", "startswith", "contains", "doesnotcontain"],
+                   datetime: ["equals", "notequalto", "lessthan", "lessorequal", "greaterthan", "greaterorequal"],
+                   date: ["equals", "notequalto", "lessthan", "lessorequal", "greaterthan", "greaterorequal"],
+                   none: ["equals", "notequalto", "lessthan", "lessorequal", "greaterthan", "greaterorequal", "startswith", "contains", "doesnotcontain"]};
+
+        var opNames = {"equals": "equals", "notequalto": "not equal to", "lessthan": "less than", "lessorequal": "less or equal", "greaterthan": "greater than", "greaterorequal": "greater or equal", "startswith": "starts with", "contains": "contains", "doesnotcontain": "does not contain"};
+
+        var fieldTypes;
+        var currentOperators;
+
+        j$(document).ready(function(){
+
+            var cons = JSON.parse(j$(esc(hiddenValId)).val());
+            var opIdx = 0;
+            j$('.operator').each(function(index, value){
+                    j$('option', this).remove();
+                    var that = this;
+                    that.options[that.options.length] = new Option('-- None --', 'none');
+                    j$.each(opNames, function(text, val){
+                            that.options[that.options.length] = new Option(val, text);
+                            if(cons != null && opIdx < cons.length && cons[opIdx].operatorName == text)
+                                that.options[that.options.length-1].selected = 'selected';
+                        });
+                    opIdx++;
+                });
+
+            j$('.field').change(function(){
+                    var index = this.id.replace('field', '');
+                    var fldName = j$('#'+this.id).val();
+                    if(currentOperators != null && currentOperators[index] != null){
+                        if(currentOperators[index] == fieldTypes[fldName].toLowerCase())
+                            return;
+                    }
+
+                    var opList = j$('#operator' + index);
+                    var selected = opList.val();
+                    j$('option', opList).remove();
+                    opList.append(new Option('-- None --', 'none'));
+                    var fieldType;
+                    var objFieldTypes;
+                    if(objName == 'Contact')
+                        objFieldTypes = conFieldTypes;
+                    else
+                        objFieldTypes = leadFieldTypes;
+                    if(fldName == 'none')
+                        fieldType = 'none';
+                    else
+                        fieldType = objFieldTypes[fldName].toLowerCase();
+                    j$.each(ops[fieldType], function(text, val){
+                            opList.append(new Option(opNames[val], val));
+                            if(selected == val)
+                                opList.children('[value=' + val + ']').attr('selected', 'selected');
+                        });
+
+                    updateconditions();
+
+                    var picklists;
+                    if(objName == 'Contact')
+                        picklists = conPicklists;
+                    else
+                        picklists = leadPicklists;
+                    if(picklists[fldName] != null){
+                        j$('#lookup' + index).css('display', 'inline-block');
+                    } else{
+                        j$('#lookup' + index).css('display', 'none');
+
+                    }
+
+                });
+
+            for(var i = 0; i < cons.length; i++)
+                j$('#value' + (i+1)).val(cons[i].value);
+
+
+            var idx = 0;
+            j$('.field').each(function(index, value){
+                    j$('option', this).remove();
+                    var that = this;
+                    var flds;
+                    if(objName == 'Contact')
+                        flds = conFields;
+                    else
+                        flds = leadFields;
+                    that.options[that.options.length] = new Option('-- None --', 'none');
+                    j$.each(flds, function(text, val){
+                        that.options[that.options.length] = new Option(val, text);
+                        if(cons != null && idx < cons.length && cons[idx].fieldName == text){
+                            that.options[that.options.length-1].selected = 'selected';
+                            j$('#' + that.id).change();
+                        }
+                    });
+                    idx++;
+                });
+
+            j$('.operator').change(updateconditions);
+            j$('.value').change(updateconditions);
+
+        });
+
+        function resetFields(){
+            j$('.field').each(function(index, value){
+                j$('option', this).remove();
+                var that = this;
+                var flds;
+                if(objName == 'Contact')
+                    flds = conFields;
+                else
+                    flds = leadFields;
+                that.options[that.options.length] = new Option('-- None --', 'none');
+                j$.each(flds, function(text, val){
+                    that.options[that.options.length] = new Option(val, text);
+                });
+            });
+
+            j$('.operator').each(function(index, value){
+                j$(this).val('-- None --');
+            });
+
+            j$('.value').each(function(index, value){
+                j$(this).val('');
+            });
+        }
+
+        function updateconditions(){
+
+            var fldTypes;
+            var picklists;
+            if(objName == 'Contact'){
+                fldTypes = conFieldTypes;
+                picklists = conPicklists;
+            } else{
+                fldTypes = leadFieldTypes;
+                picklists = leadPicklists;
+            }
+
+            var cons = new Array();
+            var index = 1;
+            var fld = j$('#field' + index);
+            var op = j$('#operator' + index);
+            var val = j$('#value' + index);
+            while(fld.length != 0 && fld.val() != null){
+
+                var con = new Object();
+                con['fieldName'] = fld.val();
+                con['fieldTypeName'] = fldTypes[fld.val()];
+                con['operatorName'] = op.val();
+                con['value'] = val.val();
+                con['isPickList'] = (picklists[fld.val()] != null);
+                if(con['fieldName'] != 'none' && con['operatorName'] != 'none')
+                    cons.push(con);
+
+
+                index++;
+                fld = j$('#field' + index);
+                op = j$('#operator' + index);
+                val = j$('#value' + index);
+
+            }
+            j$(esc(hiddenValId)).val(JSON.stringify(cons));
+
+        }
+
+        function openLookup(index){
+
+            var fldName = j$('#field' + index).val();
+            var picklists;
+            if(objName == 'Contact')
+                picklists = conPicklists;
+            else
+                picklists = leadPicklists;
+
+            openPopupFocus('/apex/wbsendit__lookup?id=' + index + '&fldName=' + picklists[fldName], 'wbsendit_filter_lookup', 620, 430, 'width=620,height=430,resizable=yes,toolbar=no,status=no,scrollbars=yes,menubar=no,directories=no,location=no,dependant=no', false, true);
+        }
+
+        function updateValueWithPicklist(values, index){
+            var id = '#value' + index;
+            var val = j$(id).val().trim();
+            if(val != null && val != '')
+                val += ',';
+            else
+                val = '';
+            val += values;
+            j$(id).val(val);
+            updateconditions();
+        }
+
+    </script>
+    </apex:outputPanel>
+
+</apex:page>

@@ -1,0 +1,24 @@
+{!Contact.OwnerFirstName},<br>
+<br>
+Actions to Take: 1. Search for articles and blogs and comment on them. 2. Call this person<br>
+Why?: They have just been sent their 3rd Sales Email from ToutApp without a response<br>
+Search: 
+<a href="https://www.google.com/search?q=%22{!Contact.Name}%22+blog+OR+article">https://www.google.com/search?q="{!Contact.Name}"+blog+OR+article</a><br>
+<br>
+Contact: <a href="https://akascia.my.salesforce.com/{!Contact.Id}" target="_blank">{!Contact.Name}</a><br>
+Email Address: {!Contact.Email}<br>
+Funnel Stage: {!Contact.Funnel_Stage__c}<br>
+Sales Campaign: {!Contact.Sales_Campaign__c}<br>
+ToutApp: <a href="https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}" target="_blank">https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}</a><br>
+Contacted by: {!Contact.Contacted_By__c}<br>
+Account: <a href="https://akascia.my.salesforce.com/{!Account.Id}" target="_blank">{!Account.Name}</a><br>Account Attributed to: {!Account.Attributed_To__c}<br>
+<br>
+What Next: 
+Two more sales emails will be sent over the next two weeks and then they will also be automatically changed to the "New Only" sales campaign in Salesforce<br>
+<br>
+Next Reminder: 
+You will also be reminded again when the final email is sent<br>
+<br>
+If they have actually already responded, then adjust their "Funnel Stage" to an appropriate value, set their Sales Emails to "New Only" or "None" and remove them from the drip campaign in ToutApp to prevent any further emails or reminders being sent<br>
+<br>
+Good Luck!

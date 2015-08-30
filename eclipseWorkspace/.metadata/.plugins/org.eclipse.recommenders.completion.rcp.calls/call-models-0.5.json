@@ -1,0 +1,12 @@
+{
+  "/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
+    "location": "/Library/Java/JavaVirtualMachines/jdk1.8.0_20.jdk/Contents/Home/jre/lib/rt.jar",
+    "status": "RESOLVED"
+  },
+  "/Users/chrissargent/eclipseWorkspace/HelloWorld/lib/google-alert-api.jar": {
+    "location": "/Users/chrissargent/eclipseWorkspace/HelloWorld/lib/google-alert-api.jar",
+    "status": "UNRESOLVED",
+    "error": "No call model found for \u0027/Users/chrissargent/eclipseWorkspace/HelloWorld/lib/google-alert-api.jar\u0027. Neither fingerprint \u00277ef6faa3ecaea56d20b1e40fc466bda71eba08f8\u0027 nor symbolic name \u0027org.jsoup.jsoup\u0027 are known."
+  }
+}

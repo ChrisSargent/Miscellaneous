@@ -1,0 +1,65 @@
+<apex:component controller="wbsendit.SendItMobileController" access="global">
+
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
+    <apex:stylesheet value="{!URLFOR($Resource.wbsendit__SendItAssets,'css/action.css')}"/>
+
+    <apex:includeScript value="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"/>
+    <apex:includeScript value="/canvas/sdk/js/publisher.js"/>
+
+    <script type="text/javascript">
+
+        function saveSelection(listId){
+
+            document.getElementById( 'si-loading' ).style.display = '';
+
+
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.SendItMobileController.addToList}',
+                '{!objId}', listId,
+                handleResult
+            );
+
+        }
+
+        function handleResult(result, event) {
+
+
+            if(!event.status){
+                alert('An error was encountered. Please retry your action.');
+                return;
+            }
+
+
+            // If the user submits via the full browser, then refresh the page
+            if(document.URL.indexOf('apex') < 0) {
+                window.top.location='/{!objId}';
+
+            // User is using Mobile
+            } else {
+                //sforce.one.back(false);
+
+                // TODO this is causing the page to reload twice even when refresh is set to false
+                Sfdc.canvas.publisher.publish({name: "publisher.close", payload:{refresh:"true"}});
+            }
+        }
+
+
+    </script>
+
+    <div id='si-loading' class="fi-loading" style="display: none;"></div>
+
+    <div id="si-container" style="width: 100%; height: 100%; overflow-y: visible;">
+        <span class="si-label">Select subscriber list to add:</span>
+        <div id="si-container-list" style="width: 100%; height: 100%; overflow-y: scroll;">
+        <ol>
+            <apex:repeat value="{!dcmLists}" var="op">
+                <li class="si-list">
+                    <a href="javascript:saveSelection('{!op.listId}');">{!op.name}</a>
+                </li>
+            </apex:repeat>
+        </ol>
+        </div>
+    </div>
+</apex:component>

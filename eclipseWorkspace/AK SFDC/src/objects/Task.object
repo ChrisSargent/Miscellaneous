@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Close</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>DeleteSeries</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>NewTask</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>true</enableFeeds>
+    <fields>
+        <fullName>ActivityDate</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>CallDisposition</fullName>
+    </fields>
+    <fields>
+        <fullName>CallDurationInSeconds</fullName>
+    </fields>
+    <fields>
+        <fullName>CallObject</fullName>
+    </fields>
+    <fields>
+        <fullName>CallType</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Priority</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+                <highPriority>true</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Normal</fullName>
+                <default>true</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <highPriority>false</highPriority>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>RecurrenceInterval</fullName>
+    </fields>
+    <fields>
+        <fullName>RecurrenceRegeneratedType</fullName>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <closed>false</closed>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Completed</fullName>
+                <closed>true</closed>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Subject</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>None</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Type</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Clicked Link Follow Up Call</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackFeedHistory>false</trackFeedHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>WhatId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>WhoId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <sharingModel>Private</sharingModel>
+    <webLinks>
+        <fullName>Create_Follow_Up</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Follow Up</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?who_id={!Candidate_Stage__c.Candidate_ID__c}
+&amp;what_id={!Candidate_Stage__c.Id}
+&amp;tsk5=Follow%20Up%3A%20{!Candidate_Stage__c.Candidate_Name_Text__c}
+%20-%20{!Candidate_Stage__c.Opportunity_Name_Text__c}
+&amp;tsk12=In%20Progress
+&amp;retURL={!Candidate_Stage__c.Id}
+&amp;00Nb0000008Q87s=Call%3A%20Candidate
+&amp;00Nb0000008SZzI={!Candidate_Stage__c.Opportunity_ID__c} 
+&amp;00Nb0000008SaFY={!Candidate_Stage__c.Opportunity_Name_Text__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Left_Message</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Left Message</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?who_id={!Contact.Id}
+&amp;tsk5=Left%20Message
+&amp;tsk12=Completed 
+&amp;retURL={!Contact.Id} 
+&amp;00Nb0000008Q87s=Left%20Message
+&amp;tsk6=Left%20Message</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Left_Message_Candidate_Stage</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Left Message</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?who_id={!Candidate_Stage__c.Candidate_ID__c}
+&amp;what_id={!Candidate_Stage__c.Id}
+&amp;tsk5=Left%20Message
+&amp;tsk12=Completed 
+&amp;retURL={!Candidate_Stage__c.Id}
+&amp;00Nb0000008Q87s=Left%20Message
+&amp;tsk6=Left%20Message
+&amp;tsk4={!TODAY()}
+&amp;00Nb0000008SZzI={!Candidate_Stage__c.Opportunity_ID__c} 
+&amp;00Nb0000008SaFY={!Candidate_Stage__c.Opportunity_Name_Text__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Call</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Call</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>/00T/e?who_id={!Candidate_Stage__c.Candidate_ID__c} 
+&amp;what_id={!Candidate_Stage__c.Id} 
+&amp;tsk5=Called%20{!Candidate_Stage__c.Candidate_Name_Text__c}.
+&amp;tsk12=Completed 
+&amp;retURL={!Candidate_Stage__c.Id} 
+&amp;00Nb0000008Q87s=Call%3A%20Candidate 
+&amp;tsk4={!TODAY()} 
+&amp;00Nb0000008SZzI={!Candidate_Stage__c.Opportunity_ID__c} 
+&amp;00Nb0000008SaFY={!Candidate_Stage__c.Opportunity_Name_Text__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_a_Message_Non_Email</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log a Message (Non-Email)</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?who_id={!Candidate_Stage__c.Candidate_ID__c}
+&amp;what_id={!Candidate_Stage__c.Id}
+&amp;tsk5=Message
+&amp;tsk12=Completed 
+&amp;retURL={!Candidate_Stage__c.Id}
+&amp;00Nb0000008Q87s=Message%20(Non-Email)
+&amp;tsk4={!TODAY()}
+&amp;00Nb0000008SZzI={!Candidate_Stage__c.Opportunity_ID__c} 
+&amp;00Nb0000008SaFY={!Candidate_Stage__c.Opportunity_Name_Text__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Log_an_Intro</fullName>
+        <availability>online</availability>
+        <description>Use for non-opportunity-specific intro calls with candidates</description>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Log an Intro</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/00T/e?who_id={!Contact.Id} 
+&amp;tsk5=Introductory%20Call
+&amp;tsk12=Completed 
+&amp;retURL={!Contact.Id} 
+&amp;00Nb0000008Q87s=Candidate%20Contact
+&amp;tsk4={!TODAY()} 
+&amp;00Nb0000007k7z1=Introductory%20Call</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Add New Candidate</label>
+    <processType>Flow</processType>
+    <steps>
+        <name>About_Specific_Job</name>
+        <label>About Specific Job?</label>
+        <locationX>799</locationX>
+        <locationY>561</locationY>
+        <connectors>
+            <targetReference>Add_Candidate_List</targetReference>
+        </connectors>
+        <connectors>
+            <targetReference>Add_Regular_Note</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Add_Candidate_List</name>
+        <label>Add an Identified Candidates Association</label>
+        <locationX>969</locationX>
+        <locationY>560</locationY>
+        <connectors>
+            <targetReference>Create_Note_for_Candidate_List</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Add_Certification_Assocaitions</name>
+        <label>Add Certification Assocaitions</label>
+        <locationX>522</locationX>
+        <locationY>400</locationY>
+        <connectors>
+            <targetReference>Add_Language_Associations</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Add_Language_Associations</name>
+        <label>Add Language Associations</label>
+        <locationX>652</locationX>
+        <locationY>401</locationY>
+        <connectors>
+            <targetReference>CV</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Add_Regular_Note</name>
+        <label>Add Regular Note</label>
+        <locationX>801</locationX>
+        <locationY>681</locationY>
+    </steps>
+    <steps>
+        <name>Add_Skill_Associations</name>
+        <label>Add Skill Associations</label>
+        <locationX>394</locationX>
+        <locationY>398</locationY>
+        <connectors>
+            <targetReference>Add_Certification_Assocaitions</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Add_Technology_Associations</name>
+        <label>Add Technology Associations</label>
+        <locationX>257</locationX>
+        <locationY>397</locationY>
+        <connectors>
+            <targetReference>Add_Skill_Associations</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Create_New_Person_with_all_fields</name>
+        <label>Create New Person (with all fields)</label>
+        <locationX>122</locationX>
+        <locationY>397</locationY>
+        <connectors>
+            <targetReference>Add_Technology_Associations</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Create_Note_for_Candidate_List</name>
+        <label>Add a &quot;Candidate Stage&quot; Record of Type &quot;Identified&quot;, Require Comments</label>
+        <locationX>1122</locationX>
+        <locationY>558</locationY>
+    </steps>
+    <steps>
+        <name>CV</name>
+        <label>CV?</label>
+        <locationX>789</locationX>
+        <locationY>401</locationY>
+        <connectors>
+            <targetReference>About_Specific_Job</targetReference>
+        </connectors>
+        <connectors>
+            <targetReference>Upload_CV</targetReference>
+        </connectors>
+    </steps>
+    <steps>
+        <name>Upload_CV</name>
+        <label>Upload CV</label>
+        <locationX>934</locationX>
+        <locationY>402</locationY>
+        <connectors>
+            <targetReference>About_Specific_Job</targetReference>
+        </connectors>
+    </steps>
+</Flow>

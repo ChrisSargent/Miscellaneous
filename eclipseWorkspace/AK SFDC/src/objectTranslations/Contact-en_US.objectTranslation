@@ -1,0 +1,1390 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Department (SF)</value>
+        </caseValues>
+        <name>department_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Email: Marketing</value>
+        </caseValues>
+        <name>email_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Address</value>
+        </caseValues>
+        <name>mailing_address_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business City</value>
+        </caseValues>
+        <name>mailing_city_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Country Code</value>
+        </caseValues>
+        <name>mailing_country_code_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Country</value>
+        </caseValues>
+        <name>mailing_country_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Latitude</value>
+        </caseValues>
+        <name>mailing_latitude_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Longitude</value>
+        </caseValues>
+        <name>mailing_longitude_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business State/Province Code</value>
+        </caseValues>
+        <name>mailing_state_code_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business State/Province</value>
+        </caseValues>
+        <name>mailing_state_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Street</value>
+        </caseValues>
+        <name>mailing_street_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Business Zip/Postal Code</value>
+        </caseValues>
+        <name>mailing_zip_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Address</value>
+        </caseValues>
+        <name>other_address_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home City</value>
+        </caseValues>
+        <name>other_city_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Country Code</value>
+        </caseValues>
+        <name>other_country_code_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Country</value>
+        </caseValues>
+        <name>other_country_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Latitude</value>
+        </caseValues>
+        <name>other_latitude_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Longitude</value>
+        </caseValues>
+        <name>other_longitude_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home State/Province Code</value>
+        </caseValues>
+        <name>other_state_code_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home State/Province</value>
+        </caseValues>
+        <name>other_state_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Street</value>
+        </caseValues>
+        <name>other_street_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Home Zip/Postal Code</value>
+        </caseValues>
+        <name>other_zip_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Specific Office Phone</value>
+        </caseValues>
+        <name>phone_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Job Title</value>
+        </caseValues>
+        <name>title_contact</name>
+        <startsWith>Consonant</startsWith>
+    </fields>
+    <fields>
+        <label><!-- Account Founded --></label>
+        <name>Account_Founded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Founded for CM --></label>
+        <name>Account_Founded_for_CM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Phone --></label>
+        <name>Account_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Relationship --></label>
+        <name>Account_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Size --></label>
+        <name>Account_Size__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type --></label>
+        <name>Account_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Akascia Territory --></label>
+        <name>Akascia_Territory__c</name>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Americas</masterLabel>
+            <translation><!-- Americas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMEA</masterLabel>
+            <translation><!-- EMEA --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Candidate Status --></label>
+        <name>Candidate_Status__c</name>
+        <picklistValues>
+            <masterLabel>Active</masterLabel>
+            <translation><!-- Active --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Lead</masterLabel>
+            <translation><!-- New Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired</masterLabel>
+            <translation><!-- Retired --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Car Allowance --></label>
+        <name>Car_Allowance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Car --></label>
+        <name>Company_Car__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Direct Line --></label>
+        <name>Contact_Direct_Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contacted By --></label>
+        <name>Contacted_By__c</name>
+        <picklistValues>
+            <masterLabel>Alicia</masterLabel>
+            <translation><!-- Alicia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chris</masterLabel>
+            <translation><!-- Chris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elisa</masterLabel>
+            <translation><!-- Elisa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sebastian</masterLabel>
+            <translation><!-- Sebastian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steve</masterLabel>
+            <translation><!-- Steve --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Current Fixed Salary --></label>
+        <name>Current_Fixed_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Package --></label>
+        <name>Current_Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Variable Salary --></label>
+        <name>Current_Variable_Salary__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to select what types of Industries or Customers the Candidate has sold to or supported. e.g. For Aspera you&apos;d probably select &quot;Broadcast / Media&quot; and for Salesforce you might select &quot;Enterprise&quot; or &quot;Finance&quot; --></help>
+        <label><!-- Customer Sectors --></label>
+        <name>Customer_Sectors__c</name>
+        <picklistValues>
+            <masterLabel>Automotive</masterLabel>
+            <translation><!-- Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking/Finance/Accounting</masterLabel>
+            <translation><!-- Banking/Finance/Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadcast/Media</masterLabel>
+            <translation><!-- Broadcast/Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Process Outsourcing</masterLabel>
+            <translation><!-- Business Process Outsourcing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Centre</masterLabel>
+            <translation><!-- Call Centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemical</masterLabel>
+            <translation><!-- Chemical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultancy</masterLabel>
+            <translation><!-- Consultancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer</masterLabel>
+            <translation><!-- Consumer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datacentre</masterLabel>
+            <translation><!-- Datacentre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defence/Space</masterLabel>
+            <translation><!-- Defence/Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Emergency Services</masterLabel>
+            <translation><!-- Emergency Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware Manufacturer</masterLabel>
+            <translation><!-- Hardware Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial/Manufacturing</masterLabel>
+            <translation><!-- Industrial/Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internal</masterLabel>
+            <translation><!-- Internal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure/Travel</masterLabel>
+            <translation><!-- Leisure/Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Research</masterLabel>
+            <translation><!-- Market Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical/Pharmaceuticals</masterLabel>
+            <translation><!-- Medical/Pharmaceuticals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile/Wireless</masterLabel>
+            <translation><!-- Mobile/Wireless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oil/Gas/Energy</masterLabel>
+            <translation><!-- Oil/Gas/Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Provider / Telco</masterLabel>
+            <translation><!-- Service Provider / Telco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small and Medium Enterprise</masterLabel>
+            <translation><!-- Small and Medium Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Vendor</masterLabel>
+            <translation><!-- Software Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systems Integrator/VAR/Reseller</masterLabel>
+            <translation><!-- Systems Integrator/VAR/Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport</masterLabel>
+            <translation><!-- Transport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer at: --></label>
+        <name>Customer_at__c</name>
+        <picklistValues>
+            <masterLabel>a Previous Account</masterLabel>
+            <translation><!-- a Previous Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>this Account</masterLabel>
+            <translation><!-- this Account --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desired Fixed Salary --></label>
+        <name>Desired_Fixed_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desired Locations --></label>
+        <name>Desired_Locations__c</name>
+        <picklistValues>
+            <masterLabel>AFRICA</masterLabel>
+            <translation><!-- AFRICA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AMERICAS</masterLabel>
+            <translation><!-- AMERICAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EUROPE</masterLabel>
+            <translation><!-- EUROPE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France</masterLabel>
+            <translation><!-- France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Germany</masterLabel>
+            <translation><!-- Germany --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hong Kong SAR</masterLabel>
+            <translation><!-- Hong Kong SAR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Indonesia</masterLabel>
+            <translation><!-- Indonesia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ireland</masterLabel>
+            <translation><!-- Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italy</masterLabel>
+            <translation><!-- Italy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japan</masterLabel>
+            <translation><!-- Japan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MIDDLE EAST</masterLabel>
+            <translation><!-- MIDDLE EAST --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Malaysia</masterLabel>
+            <translation><!-- Malaysia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monaco</masterLabel>
+            <translation><!-- Monaco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Netherlands</masterLabel>
+            <translation><!-- Netherlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Zealand</masterLabel>
+            <translation><!-- New Zealand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Singapore</masterLabel>
+            <translation><!-- Singapore --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spain</masterLabel>
+            <translation><!-- Spain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Switzerland</masterLabel>
+            <translation><!-- Switzerland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thailand</masterLabel>
+            <translation><!-- Thailand --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Arab Emirates</masterLabel>
+            <translation><!-- United Arab Emirates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Desired Package --></label>
+        <name>Desired_Package__c</name>
+    </fields>
+    <fields>
+        <label><!-- Desired Variable Salary --></label>
+        <name>Desired_Variable_Salary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Address History --></label>
+        <name>Email_Address_History__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email: Business --></label>
+        <name>Email_Business__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email: Other --></label>
+        <name>Email_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email: Personal --></label>
+        <name>Email_Personal__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to select the types of company the Candidate has worked for. e.g. for Cisco you&apos;d select &quot;Hardware&quot; and for Dimension Data you&apos;d select &quot;Systems Integrator&quot; --></help>
+        <label><!-- Employer Types --></label>
+        <name>Employer_Types__c</name>
+        <picklistValues>
+            <masterLabel>Automotive</masterLabel>
+            <translation><!-- Automotive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking / Finance / Accounting</masterLabel>
+            <translation><!-- Banking / Finance / Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadcast / Media</masterLabel>
+            <translation><!-- Broadcast / Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Process Outsourcing</masterLabel>
+            <translation><!-- Business Process Outsourcing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Centre</masterLabel>
+            <translation><!-- Call Centre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chemical</masterLabel>
+            <translation><!-- Chemical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultancy</masterLabel>
+            <translation><!-- Consultancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer</masterLabel>
+            <translation><!-- Consumer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datacentre</masterLabel>
+            <translation><!-- Datacentre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defence / Space</masterLabel>
+            <translation><!-- Defence / Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electronics</masterLabel>
+            <translation><!-- Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government</masterLabel>
+            <translation><!-- Government --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware Manufacturer</masterLabel>
+            <translation><!-- Hardware Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare</masterLabel>
+            <translation><!-- Healthcare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial / Manufacturing</masterLabel>
+            <translation><!-- Industrial / Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure / Travel</masterLabel>
+            <translation><!-- Leisure / Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Research</masterLabel>
+            <translation><!-- Market Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical / Pharmaceuticals</masterLabel>
+            <translation><!-- Medical / Pharmaceuticals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile / Wireless</masterLabel>
+            <translation><!-- Mobile / Wireless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oil / Gas / Energy</masterLabel>
+            <translation><!-- Oil / Gas / Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Provider / Telco</masterLabel>
+            <translation><!-- Service Provider / Telco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Small and Medium Enterprise</masterLabel>
+            <translation><!-- Small and Medium Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Vendor</masterLabel>
+            <translation><!-- Software Vendor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systems Integrator / VAR / Reseller</masterLabel>
+            <translation><!-- Systems Integrator / VAR / Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport</masterLabel>
+            <translation><!-- Transport --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Employment Preference --></label>
+        <name>Employment_Preference__c</name>
+        <picklistValues>
+            <masterLabel>Both</masterLabel>
+            <translation><!-- Both --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contract</masterLabel>
+            <translation><!-- Contract --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Permanent</masterLabel>
+            <translation><!-- Permanent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unknown</masterLabel>
+            <translation><!-- Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Equity (&gt; 5%) --></label>
+        <name>Equity__c</name>
+    </fields>
+    <fields>
+        <label><!-- FunnelStageInt --></label>
+        <name>FunnelStageInt__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funnel Stage --></label>
+        <name>Funnel_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified</masterLabel>
+            <translation><!-- Qualified --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responded</masterLabel>
+            <translation><!-- Responded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Healthcare --></label>
+        <name>Healthcare__c</name>
+    </fields>
+    <fields>
+        <label><!-- Influencer for Search Firms? --></label>
+        <name>Influencer_for_Search_Firms__c</name>
+        <picklistValues>
+            <masterLabel>Influencer</masterLabel>
+            <translation><!-- Influencer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not so Much</masterLabel>
+            <translation><!-- Not so Much --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Languages --></label>
+        <name>Languages__c</name>
+        <picklistValues>
+            <masterLabel>Arabic</masterLabel>
+            <translation><!-- Arabic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cantonese</masterLabel>
+            <translation><!-- Cantonese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Czech</masterLabel>
+            <translation><!-- Czech --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Danish</masterLabel>
+            <translation><!-- Danish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dutch</masterLabel>
+            <translation><!-- Dutch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>English</masterLabel>
+            <translation><!-- English --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Farsi</masterLabel>
+            <translation><!-- Farsi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>French</masterLabel>
+            <translation><!-- French --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>German</masterLabel>
+            <translation><!-- German --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greek</masterLabel>
+            <translation><!-- Greek --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hebrew</masterLabel>
+            <translation><!-- Hebrew --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hindi</masterLabel>
+            <translation><!-- Hindi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Italian</masterLabel>
+            <translation><!-- Italian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Japanese</masterLabel>
+            <translation><!-- Japanese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Korean</masterLabel>
+            <translation><!-- Korean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mandarin</masterLabel>
+            <translation><!-- Mandarin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Norwegian</masterLabel>
+            <translation><!-- Norwegian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Polish</masterLabel>
+            <translation><!-- Polish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portuguese</masterLabel>
+            <translation><!-- Portuguese --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Punjabi</masterLabel>
+            <translation><!-- Punjabi --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Russian</masterLabel>
+            <translation><!-- Russian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Spanish</masterLabel>
+            <translation><!-- Spanish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swedish</masterLabel>
+            <translation><!-- Swedish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Urdu</masterLabel>
+            <translation><!-- Urdu --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>LeadSource</name>
+        <picklistValues>
+            <masterLabel>Approached Us</masterLabel>
+            <translation><!-- Approached Us --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generic Approach</masterLabel>
+            <translation><!-- Generic Approach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linkedin Job</masterLabel>
+            <translation><!-- Linkedin Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Role</masterLabel>
+            <translation><!-- New Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recently Funded</masterLabel>
+            <translation><!-- Recently Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred to Them</masterLabel>
+            <translation><!-- Referred to Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website Signup</masterLabel>
+            <translation><!-- Website Signup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Left Company? --></label>
+        <name>Left_Company__c</name>
+    </fields>
+    <fields>
+        <label><!-- Met in Person? --></label>
+        <name>Met_in_Person__c</name>
+    </fields>
+    <fields>
+        <label><!-- No Sales Emails Until --></label>
+        <name>No_Sales_Emails_Until__c</name>
+    </fields>
+    <fields>
+        <label><!-- Why are they not a Client? --></label>
+        <name>Not_Client_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Awaiting Qualification</masterLabel>
+            <translation><!-- Awaiting Qualification --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Changed Company since last Contact</masterLabel>
+            <translation><!-- Changed Company since last Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Directed to Someone Else</masterLabel>
+            <translation><!-- Directed to Someone Else --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No External Firms</masterLabel>
+            <translation><!-- No External Firms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Immediate Plans to Hire</masterLabel>
+            <translation><!-- No Immediate Plans to Hire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Interest in Akascia</masterLabel>
+            <translation><!-- No Interest in Akascia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Real Influence</masterLabel>
+            <translation><!-- No Real Influence --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Retained</masterLabel>
+            <translation><!-- No Retained --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PSL / Existing Suppliers</masterLabel>
+            <translation><!-- PSL / Existing Suppliers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Potential Requirement</masterLabel>
+            <translation><!-- Potential Requirement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired</masterLabel>
+            <translation><!-- Retired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Expensive</masterLabel>
+            <translation><!-- Too Expensive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Original Candidate Source --></label>
+        <name>Original_Candidate_Source__c</name>
+        <picklistValues>
+            <masterLabel>Akascia Referral</masterLabel>
+            <translation><!-- Akascia Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approached us via Akascia.com</masterLabel>
+            <translation><!-- Approached us via Akascia.com --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approached us via Linkedin</masterLabel>
+            <translation><!-- Approached us via Linkedin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Referral</masterLabel>
+            <translation><!-- Contact Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Search</masterLabel>
+            <translation><!-- Direct Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Application</masterLabel>
+            <translation><!-- Other Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Referral</masterLabel>
+            <translation><!-- Other Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outsourced Search</masterLabel>
+            <translation><!-- Outsourced Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responded to a Social Network Update</masterLabel>
+            <translation><!-- Responded to a Social Network Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Other Package Info --></label>
+        <name>Other_Package_Info__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pension --></label>
+        <name>Pension__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position Code --></label>
+        <name>Position_Code__c</name>
+        <relationshipLabel><!-- Contacts --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Preferred Email Address --></label>
+        <name>Preferred_Email_Address__c</name>
+        <picklistValues>
+            <masterLabel>Business Email</masterLabel>
+            <translation><!-- Business Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Email</masterLabel>
+            <translation><!-- Other Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Personal Email</masterLabel>
+            <translation><!-- Personal Email --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Referred by: --></label>
+        <name>Referred_by__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request Permission Later? --></label>
+        <name>Request_Permission_Later__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Override DupeCatcher --></label>
+        <name>SFSSDupeCatcher__Override_DupeCatcher__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select &quot;ToutApp Drip&quot; when sending sales emails via ToutApp. Will automatically be set to &quot;New Only&quot; once completed
+Select &quot;New Only&quot; to only received ongoing sales emails
+Select &quot;None Until&quot; when asked to be contacted on a particular date --></help>
+        <label><!-- Sales Campaign --></label>
+        <name>Sales_Campaign__c</name>
+        <picklistValues>
+            <masterLabel>New Only</masterLabel>
+            <translation><!-- New Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None Until...</masterLabel>
+            <translation><!-- None Until... --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ToutApp Drip</masterLabel>
+            <translation><!-- ToutApp Drip --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unsubscribed</masterLabel>
+            <translation><!-- Unsubscribed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Campaign to New --></label>
+        <name>Sales_Campaign_to_New__c</name>
+    </fields>
+    <fields>
+        <label><!-- SkypeID --></label>
+        <name>SkypeID__c</name>
+    </fields>
+    <fields>
+        <help><!-- Use this field to select the areas of Technology the Candidate has worked in i.e. what type of products have they sold or supported. e.g. for Aspera you&apos;d put &quot;Software&quot; and &quot;Video&quot; and for Salesforce you&apos;d put &quot;Software&quot;. --></help>
+        <label><!-- Technology Sector --></label>
+        <name>Technology_Sector__c</name>
+        <picklistValues>
+            <masterLabel>BSS &amp; CRM &amp; ERP</masterLabel>
+            <translation><!-- BSS &amp; CRM &amp; ERP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Creative &amp; Print &amp; Design</masterLabel>
+            <translation><!-- Creative &amp; Print &amp; Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Device Level</masterLabel>
+            <translation><!-- Device Level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NMS &amp; OSS</masterLabel>
+            <translation><!-- NMS &amp; OSS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Networks</masterLabel>
+            <translation><!-- Networks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Security</masterLabel>
+            <translation><!-- Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software</masterLabel>
+            <translation><!-- Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systems &amp; Virtualization &amp; Storage</masterLabel>
+            <translation><!-- Systems &amp; Virtualization &amp; Storage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unapplicable</masterLabel>
+            <translation><!-- Unapplicable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Video &amp; Audio &amp; Content</masterLabel>
+            <translation><!-- Video &amp; Audio &amp; Content --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Voice &amp; Telephony</masterLabel>
+            <translation><!-- Voice &amp; Telephony --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wireless &amp; Mobile</masterLabel>
+            <translation><!-- Wireless &amp; Mobile --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ToutApp Sales Stage --></label>
+        <name>ToutApp_Sales_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responded &amp; Stopped</masterLabel>
+            <translation><!-- Responded &amp; Stopped --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 1</masterLabel>
+            <translation><!-- Stage 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 2</masterLabel>
+            <translation><!-- Stage 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 3</masterLabel>
+            <translation><!-- Stage 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 4</masterLabel>
+            <translation><!-- Stage 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Stage 5</masterLabel>
+            <translation><!-- Stage 5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- bh_LinkedID --></label>
+        <name>bh_LinkedID__c</name>
+    </fields>
+    <fields>
+        <label><!-- bh_userID --></label>
+        <name>bh_userID__c</name>
+    </fields>
+    <layouts>
+        <layout>Candidate</layout>
+        <sections>
+            <label><!-- Archived BD Information --></label>
+            <section>Archived BD Information</section>
+        </sections>
+        <sections>
+            <label><!-- Business Development --></label>
+            <section>Business Development</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate Basic Information --></label>
+            <section>Candidate Basic Information</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate Information --></label>
+            <section>Candidate Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Details --></label>
+            <section>Contact Details</section>
+        </sections>
+        <sections>
+            <label><!-- Employer Information --></label>
+            <section>Employer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Salary &amp; Benefits --></label>
+            <section>Salary &amp; Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- Type --></label>
+            <section>Type</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact: Admin</layout>
+        <sections>
+            <label><!-- Contact Info --></label>
+            <section>Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Type --></label>
+            <section>Type</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact: Client</layout>
+        <sections>
+            <label><!-- Business Development Info --></label>
+            <section>Business Development Info</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate Info --></label>
+            <section>Candidate Info</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Info --></label>
+            <section>Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Industry Info --></label>
+            <section>Industry Info</section>
+        </sections>
+        <sections>
+            <label><!-- Salary &amp; Benefits --></label>
+            <section>Salary &amp; Benefits</section>
+        </sections>
+        <sections>
+            <label><!-- ToutApp --></label>
+            <section>ToutApp</section>
+        </sections>
+        <sections>
+            <label><!-- Type --></label>
+            <section>Type</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Contact: Supplier</layout>
+        <sections>
+            <label><!-- Contact Info --></label>
+            <section>Contact Info</section>
+        </sections>
+        <sections>
+            <label><!-- Type --></label>
+            <section>Type</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Candidate --></label>
+        <name>Candidate</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact --></label>
+        <name>Contact</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact: Admin --></label>
+        <name>Contact_Admin</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Contact: Supplier --></label>
+        <name>Contact_Supplier</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Candidate Industry for this Contact (because you have selected &quot;Active&quot; for the candidate status). --></errorMessage>
+        <name>CandidateOnContact_CandidateIndustry</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Customer Sectors for this Contact (because you have selected &quot;Active&quot; for the candidate status). --></errorMessage>
+        <name>CandidateOnContact_CustomerSectors</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Employment Preference for this Contact (because you have selected &quot;Active&quot; for the candidate status). --></errorMessage>
+        <name>CandidateOnContact_EmploymentPref</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Original Candidate Source for this Contact (because you have selected &quot;Active&quot; for the candidate status). --></errorMessage>
+        <name>CandidateOnContact_Source</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please fill in the Technology Sector for this Contact (because you have selected &quot;Active&quot; for the candidate status). --></errorMessage>
+        <name>CandidateOnContact_Technology</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Home Country for this Candidate. --></errorMessage>
+        <name>Country_Candidate</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Business Country for this Contact. --></errorMessage>
+        <name>Country_Contact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the persons&apos; first name. --></errorMessage>
+        <name>First_Name</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please only select an email address that exists. --></errorMessage>
+        <name>MarketingEmail_Check_Exists</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Once an email address is added, this value can not be made blank. --></errorMessage>
+        <name>MarketingEmail_NotMadeBlank</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select which email address is preferred for marketing materials. --></errorMessage>
+        <name>MarketingEmail_PickOne</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the date when we can start sending sales emails again. --></errorMessage>
+        <name>Not_Until_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- No need to enter a date here unless you select &quot;None Until...&quot; in the Sales Campaign field. --></errorMessage>
+        <name>Not_Until_Date_Not_Blank</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Find_on_Crunchbase --></label>
+        <name>Find_on_Crunchbase</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_on_Quora --></label>
+        <name>Find_on_Quora</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_on_Twitter --></label>
+        <name>Find_on_Twitter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Identify_as_Candidate_Contact_Button --></label>
+        <name>Identify_as_Candidate_Contact_Button</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Email_Archive --></label>
+        <name>Search_Email_Archive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Gmail --></label>
+        <name>Search_Gmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Search_Linkedin --></label>
+        <name>Search_Linkedin</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_with_Tout --></label>
+        <name>ToutApp__Email_with_Tout</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_to_Tout --></label>
+        <name>ToutApp__Push_to_Tout</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Tout_Mails --></label>
+        <name>Tout_Mails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_Emails_to_List --></label>
+        <name>wbsendit__Add_Emails_to_List</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,68 @@
+<apex:page Controller="wbsendit.NewSubscriberRuleController" tabStyle="SendIt_Options__tab" action="{!checkSetup}">
+
+	<apex:sectionHeader title="Manage Subscribers Rules" subtitle="Configure rules for new subscribers" help="http://support.beaufort12.com"/>
+
+	<apex:form >
+		&nbsp;«&nbsp;<apex:commandLink action="{!back}" id="idBack"  value="Back to Settings" style="font-family: 'Verdana','Geneva',sans-serif;font-size: 91.3%;text-decoration: none;"/>
+		<apex:pageblock mode="{!inAddMode}" title="New Subscriber Rules" id="idNewSubscribers">
+			<apex:pageMessages escape="false" />
+
+			<!-- Buttons -->
+			<apex:pageBlockButtons location="bottom" >
+				<apex:commandButton id="idSaveRule" value="Save Rule" action="{!saveRule}" reRender="idNewSubscribers"  rendered="{!AND(inAddMode,listHasRows)}"/>
+				<apex:commandButton id="idCancelRule" value="Cancel" action="{!cancelRule}" reRender="idNewSubscribers"  rendered="{!inAddMode}"/>
+				<apex:commandButton id="idAddRule" value="Add Rule" action="{!switchEditMode}" reRender="idNewSubscribers"  rendered="{!NOT(inAddMode)}"/>
+			</apex:pageBlockButtons>
+
+			<!-- Manage Rules -->
+			<apex:PageBlockSection columns="1" collapsible="false" title="Edit Rule" rendered="{!AND(inAddMode,listHasRows)}">
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Email (subscriber) List" for="idEmailList"></apex:outputLabel>
+					<apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+						<apex:selectList id="idEmailList" value="{!selectedSubscriberList}" size="1" title="Email Lists">
+							<apex:selectOptions value="{!subscriberLists}"></apex:selectOptions>
+						</apex:selectList>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+				<apex:pageBlockSectionItem >
+					<apex:outputLabel value="Action" for="idSubscriberAction"></apex:outputLabel>
+					<apex:outputPanel styleClass="requiredInput" layout="block">
+                        <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+						<apex:selectList id="idSubscriberAction" value="{!selectedSubscriberAction}" size="1" title="Subscriber Action">
+							<apex:selectOptions value="{!subscriberActions}"></apex:selectOptions>
+						</apex:selectList>
+					</apex:outputPanel>
+				</apex:pageBlockSectionItem>
+			</apex:PageBlockSection>
+
+			<!-- Existing rules -->
+			<apex:PageBlockSection columns="1" collapsible="false" title="Current Rules" rendered="{!NOT(inAddMode)}">
+			<apex:pageBlockTable value="{!addSubscriberRules}" var="rule" rowClasses="odd,even" styleClass="tableClass" id="idExistingRules">
+				<apex:column width="5%" style="white-space: nowrap;">
+					<apex:facet name="header">Action</apex:facet>
+					<apex:commandLink value="Edit" action="{!editRule}" id="idEditRule">
+						<apex:param name="listId" value="{!rule.listId}" assignTo="{!listId}"/>
+						<apex:param name="ruleAction" value="edit" assignTo="{!ruleAction}"/>
+					</apex:commandLink>
+					<apex:outputText value=" | "/>
+					<apex:commandLink value="Del" action="{!deleteRule}" id="idDeleteRule">
+						<apex:param name="listId" value="{!rule.listId}" assignTo="{!listId}"/>
+					</apex:commandLink>
+				</apex:column>
+				<apex:column >
+					<apex:facet name="header">Subscriber List</apex:facet>
+					<apex:outputText value="{!rule.listName}"/>
+				</apex:column>
+				<apex:column >
+					<apex:facet name="header">Current Rule</apex:facet>
+					<apex:outputText value="{!rule.ruleLabel}"/>
+				</apex:column>
+			</apex:pageBlockTable>
+			</apex:PageBlockSection>
+
+		</apex:pageBlock>
+
+	</apex:form>
+
+</apex:page>

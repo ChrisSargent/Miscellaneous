@@ -1,0 +1,15 @@
+{!Contact.OwnerFirstName},<br>
+<br>
+Action to take: Find & follow the person below on Quora and Angellist<br>
+Why?: To increase your exposure to them<br>
+<br>
+Quora: <a href="http://www.quora.com/search?q={!Contact.Name}" target="_blank">http://www.quora.com/search?q={!Contact.Name}</a><br>
+Angellist: <a href="https://angel.co/search?q={!Contact.Name}&type=people={!Contact.Name}" target="_blank">https://angel.co/search?q={!Contact.Name}&amp;type=people={!Contact.Name} </a><br>
+<br>
+Contact: <a href="https://akascia.my.salesforce.com/{!Contact.Id}" target="_blank">{!Contact.Name}</a><br>
+Email Address: {!Contact.Email}<br>
+Funnel Stage: {!Contact.Funnel_Stage__c}<br>
+Sales Campaign: {!Contact.Sales_Campaign__c}<br>
+ToutApp: <a href="https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}" target="_blank">https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}</a><br>
+Contacted by: {!Contact.Contacted_By__c}<br>
+Account: <a href="https://akascia.my.salesforce.com/{!Account.Id}" target="_blank">{!Account.Name}</a><br>Account Attributed to: {!Account.Attributed_To__c}

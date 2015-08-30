@@ -1,0 +1,92 @@
+<apex:page sidebar="true" standardController="Contact" extensions="akCandidateWizard">
+<apex:pageMessages ></apex:pageMessages>
+    <apex:form >
+        <apex:pageBlock title="New Candidate:" >
+            <apex:pageBlockSection rendered="{!wizardState == 1 || showAll == true}" title="Candidate Basic Information">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Basic_Information}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection rendered="{!wizardState == 1 || showAll == true}" title="Employer Information">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Employer_Information}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection rendered="{!wizardState == 1 || showAll == true}" title="Contact Details">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Contact_Details}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 1 || showAll == true}" title="Candidate Details">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Information}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection rendered="{!wizardState == 1 || showAll == true}" title="Salary and Benefits">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Salary_Info}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 1 || showAll == true}" title="Address Information">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Address_Info}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            <!--
+            <apex:pageBlockSection rendered="{!wizardState == 1 || showAll == true}" title="Business Development">
+                <apex:repeat value="{!$ObjectType.Contact.FieldSets.Candidate_Biz_Dev_Info}" var="f">  
+                    <apex:inputfield value="{!theContact[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>          
+            </apex:pageBlockSection>
+            -->                   
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 2 || showAll == true}" title="Opportunity Information:">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel >Is this Candidate related to a specific Opportunity?</apex:outputLabel>
+                    <apex:actionRegion >
+                        <apex:inputCheckbox value="{!oppAdded}">
+                            <apex:actionSupport event="onchange" rerender="OppPanel"/>
+                        </apex:inputCheckbox>
+                    </apex:actionRegion>                    
+                </apex:pageBlockSectionItem>                          
+            </apex:pageBlockSection>
+
+
+<apex:outputPanel id="OppPanel">
+    <apex:outputPanel rendered="{!oppAdded == true}">
+
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 2 || showAll == true}" title="Opportunity Information:">
+                <apex:inputField required="true" value="{!ica.Opportunity__c}"/>  
+                <apex:repeat value="{!$ObjectType.IdentifiedCandidateAssociation__c.FieldSets.Candidate_Fields}" var="f">  
+                    <apex:inputfield value="{!ica[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat> 
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 2 || showAll == true}" title="Akascia:">
+                <apex:repeat value="{!$ObjectType.IdentifiedCandidateAssociation__c.FieldSets.Candidate_Wiz_ICA_Akascia}" var="f">  
+                    <apex:inputfield value="{!ica[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>                             
+            </apex:pageBlockSection>
+            
+            <apex:pageBlockSection columns="1" rendered="{!wizardState == 2 || showAll == true}" title="Candidate:">
+                <apex:repeat value="{!$ObjectType.IdentifiedCandidateAssociation__c.FieldSets.Candidate_Wiz_ICA_Candidate}" var="f">  
+                    <apex:inputfield value="{!ica[f]}" required="{!OR(f.required, f.dbrequired)}"/>
+                </apex:repeat>                             
+            </apex:pageBlockSection> 
+    </apex:outputPanel>
+</apex:outputPanel>
+                                                                                     
+                                                                                     
+                                                                                          
+            <apex:pageBlockButtons location="bottom" >
+                <apex:commandButton rendered="{!wizardState > 1}" value="Back" action="{!back}"/>
+                <apex:commandButton rendered="{!wizardState < 2}" value="Next" action="{!next}"/>
+                <apex:commandButton rendered="{!wizardState == 2}" value="Save" action="{!saveContact}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

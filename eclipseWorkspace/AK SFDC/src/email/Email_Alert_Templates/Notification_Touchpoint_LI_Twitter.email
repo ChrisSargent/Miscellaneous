@@ -1,0 +1,26 @@
+{!Contact.OwnerFirstName},<br>
+<br>
+Action to take: Find & follow the person below on Twitter and Linkedin<br>
+Why?: To increase your exposure to them<br>
+<br>
+Twitter: <a href="https://twitter.com/search?q={!Contact.Name}&mode=users" target="_blank">https://twitter.com/search?q={!Contact.Name}&amp;mode=users</a><br>
+LinkedIn: <a href="http://www.linkedin.com/vsearch/p?firstName={!Contact.FirstName}+&lastName={!Contact.LastName}+&company={!Account.Friendly_Name__c}" target="_blank">http://www.linkedin.com/vsearch/p?firstName={!Contact.FirstName}+&amp;lastName={!Contact.LastName}+&amp;company={!Account.Friendly_Name__c}</a><br>
+<br>
+You can use this text for your LinkedIn connection request:<br>
+<br>
+Hello XXXX,<br>
+<br>
+I've tried to reach you by email but I've been unable to reach you so far. I thought perhaps it would be easier for us to connect on LinkedIn.<br>
+<br>
+Regards,<br>
+<br>
+XXXX<br>
+<br>
+
+Contact: <a href="https://akascia.my.salesforce.com/{!Contact.Id}" target="_blank">{!Contact.Name}</a><br>
+Email Address: {!Contact.Email}<br>
+Funnel Stage: {!Contact.Funnel_Stage__c}<br>
+Sales Campaign: {!Contact.Sales_Campaign__c}<br>
+ToutApp: <a href="https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}" target="_blank">https://toutapp.com/next#relationships/groups/everyone/search/{!Contact.Email}</a><br>
+Contacted by: {!Contact.Contacted_By__c}<br>
+Account: <a href="https://akascia.my.salesforce.com/{!Account.Id}" target="_blank">{!Account.Name}</a><br>Account Attributed to: {!Account.Attributed_To__c}

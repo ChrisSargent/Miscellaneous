@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Identified Candidate Association</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Identified Candidate Associations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ak_IdentID --></label>
+        <name>Ak_IdentID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Akascia Comments --></label>
+        <name>Akascia_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Akascia Other Reason --></label>
+        <name>Akascia_Other_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Akascia Interest Level --></label>
+        <name>Akascia_Suitability_Level__c</name>
+        <picklistValues>
+            <masterLabel>Meh...</masterLabel>
+            <translation><!-- Meh... --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nah</masterLabel>
+            <translation><!-- Nah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Okay</masterLabel>
+            <translation><!-- Okay --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Walking Placement!</masterLabel>
+            <translation><!-- Walking Placement! --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Candidate Comments --></label>
+        <name>Candidate_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Interest Level --></label>
+        <name>Candidate_Interest_Level__c</name>
+        <picklistValues>
+            <masterLabel>Loves it!</masterLabel>
+            <translation><!-- Loves it! --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meh...</masterLabel>
+            <translation><!-- Meh... --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nah</masterLabel>
+            <translation><!-- Nah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Okay</masterLabel>
+            <translation><!-- Okay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Candidate Name --></label>
+        <name>Candidate_Name__c</name>
+        <relationshipLabel><!-- Identified Opportunities --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Candidate Other Reason --></label>
+        <name>Candidate_Other_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Stage --></label>
+        <name>Candidate_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Comments --></label>
+        <name>Client_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Interest Level --></label>
+        <name>Client_Interest_Level__c</name>
+        <picklistValues>
+            <masterLabel>Hot to Trot!</masterLabel>
+            <translation><!-- Hot to Trot! --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meh...</masterLabel>
+            <translation><!-- Meh... --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nah</masterLabel>
+            <translation><!-- Nah --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Okay</masterLabel>
+            <translation><!-- Okay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Client Other Reason --></label>
+        <name>Client_Other_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interviewed by Client? --></label>
+        <name>Interviewed_by_Client__c</name>
+    </fields>
+    <fields>
+        <label><!-- Needs Further Action? --></label>
+        <name>Needs_Further_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Stage --></label>
+        <name>Opportunity_Stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Identified Candidates --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Akascia Objection --></label>
+        <name>Primary_Akascia_Objection__c</name>
+        <picklistValues>
+            <masterLabel>Already been Approached</masterLabel>
+            <translation><!-- Already been Approached --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chased but no Response</masterLabel>
+            <translation><!-- Chased but no Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Culture Fit</masterLabel>
+            <translation><!-- Culture Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level of Experience</masterLabel>
+            <translation><!-- Level of Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Knowledge</masterLabel>
+            <translation><!-- Market Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salary</masterLabel>
+            <translation><!-- Salary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Expertise</masterLabel>
+            <translation><!-- Sales Expertise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seniority</masterLabel>
+            <translation><!-- Seniority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Expertise</masterLabel>
+            <translation><!-- Technical Expertise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unstable Work History</masterLabel>
+            <translation><!-- Unstable Work History --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Candidate Objection --></label>
+        <name>Primary_Candidate_Objection__c</name>
+        <picklistValues>
+            <masterLabel>Accepted a Role Elsewhere</masterLabel>
+            <translation><!-- Accepted a Role Elsewhere --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Reputation</masterLabel>
+            <translation><!-- Company Reputation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company not as Appealing as Current Employer</masterLabel>
+            <translation><!-- Company not as Appealing as Current Employer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company too Big</masterLabel>
+            <translation><!-- Company too Big --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company too Small / Young / Unstable</masterLabel>
+            <translation><!-- Company too Small / Young / Unstable --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Location</masterLabel>
+            <translation><!-- Location --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Looking for a Move Right Now</masterLabel>
+            <translation><!-- Not Looking for a Move Right Now --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role too Commercial</masterLabel>
+            <translation><!-- Role too Commercial --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role too Junior</masterLabel>
+            <translation><!-- Role too Junior --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role too Senior</masterLabel>
+            <translation><!-- Role too Senior --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Role too Technical</masterLabel>
+            <translation><!-- Role too Technical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salary too Low</masterLabel>
+            <translation><!-- Salary too Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sector not Interesting</masterLabel>
+            <translation><!-- Sector not Interesting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Primary Client Objection --></label>
+        <name>Primary_Client_Objection__c</name>
+        <picklistValues>
+            <masterLabel>Culture Fit</masterLabel>
+            <translation><!-- Culture Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level of Experience</masterLabel>
+            <translation><!-- Level of Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Knowledge</masterLabel>
+            <translation><!-- Market Knowledge --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Salary</masterLabel>
+            <translation><!-- Salary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sales Expertise</masterLabel>
+            <translation><!-- Sales Expertise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seniority</masterLabel>
+            <translation><!-- Seniority --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Expertise</masterLabel>
+            <translation><!-- Technical Expertise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unstable Work History</masterLabel>
+            <translation><!-- Unstable Work History --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Only Select if the Candidate has Responded. This field cannot be changed once it&apos;s set to &quot;True&quot;. --></help>
+        <label><!-- Responded? --></label>
+        <name>Responded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>Akascia.com Application</masterLabel>
+            <translation><!-- Akascia.com Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Database Search</masterLabel>
+            <translation><!-- Database Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Search</masterLabel>
+            <translation><!-- Direct Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facebook Application</masterLabel>
+            <translation><!-- Facebook Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linkedin Application</masterLabel>
+            <translation><!-- Linkedin Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other 3rd Party</masterLabel>
+            <translation><!-- Other 3rd Party --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Application</masterLabel>
+            <translation><!-- Other Application --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outsourced Search</masterLabel>
+            <translation><!-- Outsourced Search --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral from Contact</masterLabel>
+            <translation><!-- Referral from Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twitter Application</masterLabel>
+            <translation><!-- Twitter Application --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stage (Click to Update) --></label>
+        <name>Stage__c</name>
+    </fields>
+    <fields>
+        <help><!-- This field will automatically update when you change the &quot;Stage&quot; but can still be edited manually. --></help>
+        <label><!-- Still In Client Process? --></label>
+        <name>Still_In_Client_Process__c</name>
+    </fields>
+    <fields>
+        <label><!-- Submitted to Client? --></label>
+        <name>Submitted_to_Client__c</name>
+    </fields>
+    <fields>
+        <label><!-- bh_JobResponseID --></label>
+        <name>bh_JobResponseID__c</name>
+    </fields>
+    <layouts>
+        <layout>Identified Candidate Association Layout</layout>
+        <sections>
+            <label><!-- Akascia --></label>
+            <section>Akascia</section>
+        </sections>
+        <sections>
+            <label><!-- Automatic Fields --></label>
+            <section>Automatic Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Candidate --></label>
+            <section>Candidate</section>
+        </sections>
+        <sections>
+            <label><!-- Client --></label>
+            <section>Client</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please insert your &quot;Other&quot; reason. --></errorMessage>
+        <name>Akascia_Other_Reason_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please insert your &quot;Other&quot; reason. --></errorMessage>
+        <name>Candidate_Other_Reason_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You can not submit candidates to retainers. Please try again using the actual Assignment Opportunity. --></errorMessage>
+        <name>Check_Not_to_Retainer</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please insert your &quot;Other&quot; reason. --></errorMessage>
+        <name>Client_Other_Reason_Rule</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the &quot;Interviewed by Client?&quot; field, once it&apos;s been set to &quot;True&quot;. --></errorMessage>
+        <name>Prevent_Change_to_Interview_by_Client</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot change the &quot;Responsed?&quot; field once it&apos;s been set to &quot;True&quot;. --></errorMessage>
+        <name>Prevent_Change_to_Responded</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You cannot manually change the &quot;Submitted to Client?&quot; field, once it&apos;s been set to &quot;True&quot;. --></errorMessage>
+        <name>Prevent_Change_to_Submitted_to_Client</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Identify_as_Candidate --></label>
+        <name>Identify_as_Candidate</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Stage --></label>
+        <name>New_Stage</name>
+    </webLinks>
+</CustomObjectTranslation>

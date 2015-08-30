@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>Create Interview Event Flow</label>
+    <processType>Flow</processType>
+    <recordCreates>
+        <name>Create_Interview_Event</name>
+        <label>Create Interview Event</label>
+        <locationX>596</locationX>
+        <locationY>270</locationY>
+        <assignRecordIdToReference>EventID</assignRecordIdToReference>
+        <inputAssignments>
+            <field>EndDateTime</field>
+            <value>
+                <elementReference>Interview_End_Date_Time</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StartDateTime</field>
+            <value>
+                <elementReference>Interview_Start_Date_Time</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Subject</field>
+            <value>
+                <stringValue>First Interview</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Event</object>
+    </recordCreates>
+    <screens>
+        <name>Interview_Screen</name>
+        <label>Interview Screen</label>
+        <locationX>409</locationX>
+        <locationY>275</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <connector>
+            <targetReference>Create_Interview_Event</targetReference>
+        </connector>
+        <fields>
+            <name>Interview_Start_Date_Time</name>
+            <dataType>Date</dataType>
+            <fieldText>Interview Start Date / Time</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Interview_End_Date_Time</name>
+            <dataType>Date</dataType>
+            <fieldText>Interview End Date / Time</fieldText>
+            <fieldType>InputField</fieldType>
+            <isRequired>true</isRequired>
+        </fields>
+        <fields>
+            <name>Comments</name>
+            <fieldText>Comments</fieldText>
+            <fieldType>LargeTextArea</fieldType>
+            <isRequired>false</isRequired>
+        </fields>
+    </screens>
+    <startElementReference>Interview_Screen</startElementReference>
+    <variables>
+        <name>EventID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>ivdatetime</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

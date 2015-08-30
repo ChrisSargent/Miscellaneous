@@ -1,0 +1,581 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Account_Name_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Opportunity__r.Account.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Name Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Account_Website_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Opportunity__r.Account.Website</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Account Website Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate_Email_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Candidate_Name__r.Email_Personal__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Candidate Email Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>Candidate Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Candidate_First_Name_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Candidate_Name__r.FirstName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Candidate First Name Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Candidate_Name__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Candidate ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate_Name_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Candidate_Name__r.FirstName  &amp; &quot; &quot; &amp;  Identified_Candidate_Association_ID__r.Candidate_Name__r.LastName</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Candidate Name (Text)</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Candidate__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Identified_Candidate_Association_ID__r.Candidate_Name__c , Identified_Candidate_Association_ID__r.Candidate_Name__r.FirstName &amp;
+&quot; &quot; &amp;
+Identified_Candidate_Association_ID__r.Candidate_Name__r.LastName,&quot;_self&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Candidate</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Client_Feedback__c</fullName>
+        <externalId>false</externalId>
+        <label>Client Feedback</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Identified_Candidate_Association_ID__c</fullName>
+        <externalId>false</externalId>
+        <label>Identified Candidate Association ID</label>
+        <referenceTo>IdentifiedCandidateAssociation__c</referenceTo>
+        <relationshipLabel>Candidate Stage History</relationshipLabel>
+        <relationshipName>Candidate_Stages</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>Interview_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Interview Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Interview_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Interview Type</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Offer_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Offer Details</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Opportunity_ID__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Opportunity__r.Id</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity ID</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Name_Text__c</fullName>
+        <externalId>false</externalId>
+        <formula>Identified_Candidate_Association_ID__r.Opportunity__r.Name</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity Name Text</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp;  Identified_Candidate_Association_ID__r.Opportunity__c,  Identified_Candidate_Association_ID__r.Opportunity__r.Name, &quot;_self&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Opportunity</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Other_Interviewer__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Other Interviewer</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Interviews (Not Primary)</relationshipLabel>
+        <relationshipName>Candidate_Stages1</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Primary_Interviewer__c</fullName>
+        <deleteConstraint>Restrict</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Primary Interviewer</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Interviews (Primary)</relationshipLabel>
+        <relationshipName>Candidate_Stages</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Stage_Comment__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage Comment</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>15</visibleLines>
+    </fields>
+    <fields>
+        <fullName>View_Update_Stage__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/&quot; &amp; Id ,  RecordType.Name , &apos;_self&apos;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>View / Update Stage</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Candidate Stage</label>
+    <nameField>
+        <displayFormat>StageID{000000}</displayFormat>
+        <label>Candidate Stage ID</label>
+        <trackHistory>false</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Candidate Stages</pluralLabel>
+    <recordTypeTrackHistory>false</recordTypeTrackHistory>
+    <recordTypes>
+        <fullName>CV_Feedback</fullName>
+        <active>true</active>
+        <label>04a.CV Feedback</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>CV_Submission</fullName>
+        <active>true</active>
+        <label>04.CV Submission</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Final_Interview</fullName>
+        <active>true</active>
+        <label>07.Final Interview</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>First_Interview</fullName>
+        <active>true</active>
+        <label>05.First Interview</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Identified</fullName>
+        <active>true</active>
+        <label>01.Identified</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Interview</fullName>
+        <active>true</active>
+        <label>06.Interview</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Interview_Feedback</fullName>
+        <active>true</active>
+        <label>08.Interview Feedback</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Offer_Accepted</fullName>
+        <active>true</active>
+        <label>10.Offer Accepted</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Offer_Declined</fullName>
+        <active>true</active>
+        <label>11.Offer Declined</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Offer_Extended</fullName>
+        <active>true</active>
+        <label>09.Offer Extended</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Sent_Job_Description</fullName>
+        <active>true</active>
+        <label>02.Sent Job Description</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>X03_Long_List</fullName>
+        <active>true</active>
+        <label>03.Long List</label>
+        <picklistValues>
+            <picklist>Interview_Type__c</picklist>
+            <values>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Telephone</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Candidate__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Identified_Candidate_Association_ID__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <webLinks>
+        <fullName>Create_Interview_Event</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Create Interview Event</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/00U/e?what_id={!Candidate_Stage__c.Id}
+&amp;retURL={!Candidate_Stage__c.Id}
+&amp;evt2={!Candidate_Stage__c.Primary_Interviewer__c}
+&amp;StartDateTime={!DATEVALUE(Candidate_Stage__c.Interview_Time__c)}
+&amp;EndDateTime={!DATEVALUE(Candidate_Stage__c.Interview_Time__c)}
+&amp;00Nb0000008QLTS=Interview
+&amp;evt5=Interview%3A%20{!Candidate_Stage__c.Candidate_Name_Text__c}%20-%20{!Candidate_Stage__c.Opportunity_Name_Text__c}
+&amp;00Nb0000008SZzI={!Candidate_Stage__c.Opportunity_ID__c}
+&amp;00Nb0000008SaFY={!Candidate_Stage__c.Opportunity_Name_Text__c}
+&amp;evt6=</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Stage</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>New Stage</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/setup/ui/recordtypeselect.jsp?ent=01Ib0000000Vlmv&amp;retURL=%2F{!IdentifiedCandidateAssociation__c.Id}&amp;save_new_url=%2Fa0f%2Fe%3FCF00Nb0000004kUvx%3D{!IdentifiedCandidateAssociation__c.Name}%26CF00Nb0000004kUvx_lkid%3D{!IdentifiedCandidateAssociation__c.Id}%26retURL%3D%252F{!IdentifiedCandidateAssociation__c.Id}%26saveURL%3D%252F{!IdentifiedCandidateAssociation__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_CV</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send CV</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=someone@example.com&amp;su={!Candidate_Stage__c.Candidate__c}{!Candidate_Stage__c.Opportunity__c}Akascia&amp;body=BODY&amp;bcc=someone.else@example.com</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Job_Description</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Job Description</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail//?ui=2&amp;view=cm&amp;fs=1&amp;tf=1
+&amp;to={!Candidate_Stage__c.Candidate_Email_Text__c}
+&amp;cc=
+&amp;bcc=
+&amp;su=Recent+Conversastion.
+&amp;body=
+Hey+{!Candidate_Stage__c.Candidate_First_Name_Text__c}%2C+%0D%0A%0D%0AThanks+for+your+time+on+the+phone+earlier.+As+discussed%2C+please+find+attached+the+job+description+for+the+{!Candidate_Stage__c.Opportunity_Name_Text__c}+at+{!Candidate_Stage__c.Account_Name_Text__c}+%28{!Candidate_Stage__c.Account_Website_Text__c}%29.+Feel+free+to+contact+me+if+you+have+any+questions+about+this+position.+%0D%0A%0D%0APlease+find+my+contact+details+below%2C+including+links+to+our+social+networks+where+we+publish+many+of+our+assignments.+All+the+best+for+now+and+I+look+forward+to+hearing+your+thoughts+on+this+role+soon.</url>
+    </webLinks>
+</CustomObject>

@@ -1,0 +1,144 @@
+<apex:page controller="MME.EmailMessageListAll" tabStyle="MME__EmailMessage__c">
+<!--  utils --> 
+<apex:stylesheet value="{!URLFOR($Resource.MME__Common, '/css/mme.css')}"/>
+<apex:stylesheet value="{!URLFOR($Resource.MME__Common, '/js/lib/jqwidgets/styles/jqx.base.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/jquery-1.10.2.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/jqwidgets/jqxcore.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/jqwidgets/jqxtooltip.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/spin.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/mme.js')}"/>
+<div id="mme_ajax_load" style="visibility:hidden" ></div>
+    <apex:outputPanel id="roList">
+    <div class="mmePageBlock">
+    <apex:pageBlock title="Email Messages" rendered="{!!isPermitted}">
+        <apex:pageMessages />
+You do not have the level of access necessary to perform the operation you requested.
+Please contact the owner of the record or your administrator if access is necessary.        
+    </apex:pageBlock>
+    <apex:pageBlock title="Email Messages" rendered="{!EmptyList && isPermitted}">
+        <apex:pageMessages />
+        No records to display
+<script>
+if ( mme.spinner ) {
+    mme.spinner.stop();
+}
+</script>
+    </apex:pageBlock>
+    </div>
+    <apex:form rendered="{!!EmptyList}" id="theForm">
+        <apex:actionStatus id="reqStatus" onstart="mme.st_load()" onstop="mme.st_stop()"/>
+        <div class="mmePageBlock">
+        <apex:pageBlock title="Email Messages" id="mainBlock">
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Delete" action="{!massDelete}" onclick="if ( mme.emptySelected() ) return false;" rerender="roList" rendered="{!!showSelected}" status="reqStatus"/>
+                <apex:commandButton value="Confirm" action="{!confirm}" reRender="roList" rendered="{!showSelected}" status="reqStatus"/>
+                <apex:commandButton value="Back" action="{!back}" reRender="roList" rendered="{!showSelected}" status="reqStatus"/>
+            </apex:pageBlockButtons>
+            <apex:pageMessages />
+<!-- simple view -->
+            <apex:pageBlockTable value="{!records}" var="record" rendered="{!!showExtended}" styleClass="mme_msg_list_normal"  headerClass="mme_header">
+                <apex:column width="25px">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox value="{!pageSelected}" id="pageSelected" onclick="mme.selectAll(this,true)"/>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!record.selected}" id="recSelected" onclick="mme.selectRowMan(this)"/>
+                </apex:column>
+                <apex:column value="{!record.em.MME__FromShort__c}" styleClass="mme_from"/>
+                <apex:column headerValue="Subject" styleClass="mme_subject">
+					<apex:outputLink value="/{!record.em.Id}" html-data-emid="{!record.em.Id}" html-data-empty="true" id="subj_col" onmouseover="mme.getEmailBody(mme.$(this))" onmouseout="mme.clearTips()">
+						{!record.em.MME__SubjectShort__c}
+					</apex:outputLink>
+                </apex:column>
+                <apex:column value="{!record.em.MME__Date__c}" styleClass="mme_date" />
+                <apex:column headerValue="Attachments" styleClass="mme_attachments">
+                    <apex:outputtext escape="false" value="{!record.attachments}" rendered="{!!ISBLANK(record.attachments)}"/>
+                </apex:column>
+                <apex:column headerValue="Type: Matches" styleClass="mme_type_matches">
+                    <apex:outputtext escape="false" value="{!record.match}" />
+                </apex:column>
+            </apex:pageBlockTable>
+<!-- extended view -->
+            <apex:pageBlockTable value="{!records}" var="record" columns="5" rendered="{!showExtended}" styleClass="mme_msg_list_full">
+                <apex:column width="25px">
+                    <apex:facet name="header">
+                        <apex:inputCheckbox value="{!pageSelected}" id="pageSelected" onclick="mme.selectAll(this,false)"/>
+                    </apex:facet>
+                    <apex:inputCheckbox value="{!record.selected}" id="recSelected" onclick="mme.selectBlockMan(this)"/>
+                </apex:column>
+                <apex:column headerValue="" width="15%" styleClass="mme_header">From</apex:column>
+                <apex:column value="{!record.em.MME__From__c}" headerValue="" styleClass="mme_from"/>
+                <apex:column headerValue=""  styleClass="mme_header">To</apex:column>
+                <apex:column value="{!record.em.MME__To__c}" headerValue="" styleClass="mme_to"/>
+
+                <apex:column headerValue="" breakBefore="true" />
+                <apex:column headerValue="" styleClass="mme_header">Subject</apex:column>
+                <apex:column value="{!record.em.MME__SubjectLink__c}" headerValue="" styleClass="mme_subject"/>
+                <apex:column headerValue="" styleClass="mme_header">Cc</apex:column>
+                <apex:column value="{!record.em.MME__Cc__c}" headerValue="" styleClass="mme_cc"/>
+
+                <apex:column headerValue="" breakBefore="true" />
+                <apex:column headerValue="" styleClass="mme_header">Date</apex:column>
+                <apex:column value="{!record.em.MME__Date__c}" headerValue="" styleClass="mme_date"/>
+                <apex:column headerValue="" styleClass="mme_header">Bcc</apex:column>
+                <apex:column value="{!record.em.MME__Bcc__c}" headerValue="" styleClass="mme_bcc"/>
+
+                <apex:column headerValue="" breakBefore="true" />
+                <apex:column headerValue="" styleClass="mme_header">Body</apex:column>
+                <apex:column headerValue="" colspan="4" styleClass="mme_body">
+                    <apex:outputPanel >
+                        <apex:outputText escape="false" value="{!record.em.MME__Body__c}" />
+                    </apex:outputPanel>
+                </apex:column>
+
+                <apex:column headerValue="" breakBefore="true" />
+                <apex:column headerValue="" styleClass="mme_header">Attachments</apex:column>
+                <apex:column headerValue="" styleClass="mme_attachments">
+                    <apex:outputtext escape="false" value="{!record.attachments}" rendered="{!!ISBLANK(record.attachments)}"/>
+                </apex:column>
+                <apex:column headerValue="" styleClass="mme_header">Type: Matches</apex:column>
+                <apex:column headerValue="" styleClass="mme_type_matches">
+                    <apex:outputtext escape="false" value="{!record.match}" />
+                </apex:column>
+                <apex:column headerValue="" breakBefore="true"  colspan="5" id="endBlock"><hr /></apex:column>
+            </apex:pageBlockTable>
+
+<!-- paginator -->
+            <apex:panelGrid columns="4" styleClass="list">
+                <apex:panelGroup >
+                    <apex:commandLink action="{!first}" value="First" rendered="{!hasPrevious}" status="reqStatus" rerender="roList"  oncomplete="mme.checkSelected()"/>
+                    <apex:outputText value="First" rendered="{!!hasPrevious}" style="color:grey;"/>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <apex:commandLink action="{!previous}" value="Prev" rendered="{!hasPrevious}" status="reqStatus" rerender="roList"  oncomplete="mme.checkSelected()"/>
+                    <apex:outputText value="Prev" rendered="{!!hasPrevious}" style="color:grey;"/>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <apex:commandLink action="{!next}" value="Next" rendered="{!hasNext}" status="reqStatus" rerender="roList" oncomplete="mme.checkSelected()"/>
+                    <apex:outputText value="Next" rendered="{!!hasNext}" style="color:grey;"/>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <apex:commandLink action="{!last}" value="Last" rendered="{!hasNext}" status="reqStatus" rerender="roList"  oncomplete="mme.checkSelected()"/>
+                    <apex:outputText value="Last" rendered="{!!hasNext}" style="color:grey;"/>
+                    &nbsp;&nbsp;|&nbsp;&nbsp;
+                    <apex:outputPanel rendered="{!showMore > 0}">
+                        <apex:commandLink action="{!more}" value="Show {!showMore} more" status="reqStatus" rerender="roList"  oncomplete="mme.checkSelected()"/>&nbsp;&nbsp;|&nbsp;&nbsp;
+                    </apex:outputPanel>
+                    <apex:commandLink action="{!extend}" value="Show full list" status="reqStatus" rendered="{!!showExtended}" rerender="roList"/>
+                    <apex:commandLink action="{!noextend}" value="Hide full list" status="reqStatus" rendered="{!showExtended}" rerender="roList"/>
+                </apex:panelGroup>
+                <apex:panelGroup id="ResultSelected">
+                    <div id="show_res"><apex:inputHidden value="{!ResultSelected}" id="result"/></div>
+                    <apex:outputText value="Selected: {!ResultSelected}" rendered="{!ResultSelected > 0}" styleClass="mme_sel_counter mme_selected"/>
+                    <apex:outputText value="Selected: {!ResultSelected}" rendered="{!ResultSelected == 0}" styleClass="mme_sel_counter"/>
+                </apex:panelGroup>
+                <apex:outputText value="Page #: {!PageNumber}" />
+                <apex:outputText value="Results: {!ResultSize}"/>
+            </apex:panelGrid>
+        </apex:pageBlock>
+        <apex:actionPoller action="{!refreshLocator}" rerender="ResultSelected" interval="300" rendered="{!!EmptyList && (hasPrevious || hasNext)}"/>    
+        <div id="show_ext"><apex:inputHidden value="{!showExtended}" id="isExt"/></div>
+        </div>
+	    <apex:include pageName="MME__TooltipsTemplate" rendered="{!!showExtended}" />
+    </apex:form>
+    </apex:outputPanel>
+<script>
+	mme.setRa('{!$RemoteAction.EmailMessageListAll.getEmailBody}');
+</script>
+</apex:page>

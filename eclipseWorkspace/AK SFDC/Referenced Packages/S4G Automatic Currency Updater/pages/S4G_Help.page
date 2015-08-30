@@ -1,0 +1,67 @@
+<apex:page showheader="true" title="S4G Help" controller="s4g_currencies.S4Ghelp">
+<apex:pageMessages />
+<table>
+    <tr  valign="center">
+        <td width="40%" align="left"><img src='{!URLFOR($Resource.S4G)}' title="Logo" /> </td>
+        <td width="60%" align="center" valign="center"> 
+            <br/><br/>
+            <h1 style="font-size:20px">S4G Currency Updater</h1> - by S4G Consulting (<a href="http://www.s4g.es">www.s4g.es</a>)<br/>
+        </td>
+    </tr>
+</table>
+<br/><br/>
+<h2 style="font-size:16px"><u>System Requirements</u></h2>
+<p>You need an <b>Enterprise Edition</b> organization with "Multi-currency" and "Dated Exchange Rate" enabled. To get Multi-currency enabled, you must create a case or contact Salesforce.com, as it is a provisioned feature it must be enabled by them. Once this has been done, you must enable "Dated Exchange Rate" yourself (check the standard help if you need assistance with this).</p>
+<br/>
+<h2  style="font-size:16px"><u>Configuration</u></h2><br/><br/>
+<h2>1) Configure the Remote Site Settings</h2> - Please add the following URL to the remote site settings: https://sfdc-currency-updater.appspot.com, this is done within the Configuration under the Security Controls menu. If you need further help, please consult Salesforce's standard help.<br/><br/>
+<h2>2) Configure username, password and security token</h2> - Please fill out the below details. If you need help obtaining the "Security Token" for your user, please consult Salesforce's standard help.<br/><br/>
+<apex:form >
+<apex:pageBlock title="Connection settings">
+<apex:pageBlockButtons location="top">
+        <apex:commandButton value="Save" action="{!savePass}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection columns="1">
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel for="usr" value="Username">
+        <apex:inputText value="{!cfg.s4g_currencies__Username__c}" id="usr"/>
+    </apex:outputLabel>
+    </apex:pageBlockSectionItem>
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel for="pwd" value="Password">
+        <apex:inputSecret value="{!cfg.s4g_currencies__Password__c}" id="pwd"/>
+    </apex:outputLabel>
+    </apex:pageBlockSectionItem>
+    <apex:pageBlockSectionItem >
+        <apex:outputLabel for="tok" value="Security Token">
+        <apex:inputText value="{!cfg.s4g_currencies__Token__c}" id="tok"/>
+    </apex:outputLabel>
+    </apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+
+<h2>3) Start the process</h2>
+
+
+<p>Once you have done the 1st step, click the button below to start the automatic updates right now!</p>
+<br/>
+    <table width="100%">
+        <tr align="left">
+            <td align="left">
+                <apex:form >
+                    <apex:commandButton value="START CURRENCY UPDATER NOW!" action="{!save}"/>
+                </apex:form>
+            </td>
+        </tr>
+    </table>
+<br/><br/>
+
+<h2>4) Check if everything works as planned. You should have a scheduled apex job as shown bellow.</h2>
+<p>
+Go to Setup / Administration Setup / Monitoring / Scheduled Jobs</p>
+<br/>
+<img src='{!URLFOR($Resource.Monitor)}' title="Monitoring" />
+<br/><br/>
+
+</apex:page>

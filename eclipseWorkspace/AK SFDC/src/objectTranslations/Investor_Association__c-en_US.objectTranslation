@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Investment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Investments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Invested In --></label>
+        <name>Invested_In__c</name>
+        <relationshipLabel><!-- Investors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Investor --></label>
+        <name>Investor__c</name>
+        <relationshipLabel><!-- Investments --></relationshipLabel>
+    </fields>
+    <layouts>
+        <layout>Investor Association Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

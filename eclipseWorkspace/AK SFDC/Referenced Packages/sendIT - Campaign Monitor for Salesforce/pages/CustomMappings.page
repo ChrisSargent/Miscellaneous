@@ -1,0 +1,138 @@
+<apex:page Controller="wbsendit.CustomMappingController" action="{!checkSetup}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"/>
+    <script type="text/javascript">
+        var sfIdSyncDirectionListGlobal;
+        function changeBehaviour(sfIdBehaviourSelectList, sfIdSyncDirectionList) {
+
+            if(sfIdSyncDirectionList == null)
+                sfIdSyncDirectionList = sfIdSyncDirectionListGlobal;
+
+            var idBehaviourSectionList = document.getElementById(sfIdBehaviourSelectList);
+            var idSyncDirectionList = document.getElementById(sfIdSyncDirectionList);
+            var idBehaviourLabelNA = document.getElementById('idBehaviourLabelNA');
+
+            if(idSyncDirectionList.value == 'Sync both ways') {
+                idBehaviourSectionList.style.display = '';
+                idBehaviourLabelNA.style.display = 'none';
+                idBehaviourLabelNA.textContent = '';
+            } else {
+                idBehaviourSectionList.style.display = 'none';
+
+                if(idSyncDirectionList.value == 'Salesforce to Campaign Monitor') {
+                    idBehaviourLabelNA.textContent = 'Salesforce always wins';
+                } else if(idSyncDirectionList.value == 'Campaign Monitor to Salesforce') {
+                    idBehaviourLabelNA.textContent = 'Campaign Monitor always wins';
+                } else {
+                    idBehaviourLabelNA.textContent = 'Not applicable';
+                }
+                idBehaviourLabelNA.style.display = '';
+            }
+            return true;
+        }
+    </script>
+
+    <apex:sectionHeader title="Campaign Monitor to Salesforce Field Mappings" subtitle="Custom Field Mappings" help="http://support.beaufort12.com/customer/portal/articles/740131"/>
+    <apex:pageMessages escape="false" />
+
+    <apex:form >
+    <apex:pageBlock title="Custom Field Mappings">
+        <apex:pageBlockButtons location="bottom">
+            <apex:commandButton action="{!save}" value="Save" rendered="{!editMode == 'edit'}" />
+            <apex:commandButton action="{!saveRun}" value="Save and Run" rendered="{!editMode == 'edit'}" />
+            <apex:commandButton action="{!cancel}" value="Cancel"  rendered="{!editMode == 'edit'}" />
+            <apex:commandButton action="{!switchEditMode}" value="Edit"  rendered="{!editMode == 'view'}" />
+        </apex:pageBlockButtons>
+
+        <!-- Email List and Object Type section -->
+        <apex:pageBlockSection columns="2" rendered="{!showAddButton}">
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Email List" for="pro"></apex:outputLabel>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:selectList id="pro" value="{!selectedSubscriberList}" size="1" title="Email Lists">
+                            <apex:selectOptions value="{!SubscriberLists}"></apex:selectOptions>
+                            <apex:actionSupport event="onchange" reRender="mappingsSection,syncSection" status="refreshMappings" action="{!setInitialDirection}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                </apex:pageBlockSectionItem>
+
+                <apex:pageBlockSectionItem >
+                    <apex:outputLabel value="Object" for="objType"></apex:outputLabel>
+                    <apex:outputPanel styleClass="requiredInput" layout="block">
+                    <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                        <apex:selectList id="objType" value="{!ObjectType}" size="1" title="Object Type">
+                            <apex:selectOptions value="{!ObjectTypes}"></apex:selectOptions>
+                            <apex:actionSupport event="onchange" reRender="mappingsSection,syncSection" status="refreshMappings" action="{!setInitialDirection}"/>
+                        </apex:selectList>
+                    </apex:outputPanel>
+                </apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+
+        <!-- Sync Direction and Behaviour Section -->
+        <apex:pageBlockSection columns="2" id="syncSection" rendered="{!showAddButton}">
+            <apex:pageBlockSectionItem >
+                <apex:outputLabel value="Sync Direction"></apex:outputLabel>
+                <apex:outputPanel styleClass="requiredInput" layout="block">
+                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                    <apex:selectList value="{!syncDirection}" size="1" disabled="{!editMode == 'view'}" onchange="changeBehaviour('{!$Component.syncSection:idBehaviourSectionItem:idBehaviourSelectList}','{!$Component.idSyncDirectionList}');" id="idSyncDirectionList">
+                        <apex:selectOptions value="{!syncDirections}"/>
+                        <apex:actionSupport event="onchange" reRender="mappingsSection" status="refreshMappings"/>
+                    </apex:selectList>
+                    <!--
+                    <script type="text/javascript">
+                        // Save the selected option so we can use the Id later: j_id0:j_id3:j_id4:syncSection:j_id48:idSyncDirectionList
+                        (function(){
+                            sfIdSyncDirectionListGlobal = '{!$Component.idSyncDirectionList}';
+                        })();
+                    </script>
+                    -->
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            <!--
+            <apex:pageBlockSectionItem id="idBehaviourSectionItem">
+                <apex:outputLabel value="Conflict Behaviour"  id="idBehaviourLabel"></apex:outputLabel>
+                <apex:outputPanel styleClass="requiredInput" layout="block" id="idBehaviourCell">
+                <apex:outputPanel styleClass="requiredBlock" layout="block"/>
+                    <span id="idBehaviourLabelNA"></span>
+                    <apex:selectList value="{!conflictBehaviour}" size="1" disabled="{!editMode == 'view'}" id="idBehaviourSelectList">
+                        <apex:selectOptions value="{!conflictBehaviours}"/>
+                    </apex:selectList>
+                </apex:outputPanel>
+            </apex:pageBlockSectionItem>
+            -->
+        </apex:pageBlockSection>
+
+        <!-- Main Mappings Table -->
+        <apex:pageBlockSection columns="1" id="mappingsSection" rendered="{!showAddButton}">
+
+            <apex:actionStatus id="refreshMappings"  startText="Loading Mappings...">
+                <apex:facet name="stop">
+                    <apex:pageBlockTable value="{!customFields}" var="customField"  columnsWidth="400px, 400px" rowClasses="odd,even">
+                        <apex:column headerValue="Campaign Monitor">
+                                <apex:outputText value="{!customField.CMField}"/>
+                        </apex:column>
+                        <apex:column headerValue="Salesforce">
+                                <apex:selectList value="{!customField.SFField}" size="1" disabled="{!editMode == 'view'}">
+                                <apex:selectOptions value="{!customField.salesforceFieldMap[customField.cmDataType]}"/>
+                                </apex:selectList>
+                        </apex:column>
+                    </apex:pageBlockTable>
+                </apex:facet>
+            </apex:actionstatus>
+            <script type="text/javascript">
+                // On load we set the Behaviour information.
+                (function(){
+                    changeBehaviour('{!$Component.syncSection:idBehaviourSectionItem:idBehaviourSelectList}',null);
+                })();
+            </script>
+
+        </apex:pageBlockSection>
+
+
+    </apex:pageBlock>
+    </apex:form>
+
+</apex:page>

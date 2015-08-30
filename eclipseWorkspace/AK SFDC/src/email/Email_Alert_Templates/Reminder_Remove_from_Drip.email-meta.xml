@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Reminder | Remove from Drip</name>
+    <style>none</style>
+    <subject>Reminder: Remove {!Contact.Email} from drip in ToutApp.</subject>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<types xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types isSubType="false">
+    <name>AccountCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>AccountOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>AnalyticSnapshot</name>
+  </types>
+  <types isSubType="false">
+    <name>ApexClass</name>
+    <members>akCandidateWizard</members>
+    <members>akCandidateWizardTest</members>
+    <members>akProcessInboundStageR1</members>
+    <members>akProcessInboundStageS1</members>
+    <members>akProcessInboundStageS2</members>
+    <members>akProcessInboundStageS3</members>
+    <members>akProcessInboundStageS4</members>
+    <members>akProcessInboundStageS5</members>
+    <members>akProcessInboundStageS6</members>
+    <members>akProcessInboundTest</members>
+    <members>akRedirectExtension</members>
+    <members>AKTestLeadClass</members>
+    <members>akUpdateAccount</members>
+    <members>akUpdateAccountTest</members>
+    <members>akUpdateToutAppStages</members>
+    <members>ChangePasswordController</members>
+    <members>ChangePasswordControllerTest</members>
+    <members>ForgotPasswordController</members>
+    <members>ForgotPasswordControllerTest</members>
+    <members>MyProfilePageController</members>
+    <members>MyProfilePageControllerTest</members>
+    <members>SiteLoginController</members>
+    <members>SiteLoginControllerTest</members>
+    <members>SiteRegisterController</members>
+    <members>SiteRegisterControllerTest</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexComponent</name>
+    <members>SiteFooter</members>
+    <members>SiteHeader</members>
+    <members>SiteLogin</members>
+    <members>SitePoweredBy</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexPage</name>
+    <members>akCandidateWizard</members>
+    <members>akContactOverride</members>
+    <members>AnswersHome</members>
+    <members>BandwidthExceeded</members>
+    <members>ChangePassword</members>
+    <members>Exception</members>
+    <members>FileNotFound</members>
+    <members>ForgotPassword</members>
+    <members>ForgotPasswordConfirm</members>
+    <members>IdeasHome</members>
+    <members>InMaintenance</members>
+    <members>MyProfilePage</members>
+    <members>SiteLogin</members>
+    <members>SiteRegister</members>
+    <members>SiteRegisterConfirm</members>
+    <members>SiteTemplate</members>
+    <members>StdExceptionTemplate</members>
+    <members>ToutApp_Record</members>
+    <members>Unauthorized</members>
+    <members>UnderConstruction</members>
+  </types>
+  <types isSubType="false">
+    <name>ApexTrigger</name>
+    <members>AK_updLeadFromCB</members>
+    <members>akUpdateAccountTrigger</members>
+  </types>
+  <types isSubType="false">
+    <name>AppMenu</name>
+    <members>AppSwitcher</members>
+    <members>Salesforce1</members>
+  </types>
+  <types isSubType="false">
+    <name>ApprovalProcess</name>
+  </types>
+  <types isSubType="false">
+    <name>AssignmentRule</name>
+  </types>
+  <types isSubType="false">
+    <name>AuthProvider</name>
+  </types>
+  <types isSubType="false">
+    <name>AutoResponseRule</name>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>BusinessProcess</name>
+    <members>Opportunity.Assignment</members>
+    <members>Opportunity.Pipeline Assignment</members>
+    <members>Opportunity.Retainers</members>
+    <members>Opportunity.Split Fee</members>
+  </types>
+  <types isSubType="false">
+    <name>CallCenter</name>
+  </types>
+  <types isSubType="false">
+    <name>CampaignCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CampaignOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CaseCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CaseOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>Community</name>
+    <members>Internal Community</members>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>CompactLayout</name>
+  </types>
+  <types isSubType="false">
+    <name>ConnectedApp</name>
+  </types>
+  <types isSubType="false">
+    <name>ContactCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>ContactOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomApplication</name>
+    <members>Recruiting</members>
+    <members>standard__AppLauncher</members>
+    <members>standard__Chatter</members>
+    <members>standard__Content</members>
+    <members>standard__Marketing</members>
+    <members>standard__Platform</members>
+    <members>standard__Sales</members>
+    <members>standard__Service</members>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>CustomField</name>
+    <members>Account.Account_Name_Aliases__c</members>
+    <members>Account.Account_Relationship__c</members>
+    <members>Account.AccRelationshipInt__c</members>
+    <members>Account.Acquired_Account_Status__c</members>
+    <members>Account.Attributed_To__c</members>
+    <members>Account.bh_clientCorporationID__c</members>
+    <members>Account.bh_customerSectors__c</members>
+    <members>Account.Competitors__c</members>
+    <members>Account.Crunchbase_Profile__c</members>
+    <members>Account.Fee_Highlights__c</members>
+    <members>Account.Friendly_Name__c</members>
+    <members>Account.Funding_Regions__c</members>
+    <members>Account.Funding_Size__c</members>
+    <members>Account.Funding_Type__c</members>
+    <members>Account.IN_Company_Page__c</members>
+    <members>Account.IN_Employees__c</members>
+    <members>Account.IN_Founded__c</members>
+    <members>Account.IN_Linkedin_ID__c</members>
+    <members>Account.IN_Name__c</members>
+    <members>Account.IN_Operating_Status__c</members>
+    <members>Account.Nearest_Major_City__c</members>
+    <members>Account.Number_of_Opportunities__c</members>
+    <members>Account.Parent_Account_Relationship__c</members>
+    <members>Account.Parent_Account_Type__c</members>
+    <members>Account.Parent_Employees__c</members>
+    <members>Account.Parent_Founded__c</members>
+    <members>Account.Parent_Website__c</members>
+    <members>Account.Placements_at_this_Account__c</members>
+    <members>Account.Why_Idle__c</members>
+    <members>Account_Document_Folder__c.Account__c</members>
+    <members>Account_Document_Folder__c.Folder_Contains__c</members>
+    <members>Activity.Call_Sub_Type__c</members>
+    <members>Activity.Event_Type__c</members>
+    <members>Activity.Opportunity__c</members>
+    <members>Activity.Opportunity_Name_Text__c</members>
+    <members>Activity.OpportunityID__c</members>
+    <members>Activity.Task_Type__c</members>
+    <members>Bullhorn_Note_Link__c.Action__c</members>
+    <members>Bullhorn_Note_Link__c.Contact_Link__c</members>
+    <members>Bullhorn_Note_Link__c.Created_By__c</members>
+    <members>Bullhorn_Note_Link__c.Created_Date__c</members>
+    <members>Bullhorn_Note_Link__c.Job_Link__c</members>
+    <members>Bullhorn_Note_Link__c.Number_of_Links__c</members>
+    <members>Bullhorn_Note_Link__c.UserComment_bh_ID__c</members>
+    <members>Bullhorn_Note_Link__c.View_Note__c</members>
+    <members>Bullhorn_Notes__c.Action__c</members>
+    <members>Bullhorn_Notes__c.Comments__c</members>
+    <members>Bullhorn_Notes__c.Note_bh_id__c</members>
+    <members>Bullhorn_Notes__c.Number_of_Links__c</members>
+    <members>Campaign.Actual_Response__c</members>
+    <members>Campaign.Actual_Response_in_Hierarchy__c</members>
+    <members>Campaign.Email_Subject__c</members>
+    <members>Campaign.Email_URL__c</members>
+    <members>Campaign.iContact_Statistics__c</members>
+    <members>CampaignMember.Contact_Lead_Status__c</members>
+    <members>CampaignMember.Email_Canvassing__c</members>
+    <members>CampaignMember.Record_Type__c</members>
+    <members>Candidate_Stage__c.Account_Name_Text__c</members>
+    <members>Candidate_Stage__c.Account_Website_Text__c</members>
+    <members>Candidate_Stage__c.Candidate__c</members>
+    <members>Candidate_Stage__c.Candidate_Email_Text__c</members>
+    <members>Candidate_Stage__c.Candidate_Feedback__c</members>
+    <members>Candidate_Stage__c.Candidate_First_Name_Text__c</members>
+    <members>Candidate_Stage__c.Candidate_ID__c</members>
+    <members>Candidate_Stage__c.Candidate_Name_Text__c</members>
+    <members>Candidate_Stage__c.Client_Feedback__c</members>
+    <members>Candidate_Stage__c.Identified_Candidate_Association_ID__c</members>
+    <members>Candidate_Stage__c.Interview_Time__c</members>
+    <members>Candidate_Stage__c.Interview_Type__c</members>
+    <members>Candidate_Stage__c.Offer_Details__c</members>
+    <members>Candidate_Stage__c.Opportunity__c</members>
+    <members>Candidate_Stage__c.Opportunity_ID__c</members>
+    <members>Candidate_Stage__c.Opportunity_Name_Text__c</members>
+    <members>Candidate_Stage__c.Other_Interviewer__c</members>
+    <members>Candidate_Stage__c.Primary_Interviewer__c</members>
+    <members>Candidate_Stage__c.Stage_Comment__c</members>
+    <members>Candidate_Stage__c.View_Update_Stage__c</members>
+    <members>Contact.Account_Founded__c</members>
+    <members>Contact.Account_Founded_for_CM__c</members>
+    <members>Contact.Account_Phone__c</members>
+    <members>Contact.Account_Relationship__c</members>
+    <members>Contact.Account_Size__c</members>
+    <members>Contact.Account_Type__c</members>
+    <members>Contact.Akascia_Territory__c</members>
+    <members>Contact.bh_LinkedID__c</members>
+    <members>Contact.bh_userID__c</members>
+    <members>Contact.Candidate_Status__c</members>
+    <members>Contact.Car_Allowance__c</members>
+    <members>Contact.Company_Car__c</members>
+    <members>Contact.Contact_Direct_Line__c</members>
+    <members>Contact.Contacted_By__c</members>
+    <members>Contact.Current_Fixed_Salary__c</members>
+    <members>Contact.Current_Package__c</members>
+    <members>Contact.Current_Variable_Salary__c</members>
+    <members>Contact.Customer_at__c</members>
+    <members>Contact.Customer_Sectors__c</members>
+    <members>Contact.Department__c</members>
+    <members>Contact.Desired_Fixed_Salary__c</members>
+    <members>Contact.Desired_Locations__c</members>
+    <members>Contact.Desired_Package__c</members>
+    <members>Contact.Desired_Variable_Salary__c</members>
+    <members>Contact.Email_Address_History__c</members>
+    <members>Contact.Email_Business__c</members>
+    <members>Contact.Email_Other__c</members>
+    <members>Contact.Email_Personal__c</members>
+    <members>Contact.Employer_Types__c</members>
+    <members>Contact.Employment_Preference__c</members>
+    <members>Contact.Equity__c</members>
+    <members>Contact.Funnel_Stage__c</members>
+    <members>Contact.FunnelStageInt__c</members>
+    <members>Contact.Healthcare__c</members>
+    <members>Contact.Influencer_for_Search_Firms__c</members>
+    <members>Contact.Languages__c</members>
+    <members>Contact.Left_Company__c</members>
+    <members>Contact.Met_in_Person__c</members>
+    <members>Contact.No_Sales_Emails_Until__c</members>
+    <members>Contact.Not_Client_Reason__c</members>
+    <members>Contact.Original_Candidate_Source__c</members>
+    <members>Contact.Other_Package_Info__c</members>
+    <members>Contact.Pension__c</members>
+    <members>Contact.Position_Code__c</members>
+    <members>Contact.Preferred_Email_Address__c</members>
+    <members>Contact.Referred_by__c</members>
+    <members>Contact.Request_Permission_Later__c</members>
+    <members>Contact.Sales_Campaign__c</members>
+    <members>Contact.Sales_Campaign_to_New__c</members>
+    <members>Contact.SkypeID__c</members>
+    <members>Contact.Technology_Sector__c</members>
+    <members>Contact.ToutApp_Sales_Stage__c</members>
+    <members>ContentVersion.bh_DocID__c</members>
+    <members>ContentVersion.For_Internal_Use_Only__c</members>
+    <members>ContentVersion.Salesforce_Linked_Contact_ID__c</members>
+    <members>ContentVersion.Salesforce_Linked_Opportunity_ID__c</members>
+    <members>Department__c.bh_categoryID__c</members>
+    <members>IdentifiedCandidateAssociation__c.Account__c</members>
+    <members>IdentifiedCandidateAssociation__c.Ak_IdentID__c</members>
+    <members>IdentifiedCandidateAssociation__c.Akascia_Comments__c</members>
+    <members>IdentifiedCandidateAssociation__c.Akascia_Other_Reason__c</members>
+    <members>IdentifiedCandidateAssociation__c.Akascia_Suitability_Level__c</members>
+    <members>IdentifiedCandidateAssociation__c.bh_JobResponseID__c</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Comments__c</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Interest_Level__c</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Name__c</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Other_Reason__c</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Stage__c</members>
+    <members>IdentifiedCandidateAssociation__c.Client_Comments__c</members>
+    <members>IdentifiedCandidateAssociation__c.Client_Interest_Level__c</members>
+    <members>IdentifiedCandidateAssociation__c.Client_Other_Reason__c</members>
+    <members>IdentifiedCandidateAssociation__c.Interviewed_by_Client__c</members>
+    <members>IdentifiedCandidateAssociation__c.Needs_Further_Action__c</members>
+    <members>IdentifiedCandidateAssociation__c.Opportunity__c</members>
+    <members>IdentifiedCandidateAssociation__c.Opportunity_Stage__c</members>
+    <members>IdentifiedCandidateAssociation__c.Primary_Akascia_Objection__c</members>
+    <members>IdentifiedCandidateAssociation__c.Primary_Candidate_Objection__c</members>
+    <members>IdentifiedCandidateAssociation__c.Primary_Client_Objection__c</members>
+    <members>IdentifiedCandidateAssociation__c.Responded__c</members>
+    <members>IdentifiedCandidateAssociation__c.Source__c</members>
+    <members>IdentifiedCandidateAssociation__c.Stage__c</members>
+    <members>IdentifiedCandidateAssociation__c.Still_In_Client_Process__c</members>
+    <members>IdentifiedCandidateAssociation__c.Submitted_to_Client__c</members>
+    <members>Investor_Association__c.Invested_In__c</members>
+    <members>Investor_Association__c.Investor__c</members>
+    <members>ISO_alpha3_Country_Code__c.Akascia_Territory__c</members>
+    <members>ISO_alpha3_Country_Code__c.Country_Name__c</members>
+    <members>ISO_alpha3_Country_Code__c.ISO_alpha2_Country_Code__c</members>
+    <members>ISO_alpha3_Country_Code__c.Region__c</members>
+    <members>Lead.Akascia_Territory__c</members>
+    <members>Lead.CB_Category_List__c</members>
+    <members>Lead.CB_Country_Code__c</members>
+    <members>Lead.CB_Founded_Year__c</members>
+    <members>Lead.CB_Funding_Total_USD__c</members>
+    <members>Lead.CB_Last_Funding_At__c</members>
+    <members>Lead.CB_Market__c</members>
+    <members>Lead.CB_Permalink__c</members>
+    <members>Lead.CB_Region__c</members>
+    <members>Lead.CB_State_Code__c</members>
+    <members>Lead.Check_Age__c</members>
+    <members>Lead.Check_Funding__c</members>
+    <members>Lead.Check_Technology__c</members>
+    <members>Lead.Code_Check__c</members>
+    <members>Lead.Crunchbase_URL__c</members>
+    <members>Lead.Region__c</members>
+    <members>Opportunity.Based__c</members>
+    <members>Opportunity.bh_PlacementID__c</members>
+    <members>Opportunity.BHIsDeleted__c</members>
+    <members>Opportunity.BHJobID__c</members>
+    <members>Opportunity.Car_Allowance__c</members>
+    <members>Opportunity.City__c</members>
+    <members>Opportunity.Company_Car__c</members>
+    <members>Opportunity.Country_New__c</members>
+    <members>Opportunity.Customers__c</members>
+    <members>Opportunity.Fee_Arrangement__c</members>
+    <members>Opportunity.Fixed_Salary__c</members>
+    <members>Opportunity.Healthcare__c</members>
+    <members>Opportunity.Industry__c</members>
+    <members>Opportunity.Invoice_Comments__c</members>
+    <members>Opportunity.Invoice_Status__c</members>
+    <members>Opportunity.Job_Description__c</members>
+    <members>Opportunity.Pension__c</members>
+    <members>Opportunity.Placed_by__c</members>
+    <members>Opportunity.Placed_Candidate__c</members>
+    <members>Opportunity.Position_Code__c</members>
+    <members>Opportunity.Priority__c</members>
+    <members>Opportunity.Probability_Display_Read_Only__c</members>
+    <members>Opportunity.Probability_of_Winning_Assignment__c</members>
+    <members>Opportunity.Rate_Type__c</members>
+    <members>Opportunity.Related_Retainer__c</members>
+    <members>Opportunity.Retainer_Fee__c</members>
+    <members>Opportunity.Salary_and_Benefits_Comments__c</members>
+    <members>Opportunity.Sanitized_Job_Description__c</members>
+    <members>Opportunity.Service_Level__c</members>
+    <members>Opportunity.Sponsored_Visa__c</members>
+    <members>Opportunity.Start_Date__c</members>
+    <members>Opportunity.Technology_Sector__c</members>
+    <members>Opportunity.Time_to_Fill__c</members>
+    <members>Opportunity.Total_Fee__c</members>
+    <members>Opportunity.Total_Package__c</members>
+    <members>Opportunity.Travel_Requirements__c</members>
+    <members>Opportunity.Variable_Salary__c</members>
+    <members>Opportunity.Will_Relocate__c</members>
+    <members>Opportunity_Document_Folder__c.Folder_Contains__c</members>
+    <members>Opportunity_Document_Folder__c.Opportunity__c</members>
+    <members>Person_Document_Folder__c.Contact__c</members>
+    <members>Person_Document_Folder__c.Folder_Contains__c</members>
+    <members>Position_Code__c.Department__c</members>
+    <members>Position_Code__c.Position__c</members>
+    <members>wbsendit__Campaign_Activity__c.Account__c</members>
+    <members>wbsendit__Campaign_Activity__c.Account_ID__c</members>
+    <members>wbsendit__Campaign_Activity__c.Contact_Owner__c</members>
+  </types>
+  <types isSubType="true" parent="CustomLabels">
+    <name>CustomLabel</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomLabels</name>
+    <members>CustomLabels</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomObject</name>
+    <members>Account_Document_Folder__c</members>
+    <members>Bullhorn_Note_Link__c</members>
+    <members>Bullhorn_Notes__c</members>
+    <members>Candidate_Stage__c</members>
+    <members>Department__c</members>
+    <members>IdentifiedCandidateAssociation__c</members>
+    <members>Investor_Association__c</members>
+    <members>ISO_alpha3_Country_Code__c</members>
+    <members>Opportunity_Document_Folder__c</members>
+    <members>Person_Document_Folder__c</members>
+    <members>Position_Code__c</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomObjectTranslation</name>
+    <members>Account-en_US</members>
+    <members>Account_Document_Folder__c-en_US</members>
+    <members>Bullhorn_Note_Link__c-en_US</members>
+    <members>Bullhorn_Notes__c-en_US</members>
+    <members>Candidate_Stage__c-en_US</members>
+    <members>Contact-en_US</members>
+    <members>Department__c-en_US</members>
+    <members>IdentifiedCandidateAssociation__c-en_US</members>
+    <members>Investor_Association__c-en_US</members>
+    <members>ISO_alpha3_Country_Code__c-en_US</members>
+    <members>MME__ContactEmail__c-en_US</members>
+    <members>MME__EmailMessage__c-en_US</members>
+    <members>MME__EmailMessageRelatedObject__c-en_US</members>
+    <members>Opportunity-en_US</members>
+    <members>Opportunity_Document_Folder__c-en_US</members>
+    <members>Person_Document_Folder__c-en_US</members>
+    <members>Position_Code__c-en_US</members>
+    <members>s4g_currencies__Batch_Script__c-es</members>
+    <members>s4g_currencies__Currency_Updater_Job__c-es</members>
+    <members>s4g_currencies__LogCurrency__c-es</members>
+    <members>s4g_currencies__S4G_Config__c-es</members>
+    <members>s4g_currencies__S4G_settings__c-en_US</members>
+    <members>SFSSDupeCatcher__Application_Properties__c-en_US</members>
+    <members>SFSSDupeCatcher__Application_Settings__c-en_US</members>
+    <members>SFSSDupeCatcher__DC_Application_Properties__c-en_US</members>
+    <members>SFSSDupeCatcher__DcIn__c-en_US</members>
+    <members>SFSSDupeCatcher__Duplicate_Warning__c-en_US</members>
+    <members>SFSSDupeCatcher__Override_Cache__c-en_US</members>
+    <members>SFSSDupeCatcher__Potential_Duplicate__c-en_US</members>
+    <members>SFSSDupeCatcher__RequiredFieldSupport__c-en_US</members>
+    <members>SFSSDupeCatcher__Scenario__c-en_US</members>
+    <members>SFSSDupeCatcher__Scenario_Rule__c-en_US</members>
+    <members>SFSSDupeCatcher__Web_To_Lead_Sources__c-en_US</members>
+    <members>wbsendit__AutoSubscription__c-en_US</members>
+    <members>wbsendit__Campaign_Activity__c-en_US</members>
+    <members>wbsendit__Custom_Field__c-en_US</members>
+    <members>wbsendit__senditcampaign__c-en_US</members>
+    <members>wbsendit__senditclients__c-en_US</members>
+    <members>wbsendit__senditerror__c-en_US</members>
+    <members>wbsendit__senditlists__c-en_US</members>
+    <members>wbsendit__senditsettings__c-en_US</members>
+    <members>wbsendit__senditsubrule__c-en_US</members>
+    <members>wbsendit__sendituserclient__c-en_US</members>
+    <members>wbsendit__Subscription__c-en_US</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomPageWebLink</name>
+    <members>Akascia_Customisations</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomPermission</name>
+  </types>
+  <types isSubType="false">
+    <name>CustomSite</name>
+    <members>Akascia_Current_Assignments</members>
+  </types>
+  <types isSubType="false">
+    <name>CustomTab</name>
+    <members>Department__c</members>
+    <members>Getting_Started_reg</members>
+    <members>IdentifiedCandidateAssociation__c</members>
+    <members>Position_Code__c</members>
+  </types>
+  <types isSubType="false">
+    <name>Dashboard</name>
+    <members>CompanyDashboards</members>
+    <members>Sales_Marketing_Dashboards</members>
+    <members>Best_Practice_Service_Dashboards</members>
+    <members>Best_Practice_Service_Dashboards/Agent_Supervisor_Overview</members>
+    <members>Best_Practice_Service_Dashboards/Service_Exec_Overview</members>
+    <members>Best_Practice_Service_Dashboards/Service_KPIs</members>
+    <members>CompanyDashboards/AdoptionDashboard</members>
+    <members>CompanyDashboards/CompanyPerformanceDashboard</members>
+    <members>Sales_Marketing_Dashboards/Marketing_Executive_Dashboard</members>
+    <members>Sales_Marketing_Dashboards/Sales_Executive_Dashboard</members>
+    <members>Sales_Marketing_Dashboards/Sales_Manager_Dashboard</members>
+    <members>Sales_Marketing_Dashboards/Salesperson_Dashboard</members>
+  </types>
+  <types isSubType="false">
+    <name>DataCategoryGroup</name>
+  </types>
+  <types isSubType="false">
+    <name>Document</name>
+    <members>SharedDocuments</members>
+    <members>SalesTools</members>
+  </types>
+  <types isSubType="false">
+    <name>EmailTemplate</name>
+    <members>Email_Alert_Templates</members>
+    <members>Archive</members>
+    <members>unfiled$public</members>
+    <members>Archive/Canvass_2012_05_FB_IPO_Clients</members>
+    <members>Archive/Christmas_2012</members>
+    <members>Archive/Independence_Day_2013_Customer</members>
+    <members>Email_Alert_Templates/Alert_Clicked_Link</members>
+    <members>Email_Alert_Templates/Alert_Unsubscribe</members>
+    <members>Email_Alert_Templates/Notification_Call_Reminder_Final</members>
+    <members>Email_Alert_Templates/Notification_Call_Reminder_First</members>
+    <members>Email_Alert_Templates/Notification_Touchpoint_LI_Twitter</members>
+    <members>Email_Alert_Templates/Notification_Touchpoint_Reminder_1</members>
+    <members>Email_Alert_Templates/Reminder_Remove_from_Drip</members>
+    <members>unfiled$public/ContactFollowUpSAMPLE</members>
+    <members>unfiled$public/LeadsNewassignmentnotificationSAMPLE</members>
+    <members>unfiled$public/LeadsWebtoLeademailresponseSAMPLE</members>
+    <members>unfiled$public/SUPPORT%3A Self-Service New Comment %28SAMPLE%29</members>
+    <members>unfiled$public/SUPPORT%3A Self-Service New User Login %28SAMPLE%29</members>
+    <members>unfiled$public/SUPPORT%3A Self-Service Reset Password %28SAMPLE%29</members>
+    <members>unfiled$public/SUPPORTCaseescalationnotificationSAMPLE</members>
+    <members>unfiled$public/SUPPORTCaseResponsewithSolutionSAMPLE</members>
+    <members>unfiled$public/SUPPORTNewassignmentnotificationSAMPLE</members>
+    <members>unfiled$public/SUPPORTSelfServiceNewCommentNotificationSAMPLE</members>
+    <members>unfiled$public/SUPPORTSelfServiceNewUserLoginInformationSAMPLE</members>
+    <members>unfiled$public/SUPPORTSelfServiceResetPasswordSAMPLE</members>
+    <members>unfiled$public/SUPPORTWebtoCaseemailresponseSAMPLE</members>
+  </types>
+  <types isSubType="false">
+    <name>EscalationRule</name>
+  </types>
+  <types isSubType="false">
+    <name>ExternalDataSource</name>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>FieldSet</name>
+    <members>Contact.Candidate_Address_Info</members>
+    <members>Contact.Candidate_Basic_Information</members>
+    <members>Contact.Candidate_Biz_Dev_Info</members>
+    <members>Contact.Candidate_Contact_Details</members>
+    <members>Contact.Candidate_Employer_Information</members>
+    <members>Contact.Candidate_Information</members>
+    <members>Contact.Candidate_Salary_Info</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Fields</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Wiz_ICA_Akascia</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Wiz_ICA_Candidate</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Wiz_ICA_Client</members>
+  </types>
+  <types isSubType="false">
+    <name>FlexiPage</name>
+  </types>
+  <types isSubType="false">
+    <name>Flow</name>
+    <members>Add_New_Candidate-1</members>
+    <members>Create_Interview_Event_Flow-1</members>
+  </types>
+  <types isSubType="false">
+    <name>Group</name>
+  </types>
+  <types isSubType="false">
+    <name>HomePageComponent</name>
+    <members>Akascia Customisations</members>
+  </types>
+  <types isSubType="false">
+    <name>HomePageLayout</name>
+    <members>Dashboard Home Page Default</members>
+  </types>
+  <types isSubType="false">
+    <name>Layout</name>
+    <members>Account-Acquired Company Layout</members>
+    <members>Account-Company Branch Layout</members>
+    <members>Account-Company HQ Layout</members>
+    <members>Account-Employer Layout</members>
+    <members>Account-Investors Layout</members>
+    <members>Account-Supplier Layout</members>
+    <members>Account_Document_Folder__c-Account Document Folder Layout</members>
+    <members>Asset-Asset Layout</members>
+    <members>Bullhorn_Note_Link__c-Bullhorn Comment Entity Layout</members>
+    <members>Bullhorn_Notes__c-Bullhorn Note Layout</members>
+    <members>Campaign-Actual Campaign Layout</members>
+    <members>Campaign-Parent Campaign Layout</members>
+    <members>CampaignMember-Campaign Member Page Layout</members>
+    <members>Candidate_Stage__c-Comment Not Required</members>
+    <members>Candidate_Stage__c-Comment Required</members>
+    <members>Candidate_Stage__c-CV Feedback Layout</members>
+    <members>Candidate_Stage__c-Interview Feedback Layout</members>
+    <members>Candidate_Stage__c-Interview Layout</members>
+    <members>Candidate_Stage__c-Offer Layout</members>
+    <members>Case-Case Layout</members>
+    <members>CaseClose-Close Case Layout</members>
+    <members>Contact-Candidate</members>
+    <members>Contact-Contact%3A Admin</members>
+    <members>Contact-Contact%3A Client</members>
+    <members>Contact-Contact%3A Supplier</members>
+    <members>ContentVersion-General</members>
+    <members>Contract-Contract Layout</members>
+    <members>Department__c-Departments Layout</members>
+    <members>Event-Event Layout</members>
+    <members>FeedItem-Feed Item Layout</members>
+    <members>Global-Global Layout</members>
+    <members>IdentifiedCandidateAssociation__c-Identified Candidate Association Layout</members>
+    <members>Investor_Association__c-Investor Association Layout</members>
+    <members>Lead-Lead Layout</members>
+    <members>Opportunity-Permanent Layout</members>
+    <members>Opportunity-Pipeline Layout</members>
+    <members>Opportunity-Retainer Layout</members>
+    <members>Opportunity-Split Fee</members>
+    <members>Opportunity_Document_Folder__c-Job Document Folder Layout</members>
+    <members>OpportunityLineItem-Opportunity Product Layout</members>
+    <members>Person_Document_Folder__c-Akascia Documents Layout</members>
+    <members>Position_Code__c-Position Code Layout</members>
+    <members>Pricebook2-Price Book Layout</members>
+    <members>PricebookEntry-Price Book Entry Layout</members>
+    <members>Product2-Product Layout</members>
+    <members>SocialPersona-Social Persona Layout</members>
+    <members>SocialPost-Social Post Layout</members>
+    <members>Solution-Solution Layout</members>
+    <members>Task-Task Layout</members>
+    <members>User-User Layout</members>
+  </types>
+  <types isSubType="false">
+    <name>LeadCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>LeadOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>Letterhead</name>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>ListView</name>
+    <members>Account.Active_Prospects</members>
+    <members>Account.All</members>
+    <members>Account.All_Companies</members>
+    <members>Account.All_Employers</members>
+    <members>Account.AllInvestors</members>
+    <members>Account.MyAccounts</members>
+    <members>Account.NewThisWeek</members>
+    <members>Account.NewToday</members>
+    <members>Activity.MyActivities</members>
+    <members>Activity.MyDelegatedActivities</members>
+    <members>Activity.MyTeamsActivities</members>
+    <members>Activity.Open_Activities</members>
+    <members>Activity.TodaysTasks</members>
+    <members>Activity.UpcomingEvents</members>
+    <members>Asset.AllAssets</members>
+    <members>Campaign.Actual_Campaigns</members>
+    <members>Campaign.All_Campaigns</members>
+    <members>Campaign.AllActiveCampaigns</members>
+    <members>Campaign.MyActiveCampaigns</members>
+    <members>Case.AllOpenCases</members>
+    <members>Case.MyCases</members>
+    <members>Case.MyOpenCases</members>
+    <members>Contact.Candidates</members>
+    <members>Contact.Investors</members>
+    <members>Contact.My_Active_Contacts</members>
+    <members>Contact.Prospects_and_Contacts</members>
+    <members>Contract.AllActivatedContracts</members>
+    <members>Contract.AllContracts</members>
+    <members>Contract.AllDraftContracts</members>
+    <members>Contract.AllInApprovalContracts</members>
+    <members>Contract.MyActivatedContracts</members>
+    <members>Contract.MyDraftContracts</members>
+    <members>Contract.MyInApprovalContracts</members>
+    <members>Department__c.All</members>
+    <members>IdentifiedCandidateAssociation__c.All</members>
+    <members>ISO_alpha3_Country_Code__c.View_All</members>
+    <members>Lead.All_Open_Leads</members>
+    <members>Lead.AllLeads</members>
+    <members>Lead.APAC_Leads</members>
+    <members>Lead.Crunchbase_Leads_Lead</members>
+    <members>Lead.EMEA_Leads</members>
+    <members>Lead.Non_Target_All</members>
+    <members>Lead.Non_Target_Low_Funding</members>
+    <members>Lead.Non_Target_Outside_Region</members>
+    <members>Lead.Non_Target_Technology</members>
+    <members>Lead.Non_Target_Too_Old</members>
+    <members>Lead.Unknown_Territory_Leads</members>
+    <members>Lead.US_Leads_A_M_Chris</members>
+    <members>Lead.US_Leads_N_Z_Steve</members>
+    <members>Opportunity.All_Opportunities_Not_Retainers</members>
+    <members>Opportunity.Assignments_Won_Current</members>
+    <members>Opportunity.ClosingNextMonth</members>
+    <members>Opportunity.ClosingThisMonth</members>
+    <members>Opportunity.MyCurrentOpportunities</members>
+    <members>Opportunity.NewThisWeek</members>
+    <members>Opportunity.Pipeline_Assignments_All</members>
+    <members>Opportunity.Pipeline_Assignments_Current</members>
+    <members>Opportunity.Placed</members>
+    <members>Opportunity.Retainers</members>
+    <members>Position_Code__c.All</members>
+    <members>Product2.AllProducts</members>
+    <members>Solution.AllReviewedSolutions</members>
+    <members>Solution.AllUnreviewedSolutions</members>
+    <members>User.ActiveUsers</members>
+    <members>User.AdminUsers</members>
+    <members>User.AllUsers</members>
+    <members>wbsendit__Subscription__c.Main_Contact_List</members>
+    <members>wbsendit__Subscription__c.Main_Contact_List_Active</members>
+    <members>wbsendit__Subscription__c.Main_Contact_List_NotActive</members>
+  </types>
+  <types isSubType="false">
+    <name>OpportunityCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>OpportunityOwnerSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>PermissionSet</name>
+    <members>Recruiting_Developer</members>
+  </types>
+  <types isSubType="false">
+    <name>PostTemplate</name>
+  </types>
+  <types isSubType="false">
+    <name>Profile</name>
+    <members>Admin</members>
+    <members>Akascia Current Assignments Profile</members>
+    <members>Akascia User</members>
+    <members>Chatter External User</members>
+    <members>Chatter Free User</members>
+    <members>Chatter Moderator User</members>
+    <members>ContractManager</members>
+    <members>Guest License User</members>
+    <members>MarketingProfile</members>
+    <members>ReadOnly</members>
+    <members>SolutionManager</members>
+    <members>Standard</members>
+  </types>
+  <types isSubType="false">
+    <name>Queue</name>
+    <members>Crunchbase_Leads</members>
+  </types>
+  <types isSubType="false">
+    <name>QuickAction</name>
+    <members>Defer</members>
+    <members>EditDescription</members>
+    <members>LogACall</members>
+    <members>NewAccount</members>
+    <members>NewCase</members>
+    <members>NewChildCase</members>
+    <members>NewContact</members>
+    <members>NewEvent</members>
+    <members>NewGroup</members>
+    <members>NewGroupMember</members>
+    <members>NewLead</members>
+    <members>NewNote</members>
+    <members>NewOpportunity</members>
+    <members>NewTask</members>
+    <members>SendEmail</members>
+    <members>UpdatePriority</members>
+    <members>UpdateStatus</members>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>RecordType</name>
+    <members>Account.Acquired_Company</members>
+    <members>Account.Company_Branch_Office</members>
+    <members>Account.Company_HQ</members>
+    <members>Account.Employer_or_Acquirer</members>
+    <members>Account.Investor</members>
+    <members>Account.Supplier</members>
+    <members>Campaign.Actual_Campaign</members>
+    <members>Campaign.Mid_Level_Campaign</members>
+    <members>Campaign.Top_Level_Campaign</members>
+    <members>Candidate_Stage__c.CV_Feedback</members>
+    <members>Candidate_Stage__c.CV_Submission</members>
+    <members>Candidate_Stage__c.Final_Interview</members>
+    <members>Candidate_Stage__c.First_Interview</members>
+    <members>Candidate_Stage__c.Identified</members>
+    <members>Candidate_Stage__c.Interview</members>
+    <members>Candidate_Stage__c.Interview_Feedback</members>
+    <members>Candidate_Stage__c.Offer_Accepted</members>
+    <members>Candidate_Stage__c.Offer_Declined</members>
+    <members>Candidate_Stage__c.Offer_Extended</members>
+    <members>Candidate_Stage__c.Sent_Job_Description</members>
+    <members>Candidate_Stage__c.X03_Long_List</members>
+    <members>Contact.Candidate</members>
+    <members>Contact.Contact</members>
+    <members>Contact.Contact_Admin</members>
+    <members>Contact.Contact_Supplier</members>
+    <members>Event.Interview</members>
+    <members>Opportunity.Agreed_Retainer</members>
+    <members>Opportunity.Contract</members>
+    <members>Opportunity.Permanent</members>
+    <members>Opportunity.Pipeline</members>
+    <members>Opportunity.Split_Partner_Fee</members>
+  </types>
+  <types isSubType="false">
+    <name>RemoteSiteSetting</name>
+    <members>S4GCurrencyUpdater</members>
+  </types>
+  <types isSubType="false">
+    <name>Report</name>
+    <members>Akascia_Weekly_Monthly_Reports</members>
+    <members>Akascia_Sales_Marketing_Lists</members>
+    <members>Sales_Marketing_Dashboard_Reports</members>
+    <members>Akascia_Candidate_Searches</members>
+    <members>unfiled$public</members>
+    <members>Best_Practice_Service_Reports</members>
+    <members>Akascia_Lead_Generation_Report</members>
+    <members>DashboardReportsAdoption</members>
+    <members>Akascia_Candidate_Searches/Pre_Sales_Germany</members>
+    <members>Akascia_Lead_Generation_Report/Accounts_and_Status_Quarter</members>
+    <members>Akascia_Lead_Generation_Report/Correct_Campaign</members>
+    <members>Akascia_Lead_Generation_Report/Prospects</members>
+    <members>Akascia_Lead_Generation_Report/Receiving_Emails</members>
+    <members>Akascia_Lead_Generation_Report/Responded_Contacts</members>
+    <members>Akascia_Lead_Generation_Report/Too_Long_on_ToutApp</members>
+    <members>Akascia_Lead_Generation_Report/Unresponsive_Leads</members>
+    <members>Akascia_Sales_Marketing_Lists/M_Only_2004_On_200_People_or_Less</members>
+    <members>Akascia_Sales_Marketing_Lists/M_Only_2004_On_201_People_or_More</members>
+    <members>Akascia_Sales_Marketing_Lists/M_Only_Pre_2004_All_Sizes</members>
+    <members>Akascia_Sales_Marketing_Lists/Partial_Catch_Up_CS</members>
+    <members>Akascia_Sales_Marketing_Lists/Partial_Catch_UP_SB</members>
+    <members>Akascia_Sales_Marketing_Lists/S_M_2004_On_200_People_or_Less</members>
+    <members>Akascia_Sales_Marketing_Lists/S_M_2004_On_201_People_or_More</members>
+    <members>Akascia_Sales_Marketing_Lists/S_M_Pre_2004_All_Sizes</members>
+    <members>Akascia_Sales_Marketing_Lists/US_Contacts_for_Ind_Day_etc</members>
+    <members>Akascia_Weekly_Monthly_Reports/Active_Prospects_Accounts</members>
+    <members>Akascia_Weekly_Monthly_Reports/Active_Prospects_Contacts</members>
+    <members>Akascia_Weekly_Monthly_Reports/Idle_Accounts</members>
+    <members>Akascia_Weekly_Monthly_Reports/New_Accounts_Last_Month</members>
+    <members>Akascia_Weekly_Monthly_Reports/New_Accounts_Only_Last_Week</members>
+    <members>Akascia_Weekly_Monthly_Reports/New_Contacts_Last_Month</members>
+    <members>Akascia_Weekly_Monthly_Reports/New_Contacts_Last_Week</members>
+    <members>Akascia_Weekly_Monthly_Reports/Progressed_Accounts_Last_Week</members>
+    <members>Akascia_Weekly_Monthly_Reports/Progressed_Contacts_Last_Week</members>
+    <members>Best_Practice_Service_Reports/Age_of_Cases_Currently_Open_by_Type</members>
+    <members>Best_Practice_Service_Reports/Aged_Cases_by_Account</members>
+    <members>Best_Practice_Service_Reports/Aged_Cases_by_Agent</members>
+    <members>Best_Practice_Service_Reports/Average_Case_Resolution_Time_1</members>
+    <members>Best_Practice_Service_Reports/Average_Case_Resolution_Time_MTD</members>
+    <members>Best_Practice_Service_Reports/Avg_Case_Resolution_Time_MTD_by_Agen</members>
+    <members>Best_Practice_Service_Reports/Case_Resolution_Time_MTD_by_Origin</members>
+    <members>Best_Practice_Service_Reports/Cases_by_Origin</members>
+    <members>Best_Practice_Service_Reports/Cases_by_Origin_and_Open_Status</members>
+    <members>Best_Practice_Service_Reports/Cases_by_Priority</members>
+    <members>Best_Practice_Service_Reports/Cases_by_Type_and_Open_Status</members>
+    <members>Best_Practice_Service_Reports/Cases_Closed_MTD</members>
+    <members>Best_Practice_Service_Reports/Cases_Closed_MTD_by_Agent</members>
+    <members>Best_Practice_Service_Reports/Cases_Created_MTD</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open_by_Account</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open_by_Agent</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open_by_Origin</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open_by_Priority</members>
+    <members>Best_Practice_Service_Reports/Cases_Currently_Open_by_Type</members>
+    <members>Best_Practice_Service_Reports/High_Priority_Open_Cases_by_Account</members>
+    <members>Best_Practice_Service_Reports/Top_10_Cases_by_Age</members>
+    <members>Best_Practice_Service_Reports/Trend_of_Case_Resolution_Time</members>
+    <members>Best_Practice_Service_Reports/Trend_of_Cases_Closed</members>
+    <members>Best_Practice_Service_Reports/Trend_of_Cases_Created</members>
+    <members>DashboardReportsAdoption/UsageActivitiesCompleted</members>
+    <members>Sales_Marketing_Dashboard_Reports/Activities_by_Salesperson</members>
+    <members>Sales_Marketing_Dashboard_Reports/CampaignROIbyCampaignType</members>
+    <members>Sales_Marketing_Dashboard_Reports/CampaignsbyROI</members>
+    <members>Sales_Marketing_Dashboard_Reports/Closed_Deals_leader_board</members>
+    <members>Sales_Marketing_Dashboard_Reports/Closed_opportunity</members>
+    <members>Sales_Marketing_Dashboard_Reports/Leads_by_Industry</members>
+    <members>Sales_Marketing_Dashboard_Reports/LeadsbySource</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Amount_per_Camp</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Conversion_Rate</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Converted_Amount</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Converted_and_Won_Amount</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Converted_by_Month</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Lead_Trends_by_Status</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Leads_by_Campaigns</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_Leads_Converted</members>
+    <members>Sales_Marketing_Dashboard_Reports/Marketing_Exec_of_Leads</members>
+    <members>Sales_Marketing_Dashboard_Reports/OpportunityProductPipeline</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Bookings_Trend</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Closed_Deals_QTD</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Lost_Deals</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Open_Deals</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Open_Pipeline</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Open_Pipeline_next_90_days</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Exec_Top_Closed_Deals</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Manager_Closed_Deals</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Manager_Open_Opportunities</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Manager_Open_Pipeline</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Manager_Pipeline_Next_90_days</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Person_Activities_Completed</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Person_Activity</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Person_MTD_Sales</members>
+    <members>Sales_Marketing_Dashboard_Reports/Sales_Person_Open_Pipeline_by_stage</members>
+    <members>Sales_Marketing_Dashboard_Reports/SP_Current_Month_Open_Pipeline</members>
+    <members>unfiled$public/SampleReportActiveUsers</members>
+    <members>unfiled$public/SampleReportCasesStatusbyRep</members>
+    <members>unfiled$public/SampleReportClosedSales</members>
+    <members>unfiled$public/SampleReportCompletedActivities</members>
+    <members>unfiled$public/SampleReportCustomReportsbyUser</members>
+    <members>unfiled$public/SampleReportDocumentLibrary</members>
+    <members>unfiled$public/SampleReportLastModifiedBy</members>
+    <members>unfiled$public/SampleReportLeadsbyLeadSource</members>
+    <members>unfiled$public/SampleReportLoginLeaderboard</members>
+    <members>unfiled$public/SampleReportLoginWallofShame</members>
+    <members>unfiled$public/SampleReportMonthtoDateTrending</members>
+    <members>unfiled$public/SampleReportofAccounts</members>
+    <members>unfiled$public/SampleReportofCases</members>
+    <members>unfiled$public/SampleReportofContacts</members>
+    <members>unfiled$public/SampleReportofDocuments</members>
+    <members>unfiled$public/SampleReportofLeads</members>
+    <members>unfiled$public/SampleReportofOpenTasks</members>
+    <members>unfiled$public/SampleReportofOpportunities</members>
+    <members>unfiled$public/SampleReportofReports</members>
+    <members>unfiled$public/SampleReportofSolutions</members>
+    <members>unfiled$public/SampleReportofTasksandActivities</members>
+    <members>unfiled$public/SampleReportOpenCasesByPriority</members>
+    <members>unfiled$public/SampleReportOpenDeals</members>
+    <members>unfiled$public/SampleReportPipelineByCloseMonth</members>
+    <members>unfiled$public/SampleReportPipelineHistory</members>
+    <members>unfiled$public/SampleReportSalesLeaderboard</members>
+    <members>unfiled$public/SampleReportSalesPipelinebyStage</members>
+    <members>unfiled$public/SampleReportsLeadsbyStatus</members>
+    <members>unfiled$public/SampleReportSolutionsAdded</members>
+    <members>unfiled$public/SampleReportTopAccounts</members>
+    <members>unfiled$public/SampleReportUsersLoggedIn</members>
+  </types>
+  <types isSubType="false">
+    <name>ReportType</name>
+    <members>Opportunities_with_Identified_Candidate_Association_with_Candidate_Stage</members>
+  </types>
+  <types isSubType="false">
+    <name>Role</name>
+  </types>
+  <types isSubType="false">
+    <name>SamlSsoConfig</name>
+  </types>
+  <types isSubType="false">
+    <name>Scontrol</name>
+  </types>
+  <types isSubType="false">
+    <name>Settings</name>
+    <members>Account</members>
+    <members>Activities</members>
+    <members>Address</members>
+    <members>BusinessHours</members>
+    <members>Case</members>
+    <members>ChatterAnswers</members>
+    <members>Company</members>
+    <members>Contract</members>
+    <members>Forecasting</members>
+    <members>Ideas</members>
+    <members>Mobile</members>
+    <members>Opportunity</members>
+    <members>Order</members>
+    <members>Product</members>
+    <members>Quote</members>
+    <members>Security</members>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>SharingReason</name>
+  </types>
+  <types isSubType="false">
+    <name>SiteDotCom</name>
+  </types>
+  <types isSubType="false">
+    <name>StandardObject</name>
+    <members>Account</members>
+    <members>AccountContactRole</members>
+    <members>Activity</members>
+    <members>Asset</members>
+    <members>Campaign</members>
+    <members>CampaignMember</members>
+    <members>Case</members>
+    <members>CaseContactRole</members>
+    <members>Contact</members>
+    <members>ContentVersion</members>
+    <members>Contract</members>
+    <members>ContractContactRole</members>
+    <members>Event</members>
+    <members>ForecastingAdjustment</members>
+    <members>ForecastingQuota</members>
+    <members>Lead</members>
+    <members>Opportunity</members>
+    <members>OpportunityCompetitor</members>
+    <members>OpportunityContactRole</members>
+    <members>OpportunityLineItem</members>
+    <members>PartnerRole</members>
+    <members>Pricebook2</members>
+    <members>PricebookEntry</members>
+    <members>Product2</members>
+    <members>Site</members>
+    <members>SocialPersona</members>
+    <members>Solution</members>
+    <members>Task</members>
+    <members>User</members>
+  </types>
+  <types isSubType="false">
+    <name>StaticResource</name>
+    <members>AkasciaCustomisationsJS</members>
+    <members>SiteSamples</members>
+  </types>
+  <types isSubType="false">
+    <name>UserCriteriaBasedSharingRule</name>
+  </types>
+  <types isSubType="false">
+    <name>UserMembershipSharingRule</name>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>ValidationRule</name>
+    <members>Account.City_and_Country_Check</members>
+    <members>Account.Nearest_Major_City_Check</members>
+    <members>Contact.CandidateOnContact_CandidateIndustry</members>
+    <members>Contact.CandidateOnContact_CustomerSectors</members>
+    <members>Contact.CandidateOnContact_EmploymentPref</members>
+    <members>Contact.CandidateOnContact_Source</members>
+    <members>Contact.CandidateOnContact_Technology</members>
+    <members>Contact.Country_Candidate</members>
+    <members>Contact.Country_Contact</members>
+    <members>Contact.First_Name</members>
+    <members>Contact.MarketingEmail_Check_Exists</members>
+    <members>Contact.MarketingEmail_NotMadeBlank</members>
+    <members>Contact.MarketingEmail_PickOne</members>
+    <members>Contact.Not_Until_Date</members>
+    <members>Contact.Not_Until_Date_Not_Blank</members>
+    <members>IdentifiedCandidateAssociation__c.Akascia_Other_Reason_Rule</members>
+    <members>IdentifiedCandidateAssociation__c.Candidate_Other_Reason_Rule</members>
+    <members>IdentifiedCandidateAssociation__c.Check_Not_to_Retainer</members>
+    <members>IdentifiedCandidateAssociation__c.Client_Other_Reason_Rule</members>
+    <members>IdentifiedCandidateAssociation__c.Prevent_Change_to_Interview_by_Client</members>
+    <members>IdentifiedCandidateAssociation__c.Prevent_Change_to_Responded</members>
+    <members>IdentifiedCandidateAssociation__c.Prevent_Change_to_Submitted_to_Client</members>
+    <members>Opportunity.PlacementInfoCandidate</members>
+    <members>Opportunity.PlacementInfoInvoiceStatus</members>
+    <members>Opportunity.PlacementInfoPlacedBy</members>
+    <members>Opportunity.PlacementInfoStartDate</members>
+    <members>Opportunity.RetainerInfo</members>
+  </types>
+  <types isSubType="true" parent="StandardObject">
+    <name>WebLink</name>
+    <members>Account.Create_Google_Alert</members>
+    <members>Account.GoogleMaps</members>
+    <members>Account.GoogleNews</members>
+    <members>Account.GoogleSearch</members>
+    <members>Account.IN_Search_People</members>
+    <members>Campaign.ViewAllCampaignMembers</members>
+    <members>Campaign.ViewCampaignInfluenceReport</members>
+    <members>Candidate_Stage__c.Create_Interview_Event</members>
+    <members>Candidate_Stage__c.New_Stage</members>
+    <members>Candidate_Stage__c.Send_CV</members>
+    <members>Candidate_Stage__c.Send_Job_Description</members>
+    <members>Contact.Find_on_Crunchbase</members>
+    <members>Contact.Find_on_Quora</members>
+    <members>Contact.Find_on_Twitter</members>
+    <members>Contact.GoogleMaps</members>
+    <members>Contact.GoogleSearch</members>
+    <members>Contact.Identify_as_Candidate_Contact_Button</members>
+    <members>Contact.Search_Email_Archive</members>
+    <members>Contact.Search_Gmail</members>
+    <members>Contact.Search_Linkedin</members>
+    <members>Contact.Tout_Mails</members>
+    <members>IdentifiedCandidateAssociation__c.Identify_as_Candidate</members>
+    <members>IdentifiedCandidateAssociation__c.New_Stage</members>
+    <members>Lead.GoogleMaps</members>
+    <members>Lead.GoogleNews</members>
+    <members>Lead.GoogleSearch</members>
+    <members>Opportunity.View_Identified_Candidates</members>
+    <members>Task.Create_Follow_Up</members>
+    <members>Task.Left_Message</members>
+    <members>Task.Left_Message_Candidate_Stage</members>
+    <members>Task.Log_a_Call</members>
+    <members>Task.Log_a_Message_Non_Email</members>
+    <members>Task.Log_an_Intro</members>
+  </types>
+  <types isSubType="false">
+    <name>Workflow</name>
+    <members>Account</members>
+    <members>Account_Document_Folder__c</members>
+    <members>Asset</members>
+    <members>Bullhorn_Note_Link__c</members>
+    <members>Bullhorn_Notes__c</members>
+    <members>Campaign</members>
+    <members>CampaignMember</members>
+    <members>Candidate_Stage__c</members>
+    <members>Case</members>
+    <members>Contact</members>
+    <members>Contract</members>
+    <members>Department__c</members>
+    <members>EmailMessage</members>
+    <members>Event</members>
+    <members>IdentifiedCandidateAssociation__c</members>
+    <members>Investor_Association__c</members>
+    <members>ISO_alpha3_Country_Code__c</members>
+    <members>Lead</members>
+    <members>Opportunity</members>
+    <members>Opportunity_Document_Folder__c</members>
+    <members>OpportunityLineItem</members>
+    <members>Organization</members>
+    <members>Person_Document_Folder__c</members>
+    <members>Position_Code__c</members>
+    <members>Product2</members>
+    <members>Site</members>
+    <members>SocialPersona</members>
+    <members>Solution</members>
+    <members>Task</members>
+    <members>User</members>
+    <members>UserLicense</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowAlert</name>
+    <members>Contact.Notification_Call_Reminder_Final</members>
+    <members>Contact.Notification_Call_Reminder_First</members>
+    <members>Contact.Notification_Touchpoint_AngelList_Quora</members>
+    <members>Contact.Notification_Touchpoint_LI_Twitter</members>
+    <members>Contact.Reminder_Remove_from_Drip</members>
+    <members>wbsendit__Campaign_Activity__c.Alert_Clicked_Link</members>
+    <members>wbsendit__Campaign_Activity__c.Alert_Unsubscribe</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowFieldUpdate</name>
+    <members>Account_Document_Folder__c.Update_Account_Document_Folder_Name</members>
+    <members>Candidate_Stage__c.Current_Stage_Field_Update</members>
+    <members>Candidate_Stage__c.Interviewed_by_Client_Update</members>
+    <members>Candidate_Stage__c.Submitted_to_Client_Update</members>
+    <members>Candidate_Stage__c.Update_In_Process</members>
+    <members>Contact.Record_Date_Sales</members>
+    <members>Contact.Record_Historic_Email_Address</members>
+    <members>Contact.Sales_Campaign_Set_New_Only</members>
+    <members>Contact.Set_Sales_Email_to_Unsubscribe</members>
+    <members>Contact.Unsubscribe_Set_Email_Opt_Out_True</members>
+    <members>Contact.Update_Email_from_Business_Email</members>
+    <members>Contact.Update_Email_from_Other_Email</members>
+    <members>Contact.Update_Email_from_Personal_Email</members>
+    <members>IdentifiedCandidateAssociation__c.Update_Needs_Further_Action</members>
+    <members>Opportunity.Update_Amount_Field_Retainers</members>
+    <members>Opportunity_Document_Folder__c.Update_Opportunity_Document_Folder_Name</members>
+    <members>Person_Document_Folder__c.Update_People_Document_Folder_Name</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowOutboundMessage</name>
+    <members>Contact.Test_OB_Message</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowRule</name>
+    <members>Account_Document_Folder__c.Rename Account Document Folder</members>
+    <members>Candidate_Stage__c.In Process Rule</members>
+    <members>Candidate_Stage__c.Interviewed by Client Rule</members>
+    <members>Candidate_Stage__c.Submitted to Client Rule</members>
+    <members>Candidate_Stage__c.update_ident_curr_stage_text</members>
+    <members>Contact.Check if Removed from Drip Campaign</members>
+    <members>Contact.Email Opt Out%3A Unsubscribe Sales Campaign</members>
+    <members>Contact.Emails %7C Sales Stage 2</members>
+    <members>Contact.Emails %7C Sales Stage 3</members>
+    <members>Contact.Emails %7C Sales Stage 4</members>
+    <members>Contact.Emails %7C Sales Stage Completed</members>
+    <members>Contact.Is Email Changed%3F</members>
+    <members>Contact.Preferred Email - Business</members>
+    <members>Contact.Preferred Email - Other</members>
+    <members>Contact.Preferred Email - Personal</members>
+    <members>Contact.Record Date %7C Sales</members>
+    <members>Contact.Sales Unsubscribe%3A Set Email Opt Out True</members>
+    <members>IdentifiedCandidateAssociation__c.Update Needs Further Action Rule</members>
+    <members>Opportunity.Update Amount %28Retainer%29 Rule</members>
+    <members>Opportunity_Document_Folder__c.Rename Opportunity Document Folder</members>
+    <members>Person_Document_Folder__c.Rename Person Document Folder</members>
+    <members>wbsendit__Campaign_Activity__c.CM%3A Clicked Link Alert</members>
+    <members>wbsendit__Campaign_Activity__c.CM%3A Unsubscribe Alert</members>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowSend</name>
+  </types>
+  <types isSubType="true" parent="Workflow">
+    <name>WorkflowTask</name>
+  </types>
+</types>

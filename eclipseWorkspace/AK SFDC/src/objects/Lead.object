@@ -1,0 +1,1052 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>AddToCampaign</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CallHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ChangeStatus</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Convert</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>EmailHighlightAction</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>FindDup</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Follow</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>ListClean</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Address</fullName>
+    </fields>
+    <fields>
+        <fullName>Akascia_Territory__c</fullName>
+        <externalId>false</externalId>
+        <label>Akascia Territory</label>
+        <length>16</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>AnnualRevenue</fullName>
+    </fields>
+    <fields>
+        <fullName>CB_Category_List__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Category List</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Country_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Country Code</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Founded_Year__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Founded Year</label>
+        <length>4</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Funding_Total_USD__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Funding Total USD</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Last_Funding_At__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Latest Funding Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>CB_Market__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Market</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Permalink__c</fullName>
+        <caseSensitive>false</caseSensitive>
+        <externalId>true</externalId>
+        <label>CB: Permalink</label>
+        <length>255</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>true</unique>
+    </fields>
+    <fields>
+        <fullName>CB_Region__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: Region</label>
+        <length>48</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CB_State_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>CB: State Code</label>
+        <length>3</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CampaignId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Check_Age__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Check Age</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Check_Funding__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Check Funding</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Check_Technology__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(CONTAINS(CB_Category_List__c,&quot;Cooking&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Health Care&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Food&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Material Science&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Corporate Training&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Biotech&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;|Utilities|&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Shoes&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Lifestyle&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Fashion&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Manufacturing&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Auctions&quot;),FALSE,
+IF(CONTAINS(CB_Category_List__c,&quot;Clean Technology&quot;),FALSE,
+TRUE)))))))))))))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Check Technology</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Code_Check__c</fullName>
+        <externalId>false</externalId>
+        <formula>TEXT(CountryCode)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Code Check</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Company</fullName>
+    </fields>
+    <fields>
+        <fullName>Crunchbase_URL__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;http://www.crunchbase.com/&quot; &amp; CB_Permalink__c , &quot;http://www.crunchbase.com/&quot; &amp; CB_Permalink__c)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Crunchbase URL</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CurrencyIsoCode</fullName>
+    </fields>
+    <fields>
+        <fullName>Description</fullName>
+    </fields>
+    <fields>
+        <fullName>DoNotCall</fullName>
+    </fields>
+    <fields>
+        <fullName>Email</fullName>
+    </fields>
+    <fields>
+        <fullName>Fax</fullName>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfEmail</fullName>
+    </fields>
+    <fields>
+        <fullName>HasOptedOutOfFax</fullName>
+    </fields>
+    <fields>
+        <fullName>Industry</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Accounting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Apparel &amp; Fashion</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Banking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Broadcast Media</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer &amp; Network Security</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Games</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Hardware</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Networking</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Computer Software</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Electronics</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Consumer Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Defense &amp; Space</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>E-learning</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Electrical &amp; Electronic Manufacturing</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Entertainment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Food &amp; Beverages</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Graphic Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Health, Wellness and Fitness</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Hospital &amp; Health Care</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Information Technology &amp; Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Internet</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Legal Services</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leisure &amp; Travel</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Management Consulting</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Marketing &amp; Advertising</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medical Device</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Outsourcing/Offshoring</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Renewables &amp; Environment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Retail</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Semiconductors</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Venture Capital</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Wireless</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Jigsaw</fullName>
+    </fields>
+    <fields>
+        <fullName>LastTransferDate</fullName>
+    </fields>
+    <fields>
+        <fullName>LeadSource</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Recently Funded</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Linkedin Job</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Generic Approach</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Referred to Them</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>New Role</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approached Us</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Website Signup</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Word of mouth</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>MobilePhone</fullName>
+    </fields>
+    <fields>
+        <fullName>Name</fullName>
+    </fields>
+    <fields>
+        <fullName>NumberOfEmployees</fullName>
+    </fields>
+    <fields>
+        <fullName>OwnerId</fullName>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Phone</fullName>
+    </fields>
+    <fields>
+        <fullName>Rating</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Hot</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Okay</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Meh</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <length>48</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SFSSDupeCatcher__Override_DupeCatcher__c</fullName>
+        <defaultValue>false</defaultValue>
+        <deprecated>false</deprecated>
+        <externalId>false</externalId>
+        <label>Lead Override DupeCatcher</label>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Status</fullName>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <converted>false</converted>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Non-Target</fullName>
+                <converted>false</converted>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead</fullName>
+                <converted>true</converted>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Title</fullName>
+    </fields>
+    <fields>
+        <fullName>Website</fullName>
+    </fields>
+    <listViews>
+        <fullName>APAC_Leads</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>equals</operation>
+            <value>APAC</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>APAC Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>AllLeads</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>LEAD.URL</columns>
+        <columns>Check_Technology__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>All_Open_Leads</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>All Open Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>Crunchbase_Leads_Lead</fullName>
+        <filterScope>Queue</filterScope>
+        <label>Crunchbase Leads</label>
+        <queue>Crunchbase_Leads</queue>
+        <sharedTo>
+            <allInternalUsers></allInternalUsers>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>EMEA_Leads</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>equals</operation>
+            <value>EMEA</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>EMEA Leads</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Target_All</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Non-Target</value>
+        </filters>
+        <label>Non Target - All</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Target_Low_Funding</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Check_Age__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Funding__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>notEqual</operation>
+            <value>Outside</value>
+        </filters>
+        <label>Non Target - Low Funding</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Target_Outside_Region</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Check_Age__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Funding__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>equals</operation>
+            <value>Outside</value>
+        </filters>
+        <label>Non Target - Outside Region</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Target_Technology</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Check_Age__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Funding__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>notEqual</operation>
+            <value>Outside</value>
+        </filters>
+        <label>Non Target - Technology</label>
+    </listViews>
+    <listViews>
+        <fullName>Non_Target_Too_Old</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Check_Age__c</field>
+            <operation>equals</operation>
+            <value>0</value>
+        </filters>
+        <filters>
+            <field>Check_Funding__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>notEqual</operation>
+            <value>Outside</value>
+        </filters>
+        <label>Non Target - Too Old</label>
+    </listViews>
+    <listViews>
+        <fullName>US_Leads_A_M_Chris</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>equals</operation>
+            <value>Americas</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>LEAD.COMPANY</field>
+            <operation>startsWith</operation>
+            <value>a,b,c,d,e,f,g,h,i,j,k,l,m,1,2,3,4,5</value>
+        </filters>
+        <label>US Leads (A-M, Chris)</label>
+    </listViews>
+    <listViews>
+        <fullName>US_Leads_N_Z_Steve</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>equals</operation>
+            <value>Americas</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <filters>
+            <field>LEAD.COMPANY</field>
+            <operation>startsWith</operation>
+            <value>n,o,p,q,r,s,t,u,v,w,x,y,z,6,7,8,9,0</value>
+        </filters>
+        <label>US Leads (N-Z, Steve)</label>
+    </listViews>
+    <listViews>
+        <fullName>Unknown_Territory_Leads</fullName>
+        <columns>LEAD.STATUS</columns>
+        <columns>LEAD.COMPANY</columns>
+        <columns>LEAD.COUNTRY_CODE</columns>
+        <columns>CB_Founded_Year__c</columns>
+        <columns>CB_Funding_Total_USD__c</columns>
+        <columns>CB_Category_List__c</columns>
+        <columns>CB_Market__c</columns>
+        <columns>Crunchbase_URL__c</columns>
+        <columns>LEAD.URL</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>LEAD.STATUS</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <filters>
+            <field>Akascia_Territory__c</field>
+            <operation>notEqual</operation>
+            <value>Americas,EMEA,APAC</value>
+        </filters>
+        <filters>
+            <field>Check_Technology__c</field>
+            <operation>equals</operation>
+            <value>1</value>
+        </filters>
+        <label>Unknown Territory Leads</label>
+    </listViews>
+    <searchLayouts>
+        <customTabListAdditionalFields>FULL_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.COMPANY</customTabListAdditionalFields>
+        <customTabListAdditionalFields>LEAD.PHONE</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>FULL_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>LEAD.COMPANY</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>FULL_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.COMPANY</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.PHONE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>LEAD.MOBILE_PHONE</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>FULL_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.TITLE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.PHONE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.COMPANY</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.EMAIL</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>LEAD.STATUS</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CORE.USERS.ALIAS</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWriteTransfer</sharingModel>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead.Street}+{!Lead.City}+{!Lead.StateCode }&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ToutApp__Email_with_Tout</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Email with Tout</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var u = &quot;https://www.toutapp.com/pitches/new?name={!Lead.Name}&amp;email={!Lead.Email}&amp;salesforce_lead_id={!Lead.Id}&amp;force_bookmarklet=true&amp;style=salesforce&quot;; var w = window; w.open(u,&apos;Tout&apos;,&apos;scrollbars=1,status=1,width=762,height=&apos; + ( w.screen.height &lt; 970 ? w.screen.height : 970))</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ToutApp__Push_to_Tout</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Push to Tout</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>// create the form. Set it up to POST the transaction
+f = document.createElement(&quot;form&quot;);
+f.action=&quot;https://toutapp.com/salesforce_bridge&quot;;
+f.method = &quot;post&quot;;
+f.target = &quot;_blank&quot;;
+
+// add the session id as a parameter
+i = document.createElement(&quot;input&quot;);
+i.id = &quot;session&quot;;
+i.name = &quot;session&quot;;
+i.type = &quot;hidden&quot;;
+i.value = &quot;{!API.Session_ID}&quot;;
+f.appendChild(i);
+
+// add the server location as a parameter
+i = document.createElement(&quot;input&quot;);
+i.id = &quot;server&quot;;
+i.name = &quot;server&quot;;
+i.type = &quot;hidden&quot;;
+i.value = &quot;{!API.Partner_Server_URL_90}&quot;;
+f.appendChild(i);
+
+// Get the Object IDs that were checked
+idArray = {!GETRECORDIDS($ObjectType.Lead)};
+
+// add the idArray as a parameter
+i = document.createElement(&quot;input&quot;);
+i.id = &quot;ids&quot;;
+i.name = &quot;ids&quot;;
+i.type = &quot;hidden&quot;;
+i.value = idArray;
+f.appendChild(i);
+
+// add the object type
+i = document.createElement(&quot;input&quot;);
+i.id = &quot;object_type&quot;;
+i.name = &quot;object_type&quot;;
+i.type = &quot;hidden&quot;;
+i.value = &quot;Lead&quot;;
+f.appendChild(i);
+
+// add the form to the document.
+document.body.appendChild(f);
+
+// submit the form
+f.submit();</url>
+    </webLinks>
+    <webLinks>
+        <fullName>wbsendit__Add_Emails_to_List</fullName>
+        <availability>online</availability>
+        <description>Add selected leads to a subscriber list.</description>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Add Leads to Subscriber List</masterLabel>
+        <openType>sidebar</openType>
+        <page>wbsendit__AddLeadSubscribersToList</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+</CustomObject>

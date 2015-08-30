@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Candidate Stage</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Candidate Stages</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Name Text --></label>
+        <name>Account_Name_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Website Text --></label>
+        <name>Account_Website_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Email Text --></label>
+        <name>Candidate_Email_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Feedback --></label>
+        <name>Candidate_Feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate First Name Text --></label>
+        <name>Candidate_First_Name_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate ID --></label>
+        <name>Candidate_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate Name (Text) --></label>
+        <name>Candidate_Name_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Candidate --></label>
+        <name>Candidate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Feedback --></label>
+        <name>Client_Feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Identified Candidate Association ID --></label>
+        <name>Identified_Candidate_Association_ID__c</name>
+        <relationshipLabel><!-- Candidate Stage History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Interview Time --></label>
+        <name>Interview_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interview Type --></label>
+        <name>Interview_Type__c</name>
+        <picklistValues>
+            <masterLabel>Meeting</masterLabel>
+            <translation><!-- Meeting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telephone</masterLabel>
+            <translation><!-- Telephone --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Offer Details --></label>
+        <name>Offer_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity ID --></label>
+        <name>Opportunity_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Name Text --></label>
+        <name>Opportunity_Name_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Interviewer --></label>
+        <name>Other_Interviewer__c</name>
+        <relationshipLabel><!-- Interviews (Not Primary) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Interviewer --></label>
+        <name>Primary_Interviewer__c</name>
+        <relationshipLabel><!-- Interviews (Primary) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Stage Comment --></label>
+        <name>Stage_Comment__c</name>
+    </fields>
+    <fields>
+        <label><!-- View / Update Stage --></label>
+        <name>View_Update_Stage__c</name>
+    </fields>
+    <layouts>
+        <layout>CV Feedback Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Comment Not Required</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Comment Required</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Interview Feedback Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Interview Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Offer Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- 04a.CV Feedback --></label>
+        <name>CV_Feedback</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 04.CV Submission --></label>
+        <name>CV_Submission</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 07.Final Interview --></label>
+        <name>Final_Interview</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 05.First Interview --></label>
+        <name>First_Interview</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 01.Identified --></label>
+        <name>Identified</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 06.Interview --></label>
+        <name>Interview</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 08.Interview Feedback --></label>
+        <name>Interview_Feedback</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 10.Offer Accepted --></label>
+        <name>Offer_Accepted</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 11.Offer Declined --></label>
+        <name>Offer_Declined</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 09.Offer Extended --></label>
+        <name>Offer_Extended</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 02.Sent Job Description --></label>
+        <name>Sent_Job_Description</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- 03.Long List --></label>
+        <name>X03_Long_List</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Create_Interview_Event --></label>
+        <name>Create_Interview_Event</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Stage --></label>
+        <name>New_Stage</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_CV --></label>
+        <name>Send_CV</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Job_Description --></label>
+        <name>Send_Job_Description</name>
+    </webLinks>
+</CustomObjectTranslation>

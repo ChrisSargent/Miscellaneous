@@ -1,0 +1,196 @@
+<apex:page controller="MME.Configurator" setup="true">
+<apex:stylesheet value="{!URLFOR($Resource.MME__Common, '/css/mme.css')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/jquery-1.10.2.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/lib/spin.js')}"/>
+<apex:includeScript value="{!URLFOR($Resource.MME__Common, '/js/mme.js')}"/>
+    <div id="mme_ajax_load" style="visibility:hidden" ></div>
+
+<div class="mmePageBlock">
+    <apex:pageBlock title="Configure Match My Email package" mode="edit" id="mainBlock">
+        <apex:pageBlockSection columns="1" id="mainSection">
+            <apex:outputPanel id="logPanel" layout="block" title="Conversion results" />
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+<input id="mmeTryAgain" onclick="javascript:window.location.reload();" value="Try again" type="button" style="visibility:hidden"/>
+</div>
+<script>
+mme.config = {
+			time_out : 2000,
+			out_log : document.getElementById('{!$Component.mainBlock.mainSection.logPanel}'),
+			job : {
+				convertOldRelated : {
+					remote_action : '{!$RemoteAction.Configurator.convertOldRelated}',
+					next : 'convertOldLeads',
+					label : 'Process Old Related Objects',
+					last_point : '',
+					errors_count : 0,
+					fetched : 0,
+					processed : 0 
+				},
+				convertOldLeads	: {
+					remote_action : '{!$RemoteAction.Configurator.convertOldLeads}',
+					next : 'fixUnrelated',
+					label : 'Process Old Converted Leads',
+					last_point : '',
+					errors_count : 0,
+					fetched : 0,
+					processed : 0
+				},
+				fixUnrelated : {
+					remote_action : '{!$RemoteAction.Configurator.fixUnrelated}',
+					next : '',
+					label : 'Process Unrelated Objects',
+					last_point : '',
+					errors_count : 0,
+					fetched : 0,
+					processed : 0
+				}
+			},
+			style : {
+				begin_job : 'mme_cfg_job_log',
+				end_job : 'mme_cfg_job_log',
+				done : 'mme_cfg_job_done',
+				subdone : 'mme_cfg_job_subdone',
+				info : 'mme_cfg_job_info',
+				warning : 'mme_cfg_job_warning',
+				error : 'mme_cfg_job_error'
+			},
+			current_job_stage : 0, // 0 - no job , 1 - job running
+			current_job_el : null
+};
+
+mme.config.show_log = function (msg, stage) {
+	if ( !stage ) stage = this.style.info;
+	if ( stage == 'begin_job' && this.current_job_stage )
+		return;
+	if ( stage == 'begin_job' && !this.current_job_stage ) {
+		this.current_job_stage = 1;
+		var p = document.createElement('p');
+		p.className = this.style[stage];
+		p.appendChild(document.createTextNode(msg));
+		this.out_log.appendChild(p);
+		this.current_job_el = document.createElement('ul');
+		p.appendChild(this.current_job_el);
+		return;
+	}
+	if ( stage == 'end_job' ) {
+		this.current_job_stage = 0;
+		this.current_job_el.parentElement.appendChild(document.createTextNode(msg));
+		return;
+	}
+	if ( stage == 'done' ) {
+		this.current_job_stage = 1;
+		this.current_job_el = document.createElement('p');
+		this.current_job_el.className = this.style[stage];
+		this.current_job_el.appendChild(document.createTextNode(msg));
+		this.out_log.appendChild(this.current_job_el);
+		return;
+	}
+	if ( stage == 'subdone' ) {
+		this.current_job_stage = 1;
+		var p = document.createElement('p');
+		p.className = this.style[stage];
+		p.appendChild(document.createTextNode(msg));
+		this.out_log.appendChild(p);
+		this.current_job_el = document.createElement('ul');
+		p.appendChild(this.current_job_el);
+		return;
+	}
+
+	if ( this.current_job_stage ) {
+		var li = document.createElement('li');
+		li.className = this.style[stage];
+		li.appendChild(document.createTextNode(msg));
+		this.current_job_el.appendChild(li);
+	} else {
+		var p = document.createElement('p');
+		p.className = this.style[stage];
+		p.appendChild(document.createTextNode(msg));
+		this.out_log.appendChild(p);
+	}
+	
+};
+
+mme.config.run_job = function (job) {
+	this.show_log('Job started: ' + mme.config.job[job].label , 'begin_job');
+	Visualforce.remoting.Manager.invokeAction(
+		this.job[job].remote_action,
+		this.job[job].last_point,
+		function(result, event){
+			if ( event.status ) {
+				if ( mme.config.job[event.method] &&
+						typeof mme.config.job[event.method] == 'object' ) {
+					// handle response
+					if ( result ) { // we have result
+						mme.config.show_log('Records fetched: ' + 
+							result.records, 'info');
+						mme.config.show_log('Records processed: ' + 
+							result.processed, 'info');
+
+						mme.config.job[event.method].fetched =+ result.records;
+						mme.config.job[event.method].processed =+ result.processed;
+						
+						if ( result.errors && result.errors.length > 0 ) {
+							mme.config.job[event.method].errors_count =+ result.errors.length;
+							for ( var i = 0; i < result.errors.length; i++ )
+								mme.config.show_log(result.errors[i], 'warning');
+
+							if ( !result.last_query )
+								mme.config.job[job].last_point = 
+									( result.last_point) 
+									? result.last_point : '';
+						}
+
+						if ( !result.last_query ) {
+							window.setTimeout(function() {
+								mme.config.run_job(job);},
+								mme.config.time_out
+							);
+						} else {
+							mme.config.finish_and_next_job(event.method);
+						}
+					} else {
+						mme.config.show_log('Server empty response. Action: '
+							+ event.method , 'warning');
+						mme.config.finish_and_next_job(event.method);
+					}
+				} else {
+					mme.config.show_log('Unsupported action: ' + 
+						event.method, 'error');
+				}
+			} else {
+				mme.config.show_log('Server respond: ' + event.message + 
+					'. Status code: ' + event.statusCode , 'error');
+			}
+		}, // response handler
+		{ buffer: true, escape: false}
+	);
+};
+
+mme.config.finish_and_next_job = function (job) {
+	mme.config.show_log('Job finished', 'end_job');
+	if (mme.config.job[job].next && mme.config.job[job].next != '') {
+		window.setTimeout(function() {
+			mme.config.run_job(mme.config.job[job].next);},
+			mme.config.time_out
+		);
+	} else {
+		mme.config.show_log('Summary', 'done');
+		for ( var jb in mme.config.job ) {
+			mme.config.show_log(mme.config.job[jb].label, 'subdone');
+			mme.config.show_log('Fetched  : ' + mme.config.job[jb].fetched, 'info');
+			mme.config.show_log('Processed: ' + mme.config.job[jb].processed, 'info');
+			mme.config.show_log('Errors   : ' + mme.config.job[jb].errors_count, 'error');
+		}
+		mme.config.show_log('Configuration finished', 'done');
+		btn = document.getElementById('mmeTryAgain');
+		if ( btn ) btn.style.visibility = "visible";
+		mme.spinner.stop();
+	}
+};
+
+mme.st_load();
+mme.config.run_job("convertOldRelated");
+
+</script>
+</apex:page>

@@ -1,0 +1,958 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>Employees (SF)</value>
+        </caseValues>
+        <name>employees_account</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>IN: Industry</value>
+        </caseValues>
+        <name>industry_account</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <caseValues>
+            <plural>false</plural>
+            <value>IN: Ownership</value>
+        </caseValues>
+        <name>ownership_account</name>
+        <startsWith>Vowel</startsWith>
+    </fields>
+    <fields>
+        <label><!-- AccRelationshipInt --></label>
+        <name>AccRelationshipInt__c</name>
+    </fields>
+    <fields>
+        <name>AccountSource</name>
+        <picklistValues>
+            <masterLabel>Approached Us</masterLabel>
+            <translation><!-- Approached Us --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generic Approach</masterLabel>
+            <translation><!-- Generic Approach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linkedin Job</masterLabel>
+            <translation><!-- Linkedin Job --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Role</masterLabel>
+            <translation><!-- New Role --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Recently Funded</masterLabel>
+            <translation><!-- Recently Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referred to Them</masterLabel>
+            <translation><!-- Referred to Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website Signup</masterLabel>
+            <translation><!-- Website Signup --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Word of mouth</masterLabel>
+            <translation><!-- Word of mouth --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use to enter any other names this account may also be known by - e.g. for SGI, it is also Silicon Graphics Inc. --></help>
+        <label><!-- Aliases, Former and Acquired Names --></label>
+        <name>Account_Name_Aliases__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Relationship --></label>
+        <name>Account_Relationship__c</name>
+        <picklistValues>
+            <masterLabel>Active Account</masterLabel>
+            <translation><!-- Active Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Active Prospect</masterLabel>
+            <translation><!-- Active Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extinct</masterLabel>
+            <translation><!-- Extinct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Idle Account</masterLabel>
+            <translation><!-- Idle Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Qualified Lead</masterLabel>
+            <translation><!-- Qualified Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Responded</masterLabel>
+            <translation><!-- Responded --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Acquired Account Status --></label>
+        <name>Acquired_Account_Status__c</name>
+        <picklistValues>
+            <masterLabel>Dissolved</masterLabel>
+            <translation><!-- Dissolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Division of Acquiring Company</masterLabel>
+            <translation><!-- Division of Acquiring Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Subsidiary of Acquiring Company</masterLabel>
+            <translation><!-- Subsidiary of Acquiring Company --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Attributed To --></label>
+        <name>Attributed_To__c</name>
+        <picklistValues>
+            <masterLabel>Alicia</masterLabel>
+            <translation><!-- Alicia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chris</masterLabel>
+            <translation><!-- Chris --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Elisa</masterLabel>
+            <translation><!-- Elisa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Henrik</masterLabel>
+            <translation><!-- Henrik --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sebastian</masterLabel>
+            <translation><!-- Sebastian --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Steve</masterLabel>
+            <translation><!-- Steve --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitors / Search Targets --></label>
+        <name>Competitors__c</name>
+    </fields>
+    <fields>
+        <label><!-- Crunchbase Profile --></label>
+        <name>Crunchbase_Profile__c</name>
+    </fields>
+    <fields>
+        <label><!-- Fee Highlights --></label>
+        <name>Fee_Highlights__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friendly Name --></label>
+        <name>Friendly_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funding Regions --></label>
+        <name>Funding_Regions__c</name>
+        <picklistValues>
+            <masterLabel>ANZ</masterLabel>
+            <translation><!-- ANZ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Europe</masterLabel>
+            <translation><!-- Europe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Home Country Only</masterLabel>
+            <translation><!-- Home Country Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Israel</masterLabel>
+            <translation><!-- Israel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Middle East</masterLabel>
+            <translation><!-- Middle East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US</masterLabel>
+            <translation><!-- US --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funding Size ($ USD) --></label>
+        <name>Funding_Size__c</name>
+        <picklistValues>
+            <masterLabel>10M - 50M</masterLabel>
+            <translation><!-- 10M - 50M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1M - 10M</masterLabel>
+            <translation><!-- 1M - 10M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>250k - 1M</masterLabel>
+            <translation><!-- 250k - 1M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50M - 100M</masterLabel>
+            <translation><!-- 50M - 100M --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt; 250k</masterLabel>
+            <translation><!-- &lt; 250k --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 100M</masterLabel>
+            <translation><!-- &gt; 100M --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funding Type --></label>
+        <name>Funding_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accelerator</masterLabel>
+            <translation><!-- Accelerator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Angel</masterLabel>
+            <translation><!-- Angel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-Working Space</masterLabel>
+            <translation><!-- Co-Working Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early-Stage Venture</masterLabel>
+            <translation><!-- Early-Stage Venture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incubator</masterLabel>
+            <translation><!-- Incubator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Late-Stage Venture</masterLabel>
+            <translation><!-- Late-Stage Venture --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Private Equity</masterLabel>
+            <translation><!-- Private Equity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seed</masterLabel>
+            <translation><!-- Seed --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IN: Company Page --></label>
+        <name>IN_Company_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN: Employees --></label>
+        <name>IN_Employees__c</name>
+        <picklistValues>
+            <masterLabel>10001+</masterLabel>
+            <translation><!-- 10001+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1001-5000</masterLabel>
+            <translation><!-- 1001-5000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>11-50</masterLabel>
+            <translation><!-- 11-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-10</masterLabel>
+            <translation><!-- 2-10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>201-500</masterLabel>
+            <translation><!-- 201-500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5001-10000</masterLabel>
+            <translation><!-- 5001-10000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>501-1000</masterLabel>
+            <translation><!-- 501-1000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>51-200</masterLabel>
+            <translation><!-- 51-200 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Myself Only</masterLabel>
+            <translation><!-- Myself Only --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- IN: Founded --></label>
+        <name>IN_Founded__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN: Linkedin ID --></label>
+        <name>IN_Linkedin_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN: Name --></label>
+        <name>IN_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- IN: Operating Status --></label>
+        <name>IN_Operating_Status__c</name>
+        <picklistValues>
+            <masterLabel>Acquired</masterLabel>
+            <translation><!-- Acquired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operating</masterLabel>
+            <translation><!-- Operating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Operating Subsidiary</masterLabel>
+            <translation><!-- Operating Subsidiary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Out of Business</masterLabel>
+            <translation><!-- Out of Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reorganizing</masterLabel>
+            <translation><!-- Reorganizing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Industry</name>
+        <picklistValues>
+            <masterLabel>Accounting</masterLabel>
+            <translation><!-- Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Apparel &amp; Fashion</masterLabel>
+            <translation><!-- Apparel &amp; Fashion --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Banking</masterLabel>
+            <translation><!-- Banking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Broadcast Media</masterLabel>
+            <translation><!-- Broadcast Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer &amp; Network Security</masterLabel>
+            <translation><!-- Computer &amp; Network Security --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Games</masterLabel>
+            <translation><!-- Computer Games --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Hardware</masterLabel>
+            <translation><!-- Computer Hardware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Networking</masterLabel>
+            <translation><!-- Computer Networking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Software</masterLabel>
+            <translation><!-- Computer Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Electronics</masterLabel>
+            <translation><!-- Consumer Electronics --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer Services</masterLabel>
+            <translation><!-- Consumer Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defense &amp; Space</masterLabel>
+            <translation><!-- Defense &amp; Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>E-learning</masterLabel>
+            <translation><!-- E-learning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Electrical &amp; Electronic Manufacturing</masterLabel>
+            <translation><!-- Electrical &amp; Electronic Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Entertainment</masterLabel>
+            <translation><!-- Entertainment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Financial Services</masterLabel>
+            <translation><!-- Financial Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Food &amp; Beverages</masterLabel>
+            <translation><!-- Food &amp; Beverages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Graphic Design</masterLabel>
+            <translation><!-- Graphic Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Health, Wellness and Fitness</masterLabel>
+            <translation><!-- Health, Wellness and Fitness --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hospital &amp; Health Care</masterLabel>
+            <translation><!-- Hospital &amp; Health Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Human Resources</masterLabel>
+            <translation><!-- Human Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Services</masterLabel>
+            <translation><!-- Information Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Information Technology &amp; Services</masterLabel>
+            <translation><!-- Information Technology &amp; Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet</masterLabel>
+            <translation><!-- Internet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Services</masterLabel>
+            <translation><!-- Legal Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure &amp; Travel</masterLabel>
+            <translation><!-- Leisure &amp; Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Management Consulting</masterLabel>
+            <translation><!-- Management Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing &amp; Advertising</masterLabel>
+            <translation><!-- Marketing &amp; Advertising --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medical Device</masterLabel>
+            <translation><!-- Medical Device --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outsourcing/Offshoring</masterLabel>
+            <translation><!-- Outsourcing/Offshoring --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Real Estate</masterLabel>
+            <translation><!-- Real Estate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewables &amp; Environment</masterLabel>
+            <translation><!-- Renewables &amp; Environment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semiconductors</masterLabel>
+            <translation><!-- Semiconductors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Telecommunications</masterLabel>
+            <translation><!-- Telecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Utilities</masterLabel>
+            <translation><!-- Utilities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Venture Capital</masterLabel>
+            <translation><!-- Venture Capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wireless</masterLabel>
+            <translation><!-- Wireless --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nearest Major City --></label>
+        <name>Nearest_Major_City__c</name>
+        <picklistValues>
+            <masterLabel>Boston</masterLabel>
+            <translation><!-- Boston --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>London</masterLabel>
+            <translation><!-- London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New York</masterLabel>
+            <translation><!-- New York --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portland</masterLabel>
+            <translation><!-- Portland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seattle</masterLabel>
+            <translation><!-- Seattle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sydney</masterLabel>
+            <translation><!-- Sydney --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Number of Opportunities --></label>
+        <name>Number_of_Opportunities__c</name>
+    </fields>
+    <fields>
+        <name>Ownership</name>
+        <picklistValues>
+            <masterLabel>Educational</masterLabel>
+            <translation><!-- Educational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Government Agency</masterLabel>
+            <translation><!-- Government Agency --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Profit</masterLabel>
+            <translation><!-- Non Profit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partnership</masterLabel>
+            <translation><!-- Partnership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Privately Held</masterLabel>
+            <translation><!-- Privately Held --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Company</masterLabel>
+            <translation><!-- Public Company --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self Employed</masterLabel>
+            <translation><!-- Self Employed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Self Owned</masterLabel>
+            <translation><!-- Self Owned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Parent Account Relationship --></label>
+        <name>Parent_Account_Relationship__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Account Type --></label>
+        <name>Parent_Account_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Employees --></label>
+        <name>Parent_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Founded --></label>
+        <name>Parent_Founded__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent Website --></label>
+        <name>Parent_Website__c</name>
+    </fields>
+    <fields>
+        <label><!-- Placements at this Account --></label>
+        <name>Placements_at_this_Account__c</name>
+        <picklistValues>
+            <masterLabel>Just the One</masterLabel>
+            <translation><!-- Just the One --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loads!</masterLabel>
+            <translation><!-- Loads! --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nada</masterLabel>
+            <translation><!-- Nada --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <name>Rating</name>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meh</masterLabel>
+            <translation><!-- Meh --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Okay</masterLabel>
+            <translation><!-- Okay --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Account Override DupeCatcher --></label>
+        <name>SFSSDupeCatcher__Override_DupeCatcher__c</name>
+    </fields>
+    <fields>
+        <name>Type</name>
+        <picklistValues>
+            <masterLabel>Analyst</masterLabel>
+            <translation><!-- Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Competitor</masterLabel>
+            <translation><!-- Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer</masterLabel>
+            <translation><!-- Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integrator</masterLabel>
+            <translation><!-- Integrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investor</masterLabel>
+            <translation><!-- Investor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partner</masterLabel>
+            <translation><!-- Partner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Press</masterLabel>
+            <translation><!-- Press --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect</masterLabel>
+            <translation><!-- Prospect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reseller</masterLabel>
+            <translation><!-- Reseller --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Why Idle? --></label>
+        <name>Why_Idle__c</name>
+        <picklistValues>
+            <masterLabel>Acquired</masterLabel>
+            <translation><!-- Acquired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chose Other Firms</masterLabel>
+            <translation><!-- Chose Other Firms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Immediate Plans to Hire</masterLabel>
+            <translation><!-- No Immediate Plans to Hire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Using External Firms</masterLabel>
+            <translation><!-- Not Using External Firms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pain in the Ass</masterLabel>
+            <translation><!-- Pain in the Ass --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prime Contact Moved</masterLabel>
+            <translation><!-- Prime Contact Moved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wouldn&apos;t Pay Retained / Exclusive</masterLabel>
+            <translation><!-- Wouldn&apos;t Pay Retained / Exclusive --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- bh_clientCorporationID --></label>
+        <name>bh_clientCorporationID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Sectors --></label>
+        <name>bh_customerSectors__c</name>
+        <picklistValues>
+            <masterLabel>Broadcast / Media</masterLabel>
+            <translation><!-- Broadcast / Media --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Carrier / Operator / Telco</masterLabel>
+            <translation><!-- Carrier / Operator / Telco --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultancy</masterLabel>
+            <translation><!-- Consultancy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consumer</masterLabel>
+            <translation><!-- Consumer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Datacentre</masterLabel>
+            <translation><!-- Datacentre --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Education</masterLabel>
+            <translation><!-- Education --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance</masterLabel>
+            <translation><!-- Finance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hardware Manufacturer</masterLabel>
+            <translation><!-- Hardware Manufacturer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare / Medical / Pharmaceuticals</masterLabel>
+            <translation><!-- Healthcare / Medical / Pharmaceuticals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Industrial / Manufacturing</masterLabel>
+            <translation><!-- Industrial / Manufacturing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leisure / Travel</masterLabel>
+            <translation><!-- Leisure / Travel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile / Wireless</masterLabel>
+            <translation><!-- Mobile / Wireless --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oil / Gas / Energy</masterLabel>
+            <translation><!-- Oil / Gas / Energy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Public Sector</masterLabel>
+            <translation><!-- Public Sector --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail</masterLabel>
+            <translation><!-- Retail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SME / SMB</masterLabel>
+            <translation><!-- SME / SMB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service Provider</masterLabel>
+            <translation><!-- Service Provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software Editor</masterLabel>
+            <translation><!-- Software Editor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Systems Integrator / Reseller</masterLabel>
+            <translation><!-- Systems Integrator / Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Testing</masterLabel>
+            <translation><!-- Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transport</masterLabel>
+            <translation><!-- Transport --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Acquired Company Layout</layout>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Acquiring Company Information --></label>
+            <section>Acquiring Company Information</section>
+        </sections>
+        <sections>
+            <label><!-- Competitors --></label>
+            <section>Competitors</section>
+        </sections>
+        <sections>
+            <label><!-- Fills in Hierarchy --></label>
+            <section>Fills in Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Linkedin Information (Updated Automatically except ID) --></label>
+            <section>Linkedin Information (Updated Automatically except ID)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Company Branch Layout</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Fills in Hierarchy --></label>
+            <section>Fills in Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Parent Information --></label>
+            <section>Parent Information</section>
+        </sections>
+        <sections>
+            <label><!-- Specific Branch Information (Optional) --></label>
+            <section>Specific Branch Information (Optional)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Company HQ Layout</layout>
+        <sections>
+            <label><!-- Account Details --></label>
+            <section>Account Details</section>
+        </sections>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Competitors --></label>
+            <section>Competitors</section>
+        </sections>
+        <sections>
+            <label><!-- Fills in Hierarchy --></label>
+            <section>Fills in Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Linkedin Information (Updated Automatically except ID) --></label>
+            <section>Linkedin Information (Updated Automatically except ID)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Employer Layout</layout>
+        <sections>
+            <label><!-- Account Hierarchy --></label>
+            <section>Account Hierarchy</section>
+        </sections>
+        <sections>
+            <label><!-- Linkedin Information (Automatic if ID is filled in) --></label>
+            <section>Linkedin Information (Automatic if ID is filled in)</section>
+        </sections>
+        <sections>
+            <label><!-- Sector Information --></label>
+            <section>Sector Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Investors Layout</layout>
+        <sections>
+            <label><!-- Competitors --></label>
+            <section>Competitors</section>
+        </sections>
+        <sections>
+            <label><!-- Investment Info --></label>
+            <section>Investment Info</section>
+        </sections>
+        <sections>
+            <label><!-- Linkedin Information (Updated Automatically) --></label>
+            <section>Linkedin Information (Updated Automatically)</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Acquired Company --></label>
+        <name>Acquired_Company</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Company Branch Office --></label>
+        <name>Company_Branch_Office</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Company Headquarters --></label>
+        <name>Company_HQ</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Employer or Acquirer --></label>
+        <name>Employer_or_Acquirer</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Investor --></label>
+        <name>Investor</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Supplier --></label>
+        <name>Supplier</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter the City and Country. --></errorMessage>
+        <name>City_and_Country_Check</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the nearest major city for US based companies. --></errorMessage>
+        <name>Nearest_Major_City_Check</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Create_Google_Alert --></label>
+        <name>Create_Google_Alert</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- IN_Search_People --></label>
+        <name>IN_Search_People</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_with_Tout --></label>
+        <name>ToutApp__Email_with_Tout</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Push_to_Tout --></label>
+        <name>ToutApp__Push_to_Tout</name>
+    </webLinks>
+</CustomObjectTranslation>

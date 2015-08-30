@@ -1,0 +1,19 @@
+<apex:page standardController="Lead" showChat="true">
+    <div id="mme_detail">
+        <apex:detail inlineEdit="true" showChatter="true" oncomplete="mme.fix_mme_rlist_dom()"/>
+    </div>
+    <div id="mme_rlist" class="bRelatedList">
+        <c:EmailMessageListRelated owner="{!Lead}" />
+    </div>
+    <script>
+        mme.$(document).ready(function () {
+          mme.detailMoveToRListTop('mme_detail', 'mme_rlist');
+          
+          mme.mme_rlist_dom = mme.$('#mme_rlist').get(0);
+          mme.fix_mme_rlist_dom = function () {
+              mme.$('#mme_detail').find('.bDetailBlock').after(mme.mme_rlist_dom);
+          }
+        });
+        
+    </script>
+</apex:page>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Position Code</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Position Codes</value>
+    </caseValues>
+    <fields>
+        <label><!-- Department --></label>
+        <name>Department__c</name>
+        <relationshipLabel><!-- Position Codes --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- bh_specialtyID --></label>
+        <name>Position__c</name>
+    </fields>
+    <layouts>
+        <layout>Position Code Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
